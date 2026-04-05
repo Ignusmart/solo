@@ -23,6 +23,8 @@ solo/
     ├── saas-costs-tracker/    # SaaS costs tracker
     ├── salary-comparison/     # Python salary/credit analysis scripts
     ├── driftwatch/            # DriftWatch — API dependency change monitor [BUILDING]
+    ├── stubsnap/              # StubSnap — IRS-compliant paystub generator [KILLED — competitors are full tax platforms]
+    ├── acquisition-play/      # Acquisition play [KILLED — market depleted]
     └── freight-tms/           # Freight broker micro-TMS [KILLED — offline buyers]
 ```
 
@@ -44,15 +46,15 @@ solo/
 
 - **Research before building**: Use `research/` to capture market research, competitive analysis, feasibility studies, and decision docs before starting a new project.
 - **Reports go in `research/reports/`**: Named as `YYYY-MM-DD-topic.md` for chronological ordering.
-- **Strategy docs live in `research/strategy/`**: The 00-06 numbered series covers skills, ideas, playbooks, killed ideas. Update these as the strategy evolves.
+- **Strategy docs live in `research/strategy/`**: The 00-07 numbered series covers skills, ideas, playbooks, killed ideas. Update these as the strategy evolves.
 - **New projects go in `projects/`**: Create `projects/<name>/`, add a README and CLAUDE.md, optionally `git init`. The `/implement` command handles this automatically.
 - **Don't refactor subprojects from here** — cd into `projects/<name>/` and work with their own CLAUDE.md.
 
 ## Commands
 
 - **`/implement`** — Build micro-SaaS MVPs from the unified leaderboard (SaaS + tools). Works with `/loop 30m`. Tracks progress in `research/implementation/TRACKER.md`.
-- **`/research-ideas`** — Find new micro-SaaS ideas. 14 iterations done, 178+ killed. Works with `/loop`.
-- **`/research-tool-ideas`** — Find transactional utility tool ideas. 2 iterations done. Works with `/loop`.
+- **`/research-ideas`** — Find new micro-SaaS ideas. 16 iterations done, 190+ killed. Works with `/loop`.
+- **`/research-tool-ideas`** — Find transactional utility tool ideas. 3 iterations done. Works with `/loop`.
 - **`/ideas-status`** — Read-only dashboard of all ideas across both research tracks and implementation pipeline.
 - **`/auto-audit`** — Audit workspace for staleness, inconsistencies, and broken cross-references. Use `--fix` to auto-repair safe issues.
 

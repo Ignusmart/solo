@@ -149,11 +149,20 @@ For each tool idea, validate with HARD DATA:
 - **Price sensitivity**: What are people currently paying? What would they pay for a better/faster version?
 - **Evidence of payment**: Existing tools with pricing pages, App Store purchases, Gumroad sales
 
-#### Competition analysis
+#### Competition analysis (MUST visit actual competitor sites — no armchair analysis)
 - List ALL existing tools — web apps, mobile apps, desktop apps, browser extensions
 - For each: pricing model, review count, rating, traffic estimate (SimilarWeb/SEMrush if possible)
-- What specifically is bad about existing options? (slow, ugly, expensive, inaccurate, limited)
+- **VISIT the top 2 competitors' actual websites** (use WebFetch). Document:
+  - Full product scope: every product/service they offer — competitors often do MUCH more than the one thing you're targeting. A "paystub generator" might actually be a full tax document platform with 30+ form types.
+  - Pricing: all tiers, bundles, volume discounts
+  - Content moat: blog posts, SEO landing pages, guides, templates — this is years of accumulated organic traffic you can't replicate in a week
+  - Support infrastructure: live chat, email, phone, FAQ, knowledge base
+  - Trust signals: reviews, testimonials, years in business, payment methods, refund policy
+  - Mobile experience: responsive? native app?
+- **Honest assessment**: Are existing tools actually "bad" or are you projecting? A site can look "dated" and still have excellent functionality, trust, and SEO authority that took years to build. Ugly ≠ bad product.
+- What specifically is bad about existing options? (slow, ugly, expensive, inaccurate, limited) — back this up with evidence, not assumptions
 - Is there an open-source version? If yes, why would someone pay for yours? (UX, speed, hosted, no-code)
+- **Scope reality check**: If the top competitor has N features/products and you're building 1, you're not "differentiated" — you're incomplete. Acknowledge the real scope gap and assess whether your MVP can survive with just the core feature.
 
 #### Unit economics (CRITICAL — utility tools live or die here)
 - **Cost per use**: API costs (AI inference, cloud processing, storage) per transaction
@@ -173,12 +182,14 @@ For each tool idea, validate with HARD DATA:
 
 ### Step 4: ADVERSARIAL REVIEW (mandatory for every idea scoring 16+)
 
-#### Competitor reality check
+#### Competitor reality check (MANDATORY — do not skip)
 - Search for the exact tool name + domain. Taken?
 - Search Product Hunt for "[task] tool" — launched in last 12 months?
 - Search App Store / Play Store for similar utility apps
 - Search GitHub for open-source alternatives
 - Check if Canva, Adobe Express, or ChatGPT already does this well enough
+- **If not already done in Step 3, VISIT the top 2 competitors' actual websites** (use WebFetch). This is non-negotiable. You cannot assess competition without seeing what they actually offer.
+- **Platform vs tool assessment**: Is the competitor a simple single-purpose tool (like yours would be), or a full platform with dozens of products, content marketing, support team, and years of SEO authority? If the latter, acknowledge that "better UX on one feature" is NOT a viable differentiation strategy — you'd be bringing a knife to a gunfight.
 
 #### The 5 kill tests (adapted for utility tools)
 1. **Free tool test**: Is there a free version that's good enough? Not "does a free version exist" but "would a normal person find and use the free one instead?"

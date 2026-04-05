@@ -493,21 +493,62 @@ This is what YOU (the orchestrator) do after all parallel agents complete. **Do 
 
 ---
 
-## STEP 6: LAUNCH (after MVP_COMPLETE — 2-3 iterations)
+## STEP 6: LAUNCH (after MVP_COMPLETE — 5-7 iterations)
 
 **Trigger:** Status is `MVP_COMPLETE`. Update status to `LAUNCHING`.
 
-These run as sequential iterations (one per cycle):
+### Phase A: Demand Validation (iterations 1-2) — BEFORE full launch
+
+Validate that real people will pay before investing in distribution. This is especially critical for utility tools where search demand is unproven.
 
 | Iteration | Skill | Deliverable |
 |:---------:|-------|-------------|
-| 1 | **`launch-strategy`** | Distribution plan — Product Hunt, Hacker News, Reddit, communities, cold outreach targets |
-| 2 | **`social-content`** | Launch posts — LinkedIn, Twitter/X, relevant subreddits, Indie Hackers |
-| 3 | None | Execute launch — deploy to production, submit to Product Hunt, publish posts, email beta list |
+| 1 | None | **Paid demand test**: Set up a small Google Ads campaign ($100-200 budget) targeting the tool's core keywords (e.g., "WCAG accessibility report", "accessibility audit online"). Drive traffic to the live landing page with real payment flow. Goal: measure click-through rate, landing page conversion, and actual purchases. Record: ad spend, impressions, clicks, signups, paid conversions. |
+| 2 | None | **Analyze results + decide**: Review ad data. Calculate cost-per-acquisition and projected unit economics at scale. **Kill criteria**: If <3 paid conversions on $150 spend AND <1% landing page conversion rate → seriously consider killing the idea (update TRACKER.md with kill reason). If results are promising (>5 conversions or >2% conversion), proceed to full launch. If mixed, adjust pricing/copy and run one more $100 test. |
 
-After launch iteration 3:
+**What to track in audit-log for demand validation:**
+```markdown
+### Demand Validation
+- Ad platform: Google Ads
+- Budget spent: $X
+- Impressions: N
+- Clicks: N (CTR: X%)
+- Landing page visits: N
+- Signups/free scans: N
+- Paid conversions: N (conversion rate: X%)
+- Revenue: $X
+- Cost per acquisition: $X
+- Decision: PROCEED / ADJUST / KILL
+```
+
+### Phase B: Launch Strategy (iterations 3-4)
+
+| Iteration | Skill | Deliverable |
+|:---------:|-------|-------------|
+| 3 | **`launch-strategy`** | Distribution plan tailored to idea type. **For SaaS**: Product Hunt, Hacker News, relevant communities, cold outreach targets, integration directories. **For utility tools**: SEO landing page strategy (long-tail keyword pages, comparison pages, "X vs Y" pages), Google Ads scaling plan (if validation passed), Product Hunt, relevant subreddits, content marketing calendar. |
+| 4 | **`social-content`** | Launch posts — LinkedIn, Twitter/X, relevant subreddits, Indie Hackers. Include before/after results from demand validation ("We tested with $150 in ads and got X conversions"). |
+
+### Phase C: Execute Launch (iterations 5-6)
+
+| Iteration | Skill | Deliverable |
+|:---------:|-------|-------------|
+| 5 | **`seo-audit`** | Final SEO pass before launch — ensure all landing pages have proper meta tags, OG images, structured data, sitemap. **For utility tools**: create 5-10 long-tail SEO pages (e.g., "free WCAG checker", "EAA compliance report", "website accessibility audit [state/country]"). |
+| 6 | None | **Execute launch** — deploy to production, submit to Product Hunt, publish social posts, post to relevant subreddits/communities, scale up Google Ads if validation was positive. |
+
+### Phase D: Post-Launch Review (iteration 7)
+
+| Iteration | Skill | Deliverable |
+|:---------:|-------|-------------|
+| 7 | None | **Week-1 review**: Collect metrics from first 7 days post-launch. Revenue, traffic sources, conversion rates, user feedback, support requests. **Post-launch kill criteria**: If <$50 revenue in first 2 weeks AND no organic traffic growth → kill. Update TRACKER.md accordingly. If promising → proceed to V2/GROWTH. |
+
+After launch iteration 7:
 1. Update TRACKER.md: status → `LAUNCHED`
 2. Proceed to V2/GROWTH phase (Step 7)
+
+### Launch kill criteria (apply to ALL ideas):
+- **Utility tools**: <$50 revenue in first 2 weeks after launch → kill
+- **SaaS**: <5 signups in first 2 weeks after launch → kill
+- **Both**: If Google Ads CPA > price per use/subscription → organic-only distribution is required. If no organic path exists → kill
 
 ---
 
@@ -536,9 +577,10 @@ This phase **never auto-terminates**. Each iteration, the agent picks the highes
 
 ### Priority 4: Distribution & content
 - Re-run `social-content` monthly for ongoing posts
-- SEO content pages (comparison pages, how-to guides)
+- SEO content pages (comparison pages, how-to guides, "[tool] vs [competitor]" pages)
 - Changelog/blog posts for new features
 - Community engagement (answer questions, share updates)
+- **Paid acquisition review** (every 5 iterations): Check Google Ads performance — pause underperforming campaigns, scale winners, add new keyword groups. Target CPA < 50% of price per use.
 
 ### V2 iteration format in audit-log:
 ```markdown

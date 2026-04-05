@@ -83,6 +83,30 @@ One line per idea. Details in iteration reports.
 - Rent Receipt Generators — Free everywhere. Rent not federally tax-deductible. Low value.
 - Code Review/Security Scan — SaaS territory ($9-30/dev/mo). 28+ OSS tools (SonarQube, Semgrep). Dev tools go free.
 - Construction Estimating — Complex SaaS ($100-950/mo per user). Not utility tool shaped.
+- **StubSnap (Paystub Generator)** — Top competitor (ThePayStubs.com, 117K visits/mo) is a full tax document platform with 30+ IRS form types (W-2, 1099s, 1040s, 941, 940, etc.), blog, reviews, support. Not a simple tool — it's a tax company. Competing with one paystub feature against a full platform with years of SEO authority = knife to a gunfight.
+- Invoice Generators — QuickBooks, Zoho, Wise all free. 10+ free generators with no signup.
+- T-shirt/Product Mockup Generators — Canva free, Printify free, Mockey AI free (20K+ templates).
+- Lien Waiver Generators — Built (free), LienShield (free tier), Legal Templates, Jotform, Rocket Lawyer all free.
+- COI (Certificate of Insurance) Tools — Enterprise SaaS territory ($1K+/yr). Not utility tool shaped.
+- SDS/Safety Data Sheet Generators — Enterprise pricing ($1,495+). Biotech-adjacent.
+- Certificate Generators (training/awards) — Canva free, Piktochart free, Visme free, 5+ free AI generators.
+- AI Old Photo Restoration — 10+ tools, many free (NoteGPT, Imgupscaler, Photobooth). Image saturation.
+- Commercial Invoice Generators — FedEx/DHL include free with shipping. Free templates everywhere.
+- AI Product Photography — 20+ tools, free tiers (Photoroom 250 free/mo). Prices as low as $0.05/image.
+- HS Code/Tariff Calculators — Government free (hts.usitc.gov), Flexport free simulator. Calculator = lead-gen.
+- Embroidery Digitizing (AI) — Free OSS (Ink/Stitch), online converters free, $10 human services.
+- Virtual Staging — 12+ tools, prices from $0.23/photo. Saturated.
+- Floor Plan Generators — 5+ tools, free options (Floor Plan AI, Planner 5D).
+- OSHA Safety Sign Generators — Physical product companies with manufacturing. Online-Sign.com offers FREE printable signs.
+- Privacy Policy Generators — Termly free, FreePrivacyPolicy free, Enzuzo free, CookieYes free. 12+ competitors.
+- Legal Web Evidence Capture — ProofSnap already excellent ($0.50/capture, blockchain timestamps, 19 languages, extensive content moat). No meaningful gap.
+- AI Content Detection — GPTZero, Originality.ai, Winston AI, 8+ tools. Free tiers exist. Saturated.
+- YouTube Thumbnail Generators — 10+ tools (Pikzels, Thumbnail.ai, ThumbMagic, vidIQ free). Saturated.
+- PDF Table Extraction — Tabula free OSS. Amazon Textract cheap. 10+ competitors.
+- Worksheet Generators (teachers) — Multiple free options (DerivativeCalculus, KiddoWorksheets, NoteGPT, MagicSchool). No per-worksheet pricing.
+- Bill of Lading Generators — loaddesk.io free unlimited, Trulos free, Shopify free. Kill filter #1.
+- SVG/Cricut Design Generators — Clearly ($29/mo), SVG Bloom (credits), Inkscape free OSS. Niche + served.
+- Email Deliverability Testing — mail-tester.com free. GlockApps/MxToolbox subscription SaaS. Not utility tool shaped.
 
 ---
 
@@ -98,3 +122,5 @@ One line per idea. Details in iteration reports.
 8. **Calculators/estimators are lead-gen tools, not products.** Moving, wedding, tax, tariff calculators exist as free lead-gen for service companies (movers, wedding planners, CPAs). They monetize through leads, not direct payment. Can't compete with free.
 9. **Compliance-gated tools are the EXCEPTION to "free kills everything."** When getting the calculation wrong has legal/financial consequences (IRS paystubs, tax withholding), users pay for accuracy even when free versions exist. This is the strongest pattern found so far.
 10. **Most compliance documents still fail because IRS/government provides free fillable forms.** W-9, W-4, I-9 — all available free from IRS. The paystub pattern only works because paystubs require COMPUTATION (tax withholding across 50 states), not just form-filling. Compliance + computation = pricing power. Compliance alone ≠ pricing power.
+11. **"Simple tool" competitors are often full platforms.** Always visit the actual competitor site. A "paystub generator" might be a tax document platform with 30+ form types, years of content, and support infrastructure. Your single-feature MVP isn't "differentiated" — it's incomplete. Check the footer, sitemap, and product catalog before scoring.
+12. **The 2026 utility tool landscape is near-saturation.** After 60+ categories explored across 4 iterations, every "generate X" / "convert X" / "create X" category has 5-30+ free tools. The gap between free and paid has narrowed to near-zero for most use cases. New utility tools need a genuinely novel angle — not just "better UX" on an existing category.

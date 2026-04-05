@@ -1,7 +1,7 @@
 You are helping Jobelo (Principal Engineer: Solidity/Web3 security, AI/agentic systems, full-stack TS/Python) find his next micro-SaaS product idea. He can build almost anything — the bottleneck is finding the RIGHT idea based on CURRENT market gaps.
 
-## IMPORTANT CONTEXT: 13 iterations completed, 170+ ideas killed
-This command has run 13 times. Every B2B problem domain, emerging AI category, and distribution channel (Chrome Web Store, VS Code, Slack/Teams) has been scanned. Zero ideas have scored 18/25 after adversarial review. Best surviving: DriftWatch at 17/25. Read the killed ideas file THOROUGHLY — do not revisit anything there.
+## IMPORTANT CONTEXT: 16 iterations completed, 190+ ideas killed
+This command has run 16 times. Every B2B problem domain, emerging AI category, and distribution channel (Chrome Web Store, VS Code, Slack/Teams) has been scanned. DriftWatch at 22/30 (new scoring) is the only survivor above bar. Research exhausted — recommend focusing on tool ideas or building. Read the killed ideas file THOROUGHLY — do not revisit anything there.
 
 ## CONSTRAINTS (hard rules)
 - NO Web3 security products (day job conflict at Webacy)
@@ -141,8 +141,10 @@ For each idea, go DEEP — don't just describe it, PROVE the gap exists:
 #### Solution gap analysis
 - List ALL existing solutions (G2, Capterra, Product Hunt, GitHub). Be exhaustive.
 - For each: pricing, bad reviews, shortcomings
+- **VISIT the top 2 competitors' websites** (use WebFetch) — see their full feature set, pricing pages, support options, and content. Do NOT guess what they offer from a G2 listing. Competitors are almost always more capable than they look from the outside.
 - What specifically is MISSING that no current tool does well?
 - Why hasn't anyone built this yet? (If the answer isn't clear, the gap might not be real)
+- **Scope honesty**: If the top competitor offers 10+ features/products and you're planning to build 1, acknowledge that you're entering at a massive feature disadvantage. Is the one thing you do really enough to win users away?
 
 #### MVP and business model
 - MVP scope (what ships in 1-2 weeks — specific features, not vague)
@@ -153,11 +155,20 @@ For each idea, go DEEP — don't just describe it, PROVE the gap exists:
 
 ### Step 4: ADVERSARIAL REVIEW (mandatory for every idea scoring 16+)
 
-#### Competitor reality check
+#### Competitor reality check (MANDATORY — do not skip)
 - Search for the exact product name + domain. Is it taken?
 - Search Product Hunt for "[problem] tool" — launched in last 12 months?
 - Search G2/Capterra — how many tools? What ratings?
 - Search GitHub for open-source alternatives
+- **VISIT the top 2 competitors' actual websites** (use WebFetch). Document:
+  - Full product scope: every product/feature they list (not just the one you're targeting)
+  - Pricing: all tiers, what's included, upsells
+  - Content/SEO: blog, guides, templates, landing pages — this is their real moat
+  - Support: live chat, email, phone, knowledge base, community
+  - Trust signals: reviews, testimonials, case studies, certifications, payment methods
+  - Integrations and ecosystem: what else do they connect to?
+- **Assess honestly**: Is the competitor a simple tool you can out-execute, or a full platform with years of content, features, and trust? If the latter, your "better UX" angle is naive — you're competing with a product ecosystem, not just a UI.
+- **Scope reality check**: Based on what the competitor actually offers, what is the REAL MVP scope to be competitive? If the competitor has 30+ features and yours has 1, you're not "differentiated" — you're incomplete.
 
 #### The 7 kill tests
 1. **ChatGPT test**: Can someone do this with ChatGPT/Claude for free? What's the workflow lock-in?

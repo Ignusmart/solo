@@ -21,6 +21,7 @@ All projects live in `projects/` (gitignored — each has its own repo).
 | Project | Description | Status |
 |---------|-------------|--------|
 | projects/driftwatch/ | **DriftWatch** — API dependency change monitor for SaaS teams | Building (Phase 2, iteration #7) |
+| projects/stubsnap/ | **StubSnap** — IRS-compliant paystub generator ($3.99/stub) | Not started |
 
 ### Killed
 
@@ -41,11 +42,11 @@ All strategy docs and research reports live in [`research/`](research/).
 | [03-QUICK-WINS](research/strategy/03-QUICK-WINS.md) | Fastest paths to first dollar (< 30 days) |
 | [04-PRODUCT-IDEAS-DEEP-DIVE](research/strategy/04-PRODUCT-IDEAS-DEEP-DIVE.md) | Detailed breakdown of top 3 product ideas |
 | [05-NO-CALLS-PLAYBOOK](research/strategy/05-NO-CALLS-PLAYBOOK.md) | Operating with zero synchronous communication |
-| [06-KILLED-IDEAS](research/strategy/06-KILLED-IDEAS.md) | 170+ killed ideas from 13 research iterations |
+| [06-KILLED-IDEAS](research/strategy/06-KILLED-IDEAS.md) | 190+ killed ideas from 16 research iterations |
 | [07-KILLED-TOOL-IDEAS](research/strategy/07-KILLED-TOOL-IDEAS.md) | Killed tool ideas from /research-tool-ideas |
 | [TRACKER](research/implementation/TRACKER.md) | Implementation progress for /implement command |
-| [SaaS Leaderboard](research/reports/2026-04-04-idea-leaderboard.md) | Running leaderboard of SaaS ideas (14 iterations, 178+ ideas) |
-| [Tool Leaderboard](research/reports/tool-ideas-leaderboard.md) | Running leaderboard of utility tool ideas (2 iterations) |
+| [SaaS Leaderboard](research/reports/2026-04-04-idea-leaderboard.md) | Running leaderboard of SaaS ideas (16 iterations, 190+ ideas) |
+| [Tool Leaderboard](research/reports/tool-ideas-leaderboard.md) | Running leaderboard of utility tool ideas (3 iterations, 40+ ideas) |
 
 New research and reports go in `research/reports/` with date-prefixed filenames.
 
@@ -105,7 +106,7 @@ Hunts for subscription SaaS opportunities ($19-99/mo). Multi-source signal hunti
 - `research/reports/YYYY-MM-DD-market-gap-iteration-N.md` — per-iteration findings
 - `research/strategy/06-KILLED-IDEAS.md` — killed ideas registry (178+ entries)
 
-**Status:** 14 iterations completed, 178+ ideas considered, SaaS track considered exhausted. DriftWatch (22/30) is the only survivor above bar.
+**Status:** 16 iterations completed, 190+ ideas considered, SaaS track exhausted. DriftWatch (22/30) is the only survivor above bar.
 
 ---
 
@@ -129,7 +130,7 @@ Hunts for pay-per-use, credit-based, or one-time-purchase tools (think Pieter Le
 - `research/reports/YYYY-MM-DD-tool-ideas-iteration-N.md` — per-iteration findings
 - `research/strategy/07-KILLED-TOOL-IDEAS.md` — killed tool ideas registry
 
-**Status:** 2 iterations completed, 25+ ideas killed. No ideas at threshold yet. Best: ClipCast at 15/25.
+**Status:** 3 iterations completed, 40+ ideas killed. StubSnap at 17/25 — first to hit build threshold. Now in TRACKER as NOT_STARTED.
 
 ---
 
