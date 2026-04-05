@@ -6,7 +6,7 @@ Last updated: 2026-04-05
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
-| 1 | DriftWatch — API dependency change monitor | SaaS | projects/driftwatch/ | BUILDING | Phase 3 | 2026-04-05 (#9) | DB migration + Stripe keys needed for live testing |
+| 1 | DriftWatch — API dependency change monitor | SaaS | projects/driftwatch/ | POLISHING | Phase 3 | 2026-04-05 (#10) | DB URL + Stripe keys + domain needed for production deploy |
 | 2 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 3 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
 | 4 | Acquisition Play — buy underperforming extension | — | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
