@@ -295,15 +295,23 @@ Use these as pre-filters for future research:
 
 ---
 
-## Stats (13 iterations)
+### Iteration 14 Kills (developer workflow niches)
+- Dead Code Detection SaaS — episodic use (churn), Knip 4.9M downloads/week (free), CodeScene exists at price point
+- Tech Debt Tracking — SonarQube/CodeScene saturated, 7% adoption = category rejection
+- Release Notes Automation — already killed (changelog generators, 12+ tools)
+- On-Call Management — PagerDuty dominates, saturated
+- Database Migration — saturated, high-touch sales needed
+- Staging Environment — bundled into platforms (Vercel, Northflank)
+- Freight Broker Micro-TMS — offline buyers, high-touch sales required, killed from /implement
 
-- **Total ideas considered**: 170+
-- **Total verticals scanned**: 45+
+## Stats (14 iterations)
+
+- **Total ideas considered**: 178+
+- **Total verticals scanned**: 48+
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
-- **Ideas deep-dived**: 41+
-- **Ideas surviving above 18/25**: 0 (all top ideas killed under adversarial review)
-- **Best surviving idea**: DriftWatch at 17/25 (API dependency change monitoring)
-- **Iterations without a viable idea**: 13 consecutive
+- **Ideas deep-dived**: 43+
+- **Ideas surviving above bar**: DriftWatch at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as DriftWatch feature)
+- **Best surviving idea**: DriftWatch (API dependency change monitoring) — BEING BUILT, 6/10 MVP
 
 ---
 

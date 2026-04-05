@@ -1,15 +1,10 @@
-# Idea Leaderboard -- Updated 2026-04-05 (post-Iteration 13)
+# Idea Leaderboard -- Updated 2026-04-05 (post-Iteration 14)
 
-Ranked by total score (5 criteria, 1-5 each, max 25). Bar: real market gap AND clear path to $2K+ MRR within 6 months.
+**Scoring updated in iteration 14**: 6 dimensions (max 30), distribution weighted 2x, minimum 22/30. Old scores (max 25) retained for reference.
 
-**STATUS**: 13 iterations, 170+ ideas considered, 0 scoring 18+ after adversarial review. Best surviving: DriftWatch at 17/25.
+**STATUS**: 14 iterations, 178+ ideas considered. DriftWatch at 22/30 (new scoring) — meets bar. API Rate Limit Aggregator at 24/30 but recommended as DriftWatch feature, not standalone.
 
-**CONCLUSION AFTER 13 ITERATIONS**: Three research strategies exhausted:
-1. **Problem-space scanning** (iterations 1-11): Every B2B category saturated. 150+ ideas killed.
-2. **Emerging category scanning** (iteration 12): New categories fill in 6-12 months. All killed.
-3. **Distribution-first scanning** (iteration 13): Marketplace platform risk dominates. All killed.
-
-**RECOMMENDATION**: Stop desk research. Either (a) build DriftWatch (17/25, best surviving) and test the market, (b) do customer-first discovery with a specific buyer segment, or (c) acquire an underperforming existing product with built-in distribution.
+**ACTIVE**: DriftWatch is being built (6/10 MVP). Freight TMS killed (offline buyers, high-touch sales). Acquisition play killed (market too thin).
 
 ---
 
