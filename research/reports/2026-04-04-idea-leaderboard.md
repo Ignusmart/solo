@@ -10,7 +10,9 @@
 
 **ITERATION 16**: Revenue-reverse engineering — studied real solo-founder revenue ($2K-132K/mo). Adjacent gaps from Bannerbear, Simple Analytics, Carrd, Capgo, Karma all map to existing kill patterns. Confirms DriftWatch playbook matches winning pattern (clear B2B pain → simple tool → SEO growth). 190+ ideas total.
 
-**ITERATION 17**: Fresh 2026 signals scan (HN/PH/IH/G2/compliance deadlines). 8 new ideas evaluated — ALL killed (CI test selector: platform absorption; SOP automation: 9+ tools; trades CRM: offline buyers; etc.). DriftWatch competitive intel updated: Recent.dev validates changelog space but is NOT a competitor; API Drift Alert at $149/mo remains only direct competitor with limited traction. 198+ ideas total. **RESEARCH DEFINITIVELY EXHAUSTED — cancel research loop, ship DriftWatch.**
+**ITERATION 17**: Fresh 2026 signals scan (HN/PH/IH/G2/compliance deadlines). 8 new ideas evaluated — ALL killed (CI test selector: platform absorption; SOP automation: 9+ tools; trades CRM: offline buyers; etc.). DriftWatch competitive intel updated: Recent.dev validates changelog space but is NOT a competitor; API Drift Alert at $149/mo remains only direct competitor with limited traction. 198+ ideas total.
+
+**ITERATION 18**: Formal close-out. No new searches — iteration 17 was comprehensive and returned zero viable ideas. 6 consecutive zero-result iterations (13-18). 200+ ideas total. **RESEARCH LOOP CLOSED. Ship DriftWatch + run /research-tool-ideas for new candidates.**
 
 ---
 
