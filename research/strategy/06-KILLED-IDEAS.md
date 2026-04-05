@@ -304,10 +304,19 @@ Use these as pre-filters for future research:
 - Staging Environment — bundled into platforms (Vercel, Northflank)
 - Freight Broker Micro-TMS — offline buyers, high-touch sales required, killed from /implement
 
-## Stats (14 iterations)
+### Iteration 15 Kills (non-dev B2B + compliance)
+- Cookie consent tools — free tiers everywhere (CookieYes, Termly, Enzuzo), race to bottom
+- Vendor risk assessment (SMB) — all enterprise-priced ($10K+/yr), thin SMB TAM
+- Data retention policy automation — feature not product, inside larger compliance platforms
+- DORA/NIS2 compliance (SME) — EU-centric, requires regulatory expertise, local-language tools
+- International tax compliance SaaS — Paddle, Stripe Tax, Avalara dominate, liability risk
+- SaaS compliance pre-flight/readiness — episodic (pre-audit only), Vanta/Sprinto upsell path
+- Software license compliance tracking (SMB) — overlaps expense tracking, thin standalone value
 
-- **Total ideas considered**: 178+
-- **Total verticals scanned**: 48+
+## Stats (15 iterations)
+
+- **Total ideas considered**: 185+
+- **Total verticals scanned**: 55+
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
 - **Ideas deep-dived**: 43+
 - **Ideas surviving above bar**: DriftWatch at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as DriftWatch feature)

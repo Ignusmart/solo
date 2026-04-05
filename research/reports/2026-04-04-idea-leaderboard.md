@@ -6,6 +6,8 @@
 
 **ACTIVE**: DriftWatch is being built (6/10 MVP). Freight TMS killed (offline buyers, high-touch sales). Acquisition play killed (market too thin).
 
+**ITERATION 15**: Scanned non-dev B2B (agency tools, proposals, testimonials, client portals) + compliance (SOC 2, accessibility, cookie consent, DORA/NIS2, vendor risk, tax). ALL pre-killed — every vertical maps to existing killed ideas. 185+ ideas total. Research delivering diminishing returns.
+
 ---
 
 ## Scoring Criteria

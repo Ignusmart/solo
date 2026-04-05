@@ -41,11 +41,33 @@ One line per idea. Details in iteration reports.
 - AI Voice Clone/TTS — ElevenLabs dominant ($11M+ ARR). 15+ competitors. Capital-intensive.
 - Podcast Show Notes (subscription) — Castmagic $99/mo, Descript $24/mo, PodSqueeze. Crowded subscriptions.
 
+### Business/B2B Tools
+- Product Mockup Generators — Printify/Printful/Mockey all free with 20K+ templates. Placeit subscription but free alternatives sufficient.
+- Offer Letter Generators — Zoho, Canva, Easy-Peasy, HROne all free. Zero pricing power.
+- Certificate/Diploma Generators — Canva free, Certifier 250 free/mo. No gap.
+- Social Proof/Testimonial Widgets — 15+ tools (EmbedSocial, Trustmary). Free tiers dominate.
+- Google Business Profile Audit — Merchynt free audit. BrightLocal $39/mo. SaaS territory.
+- Lien Waiver Generators — Built and Terms.Law both free. No pricing power.
+
+### Calculators & Estimators
+- Moving Cost Calculators — Lead-gen tools for movers. moveBuddha, Allied, Extra Space all free.
+- Wedding Budget Calculators — All free (YourWeddingCompany, Centric Events, Smarty Pig).
+- Tax Calculators — efile, SoFi, Calculator.net all free. Zero monetization path.
+- Tariff/Customs Duty Calculators — Flexport, Gateway, AMZ Prep, Tariff Check all free. 30K+ HTS codes covered.
+- Barcode/QR Code Generators — Shopify free, Avery free, Barcodes Inc free. Commoditized.
+- Invoice Factoring Calculators — Riviera Finance, Small Fleet HQ free. Too niche.
+
+### Tech/Dev Tools
+- Screenshot-to-Code — Figma built-in (free), Codia, CodeParrot. Platform gives it away.
+- Email Deliverability/Warm-up — 11+ tools. EmailWarmup.com free unlimited. Already killed in SaaS.
+
 ### Other
 - Virtual Staging — Race to $0.03/photo. Collov $0.23, Virtual Staging AI $0.28. Zero margin.
 - AI Floor Plan Generators — 22+ free generators. No pricing power.
 - Handwriting to Font — Niche, low volume. YourFonts at $9.95 covers it.
 - Email Signature Generators — 10+ tools at $5-11/mo. Already killed in SaaS research.
+- 1099/W-2 Form Generators — Otto AI free, Jotform free. TaxBandits $2.75/form for e-filing. Seasonal + complex compliance.
+- Privacy/GDPR Cookie Audit — CookieYes free, Termly free. Cookiebot subscription. No pay-per-scan model.
 
 ---
 
@@ -58,3 +80,5 @@ One line per idea. Details in iteration reports.
 5. **Subscription incumbents block pay-per-use entrants.** When established tools charge $15-99/mo, they can absorb low-volume users. Pay-per-use only works if the incumbent is dramatically overpriced for the use case.
 6. **Platform features kill indie tools.** When Google, Apple, Adobe, or Canva add a feature, indie tools in that space die. Track platform roadmaps before building.
 7. **The AI wave made building trivial — competition is the real problem.** Any solo dev can build any "X generator" in a weekend. The bottleneck is distribution and differentiation, not engineering.
+8. **Calculators/estimators are lead-gen tools, not products.** Moving, wedding, tax, tariff calculators exist as free lead-gen for service companies (movers, wedding planners, CPAs). They monetize through leads, not direct payment. Can't compete with free.
+9. **Compliance-gated tools are the EXCEPTION to "free kills everything."** When getting the calculation wrong has legal/financial consequences (IRS paystubs, tax withholding), users pay for accuracy even when free versions exist. This is the strongest pattern found so far.
