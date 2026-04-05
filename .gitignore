@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.next/
+build/
+*.pyc
+__pycache__/
+.env
+.env.*
+
+# All projects live in projects/ — each has its own git repo
+projects/
