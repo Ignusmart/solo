@@ -6,9 +6,9 @@ Last updated: 2026-04-05
 
 | # | Idea | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|--------|--------|-------|---------------|----------|
-| 1 | DriftWatch — API dependency change monitor | projects/driftwatch/ | NOT_STARTED | — | — | None |
-| 2 | Freight Broker Micro-TMS | projects/freight-tms/ | NOT_STARTED | — | — | Domain expertise gap |
-| 3 | Acquisition Play — buy underperforming extension | — | NOT_STARTED | — | — | Need to find targets |
+| 1 | DriftWatch — API dependency change monitor | projects/driftwatch/ | PLANNING | Phase 1 | 2026-04-05 (#1) | None |
+| 2 | Freight Broker Micro-TMS | projects/freight-tms/ | PLANNING | Phase 1 | 2026-04-05 (#1) | Domain expertise gap (HIGH), AscendTMS free tier adequacy (HIGH) |
+| 3 | Acquisition Play — buy underperforming extension | projects/acquisition-play/ | SCOUTING | — | 2026-04-05 (#1) | Need Microns.io premium to contact sellers |
 
 ## Status Key
 - `NOT_STARTED` — idea selected, no work done yet
