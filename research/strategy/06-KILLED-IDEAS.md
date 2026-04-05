@@ -313,10 +313,17 @@ Use these as pre-filters for future research:
 - SaaS compliance pre-flight/readiness — episodic (pre-audit only), Vanta/Sprinto upsell path
 - Software license compliance tracking (SMB) — overlaps expense tracking, thin standalone value
 
-## Stats (15 iterations)
+### Iteration 16 Kills (revenue-reverse adjacent gaps)
+- PDF generation API (Bannerbear adjacent) — PDFShift, PDFMonkey, DocSpring exist
+- Vertical privacy analytics — Plausible, Fathom, Simple Analytics saturate the space
+- Screenshot-to-docs automation — AI wrapper risk, too niche
+- OTA updates for React Native — Expo dominates ecosystem
+- AI business generators (FounderPal adjacent) — AI wrapper kill filter, ChatGPT substitute
 
-- **Total ideas considered**: 185+
-- **Total verticals scanned**: 55+
+## Stats (16 iterations)
+
+- **Total ideas considered**: 190+
+- **Total verticals scanned**: 58+
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
 - **Ideas deep-dived**: 43+
 - **Ideas surviving above bar**: DriftWatch at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as DriftWatch feature)

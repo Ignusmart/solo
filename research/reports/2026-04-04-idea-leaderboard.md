@@ -8,6 +8,8 @@
 
 **ITERATION 15**: Scanned non-dev B2B (agency tools, proposals, testimonials, client portals) + compliance (SOC 2, accessibility, cookie consent, DORA/NIS2, vendor risk, tax). ALL pre-killed — every vertical maps to existing killed ideas. 185+ ideas total. Research delivering diminishing returns.
 
+**ITERATION 16**: Revenue-reverse engineering — studied real solo-founder revenue ($2K-132K/mo). Adjacent gaps from Bannerbear, Simple Analytics, Carrd, Capgo, Karma all map to existing kill patterns. Confirms DriftWatch playbook matches winning pattern (clear B2B pain → simple tool → SEO growth). 190+ ideas total. **RESEARCH EXHAUSTED — recommend cancelling research loop.**
+
 ---
 
 ## Scoring Criteria
