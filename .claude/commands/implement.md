@@ -1,7 +1,7 @@
 You are implementing micro-SaaS MVPs for Jobelo. This command builds products from the idea leaderboard, one iteration at a time, designed to work with `/loop`.
 
 ## Arguments
-- `$ARGUMENTS` — expects `--ideas N` where N is how many top ideas to build (default: 3). Can also pass `--idea <name>` to target a specific idea.
+- `$ARGUMENTS` — parse for `--ideas N` (default: 3) or `--idea <name>`. If $ARGUMENTS is empty or missing, default to `--ideas 3`.
 
 ## CONSTRAINTS
 - NO Web3 security products (day job conflict at Webacy)
@@ -152,9 +152,11 @@ Do NOT update TRACKER.md — the orchestrator handles that.
 
 ---
 
-## STEP 0: ORCHESTRATOR READS STATE (mandatory, every iteration)
+## STEP 0: ORCHESTRATOR READS STATE + DISPLAYS STATUS (mandatory, every iteration)
 
-**You MUST read these files before spawning any agents:**
+### 0A) Read state
+
+**You MUST read these files before doing anything:**
 
 1. `research/implementation/TRACKER.md` — current status of all ideas, which iteration each is on, blockers
    - **If this file does not exist**, create it using the format in the TRACKER.md FORMAT section below, seeded from the leaderboard's top N ideas.
@@ -163,16 +165,35 @@ Do NOT update TRACKER.md — the orchestrator handles that.
 3. For EACH active idea, read its `docs/plan.md` (if it exists) — what phase we're in, what's the next deliverable
    - **If this file does not exist**, the agent brief should say "PLAN this idea (Step 1)".
 
-**Based on the read, prepare agent briefs:**
+### 0B) Display status dashboard (output to user — NO input needed, NO waiting)
+
+**Before spawning agents, output this dashboard as text so the user sees progress. Then immediately proceed to spawn agents — do NOT wait for user input.**
+
+```
+## /implement iteration — [DATE]
+
+| # | Idea | Status | Phase | Iteration | MVP | Next Deliverable | Blocker |
+|---|------|--------|-------|:---------:|:---:|-----------------|---------|
+| 1 | DriftWatch | BUILDING | Phase 1 | 4 | 3/10 | Build crawler service | None |
+| 2 | Freight TMS | PLANNING | — | 1 | 0/10 | Scaffold monorepo | None |
+| 3 | Acquisition | SCOUTING | — | 2 | 0/5 | Research targets | None |
+
+Spawning 3 agents in parallel...
+```
+
+Fill in actual values from TRACKER.md and audit-logs. The MVP column shows checklist progress (X/10 for builds, X/5 for acquisition). Then immediately proceed — this is a status display, not a prompt.
+
+### 0C) Prepare agent briefs and spawn
+
 - For each active idea: determine its iteration number, current status, next deliverable, applicable skill
 - Determine which step each agent should execute (Plan vs Build vs Quality Gate)
-- **Then spawn ALL agents in parallel using a single message with multiple Agent tool calls**
+- **Then spawn ALL agents in parallel using a single message with multiple Agent tool calls — do NOT wait for user input between the dashboard and the spawn**
 
 ---
 
 ## AVAILABLE SKILLS (invoke via the Skill tool)
 
-You have access to specialized skills that produce higher-quality output than doing it manually. **But skills are heavy — max ONE skill invocation per loop iteration.** Pick the one that adds the most value for the current deliverable.
+You have access to specialized skills that produce higher-quality output than doing it manually. **Max ONE skill per agent per iteration.** The orchestrator assigns the skill in each agent's brief.
 
 ### CRITICAL RULE: One skill per agent per iteration
 Each skill is a full analysis/generation pass. Each agent should invoke at most ONE skill per iteration. The orchestrator assigns the skill in the agent brief based on the deliverable. **Since agents run in parallel, up to N skills can run simultaneously (one per agent).**
@@ -219,6 +240,12 @@ In the audit-log, note: `Skills used: [skill-name]` or `Skills used: none`. This
 
 ---
 
+## AGENT INSTRUCTIONS (Steps 1-4 below are what each AGENT executes — passed via the brief)
+
+The orchestrator does NOT execute these steps directly. They are included here as the specification for what agents do. The orchestrator copies the relevant step into each agent's brief.
+
+---
+
 ## STEP 1: PLAN (first iteration for a given idea only)
 
 **Trigger:** The idea has no project folder, OR has a folder but no `docs/plan.md`.
@@ -259,8 +286,8 @@ In the audit-log, note: `Skills used: [skill-name]` or `Skills used: none`. This
    ### Blockers
    - None
    ```
-8. **Update `research/implementation/TRACKER.md`**: status → `PLANNING`, last iteration → today + iter 1
-9. **STOP.** Do NOT write application code in the planning iteration. Plan first, build next.
+8. **STOP.** Do NOT write application code in the planning iteration. Plan first, build next.
+   *(The orchestrator will update TRACKER.md after this agent returns.)*
 
 ### Special handling: Acquisition Play
 If one of the top N ideas is an acquisition play (not a build):
@@ -309,11 +336,11 @@ After writing code, answer these questions in the audit-log:
 
 ---
 
-## STEP 4: UPDATE TRACKING (every iteration, non-negotiable)
+## STEP 4: AGENT WRITES ITS OWN TRACKING (every iteration, non-negotiable)
 
-Write ALL of the following before ending the iteration:
+Each agent writes to its OWN project files only. **Do NOT touch TRACKER.md** — the orchestrator handles that after all agents return.
 
-### A) `docs/audit-log.md` — append new entry:
+### A) `projects/<name>/docs/audit-log.md` — append new entry:
 ```markdown
 ## Iteration N — YYYY-MM-DD
 ### What was done
@@ -324,6 +351,7 @@ Write ALL of the following before ending the iteration:
 - Build: PASS/FAIL (apps/web: ✓/✗, apps/api: ✓/✗)
 - Feature works: YES/NO — [details]
 - Security: [any issues found]
+- Skills used: [skill-name or "none"]
 - MVP checklist: X/10 complete
 ### What's next
 - [THE single next deliverable — be specific]
@@ -331,15 +359,11 @@ Write ALL of the following before ending the iteration:
 - [anything preventing progress, or "None"]
 ```
 
-### B) `docs/plan.md` — check off completed deliverables
+### B) `projects/<name>/docs/plan.md` — check off completed deliverables
 
-### C) `research/implementation/TRACKER.md` — update the row for this idea:
-- Status column: current status
-- Phase column: current phase
-- Last Iteration column: today's date + iteration number
-- Blockers column: current blockers or "None"
+### C) The orchestrator reads the above after all agents return, then updates TRACKER.md
 
-### D) Check for MVP completion:
+### D) Check for MVP completion (orchestrator reads this from audit-log):
 Count against this checklist:
 - [ ] Core feature works end-to-end (not just UI, the actual workflow)
 - [ ] Landing page exists (Next.js + shadcn/ui + Tailwind) with clear value prop, pricing, and CTA
@@ -368,6 +392,31 @@ Track gate progress in audit-log: `Quality gates: 3/5 passed`
 3. Next iteration for this idea: invoke `launch-strategy` skill
 4. Following iteration: invoke `social-content` skill
 5. If ALL N ideas are MVP_COMPLETE or KILLED → output `[LOOP_COMPLETE]` at the very end of your response
+
+---
+
+## STEP 5: ORCHESTRATOR CONSOLIDATION (after all agents return)
+
+This is what YOU (the orchestrator) do after all parallel agents complete. **Do NOT ask the user for input — proceed automatically.**
+
+1. **Read each idea's updated `docs/audit-log.md`** — extract status, MVP score, blockers, what's next
+2. **Update `research/implementation/TRACKER.md`** with consolidated data:
+   - Status column: derive from audit-log (PLANNING if just planned, BUILDING if code written, etc.)
+   - Phase column: current phase from plan.md
+   - Last Iteration column: today's date + idea's iteration number
+   - Blockers column: from audit-log
+3. **Output a results summary** (no user input needed):
+   ```
+   ## Results
+
+   | # | Idea | Did | MVP | Next |
+   |---|------|-----|:---:|------|
+   | 1 | DriftWatch | Built crawler service | 4/10 | Dashboard page |
+   | 2 | Freight TMS | Wrote plan + scaffolded | 0/10 | pnpm install + first migration |
+   | 3 | Acquisition | Researched 2 targets | 1/5 | Due diligence on Target A |
+   ```
+4. **Check completion**: if ALL ideas are MVP_COMPLETE or KILLED → output `[LOOP_COMPLETE]`
+5. **Commit tracking updates** if any research/ files changed: `git add research/ && git commit -m "update implementation tracker"`
 
 ---
 
