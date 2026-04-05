@@ -6,9 +6,9 @@ Last updated: 2026-04-05
 
 | # | Idea | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|--------|--------|-------|---------------|----------|
-| 1 | DriftWatch — API dependency change monitor | projects/driftwatch/ | BUILDING | Phase 1 | 2026-04-05 (#2) | None |
-| 2 | Freight Broker Micro-TMS | projects/freight-tms/ | BUILDING | Phase 1 | 2026-04-05 (#2) | None (schema done, ready for API endpoints) |
-| 3 | Acquisition Play — buy underperforming extension | projects/acquisition-play/ | SCOUTING | — | 2026-04-05 (#2) | Both WORTH_EXPLORING candidates eliminated, sub-$5K market too thin |
+| 1 | DriftWatch — API dependency change monitor | projects/driftwatch/ | BUILDING | Phase 1 | 2026-04-05 (#3) | None |
+| 2 | Freight Broker Micro-TMS | projects/freight-tms/ | BUILDING | Phase 1 | 2026-04-05 (#3) | None |
+| 3 | Acquisition Play — buy underperforming extension | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
 
 ## Status Key
 - `NOT_STARTED` — idea selected, no work done yet
