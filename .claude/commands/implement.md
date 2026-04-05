@@ -85,17 +85,28 @@ This command is designed for `/loop 30m /implement --ideas 3`. Each invocation i
 ### Iteration lifecycle (every single run):
 ```
 ORCHESTRATOR: Read TRACKER.md
+  → Count active ideas (not KILLED, not STABLE)
+  → If active < N: backfill from leaderboard (next unstarted idea → PLAN)
   → Spawn Agent 1 (Idea #1) ─┐
   → Spawn Agent 2 (Idea #2) ─┼─ ALL run in PARALLEL via Agent tool
   → Spawn Agent 3 (Idea #3) ─┘
   ← Collect results from all agents
   → Update TRACKER.md with consolidated status
-  → Check if all ideas are MVP_COMPLETE or KILLED → output [LOOP_COMPLETE] if so
 ```
 
+### Backfilling killed/stable slots (CRITICAL — always maintain N active ideas):
+When an idea is KILLED or STABLE, **it does NOT reduce the number of active slots.** The orchestrator must:
+1. Count active ideas in TRACKER.md (any status except KILLED and STABLE)
+2. If active count < N (the `--ideas N` argument):
+   - Read `research/reports/2026-04-04-idea-leaderboard.md` for the next highest-scoring idea NOT already in TRACKER.md
+   - Add it to TRACKER.md with status `NOT_STARTED`
+   - The agent for that idea will execute Step 1 (PLAN) this iteration
+3. If the leaderboard is exhausted (all ideas already tried or killed), invoke `/research-ideas` logic inline to find a new idea — or note "no ideas available" and run with fewer agents
+4. **Never leave empty slots.** 3 ideas means 3 agents running every iteration, always.
+
 ### Orchestrator responsibilities (you — the main process):
-1. **Read TRACKER.md** — determine status of all N ideas
-2. **For each active idea** (not KILLED, not MVP_COMPLETE), **spawn one Agent** using the Agent tool:
+1. **Read TRACKER.md** — determine status of all ideas, backfill if active count < N
+2. **For each active idea** (not KILLED, not STABLE), **spawn one Agent** using the Agent tool:
    - Pass the agent a complete brief: idea name, folder path, current status, last iteration's "What's next", blockers, which step to execute (Plan or Build), and the relevant skill to invoke if applicable
    - Set `isolation: "worktree"` is NOT needed — each agent works in its own `projects/<name>/` folder, so they don't conflict
    - **Launch ALL agents in a SINGLE message** (parallel tool calls) — do NOT wait for one to finish before starting the next
@@ -148,6 +159,7 @@ Do NOT update TRACKER.md — the orchestrator handles that.
 ### When to skip an idea (don't spawn an agent):
 - Status is `STABLE` — reached diminishing returns, no agent needed
 - Status is `KILLED` — dead, no agent needed
+- **But don't leave the slot empty** — backfill with the next idea from the leaderboard (see "Backfilling" above)
 
 ---
 
