@@ -6,8 +6,8 @@ Last updated: 2026-04-05
 
 | # | Idea | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|--------|--------|-------|---------------|----------|
-| 1 | DriftWatch — API dependency change monitor | projects/driftwatch/ | BUILDING | Phase 2 | 2026-04-05 (#6) | None |
-| 2 | Freight Broker Micro-TMS | projects/freight-tms/ | BUILDING | Phase 2 | 2026-04-05 (#6) | None |
+| 1 | DriftWatch — API dependency change monitor | projects/driftwatch/ | BUILDING | Phase 2 | 2026-04-05 (#7) | None |
+| 2 | Freight Broker Micro-TMS | projects/freight-tms/ | BUILDING | Phase 2 | 2026-04-05 (#7) | None |
 | 3 | Acquisition Play — buy underperforming extension | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
 
 ## Status Key
