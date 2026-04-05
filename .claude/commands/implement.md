@@ -76,50 +76,97 @@ projects/<project>/
 
 ---
 
-## LOOP EXECUTION MODEL
+## LOOP EXECUTION MODEL — PARALLEL AGENTS
 
-This command is designed for `/loop 30m /implement --ideas 3`. Each invocation is ONE iteration. The loop runs every 30 minutes. **You have NO memory of previous iterations** — the tracking files ARE your memory.
+This command is designed for `/loop 30m /implement --ideas 3`. Each invocation is ONE iteration. The `--ideas N` argument means **ALL N ideas are worked on in parallel** — one agent per idea.
+
+**You have NO memory of previous iterations** — the tracking files ARE your memory.
 
 ### Iteration lifecycle (every single run):
 ```
-READ STATE → DETECT ITERATION # → PICK ONE IDEA → BUILD OR PLAN → AUDIT → UPDATE ALL TRACKING → DONE
+ORCHESTRATOR: Read TRACKER.md
+  → Spawn Agent 1 (Idea #1) ─┐
+  → Spawn Agent 2 (Idea #2) ─┼─ ALL run in PARALLEL via Agent tool
+  → Spawn Agent 3 (Idea #3) ─┘
+  ← Collect results from all agents
+  → Update TRACKER.md with consolidated status
+  → Check if all ideas are MVP_COMPLETE or KILLED → output [LOOP_COMPLETE] if so
+```
+
+### Orchestrator responsibilities (you — the main process):
+1. **Read TRACKER.md** — determine status of all N ideas
+2. **For each active idea** (not KILLED, not MVP_COMPLETE), **spawn one Agent** using the Agent tool:
+   - Pass the agent a complete brief: idea name, folder path, current status, last iteration's "What's next", blockers, which step to execute (Plan or Build), and the relevant skill to invoke if applicable
+   - Set `isolation: "worktree"` is NOT needed — each agent works in its own `projects/<name>/` folder, so they don't conflict
+   - **Launch ALL agents in a SINGLE message** (parallel tool calls) — do NOT wait for one to finish before starting the next
+3. **After all agents return**, read each idea's updated `docs/audit-log.md` and consolidate into TRACKER.md
+4. **Check completion** — if all ideas are MVP_COMPLETE or KILLED, output `[LOOP_COMPLETE]`
+
+### Agent brief template (what you pass to each spawned agent):
+```
+You are building the MVP for [IDEA NAME].
+
+## Current state
+- Folder: projects/[folder]/
+- Status: [from TRACKER.md]
+- Last iteration did: [from audit-log "What was done"]
+- Next task: [from audit-log "What's next"]
+- Blockers: [from audit-log or "None"]
+
+## What to do this iteration
+[Either PLAN (Step 1) or BUILD (Step 2) — be specific about the deliverable]
+
+## Skill to invoke (if applicable)
+[The ONE skill for this deliverable, or "None"]
+
+## Tech stack (mandatory)
+[Include the full tech stack rules from this command]
+
+## When done
+Write your results to:
+1. projects/[folder]/docs/audit-log.md — append iteration entry
+2. projects/[folder]/docs/plan.md — check off completed items
+Do NOT update TRACKER.md — the orchestrator handles that.
 ```
 
 ### How to determine iteration number:
-1. Read `research/implementation/TRACKER.md` — check "Last iteration" column
-2. Read the active idea's `docs/audit-log.md` — count existing `## Iteration N` headers
-3. Next iteration = max(existing) + 1
-4. If no audit-log exists, this is iteration 1
+1. Read `research/implementation/TRACKER.md` — check "Last iteration" column for each idea
+2. For each idea, read its `docs/audit-log.md` — count existing `## Iteration N` headers
+3. Each idea has its OWN iteration counter (they progress independently)
+4. If no audit-log exists for an idea, it's iteration 1 for that idea
 
-### Scope per iteration:
-- **Focus on ONE idea per loop cycle** (not all N). Pick the one that needs the most attention.
-- **One meaningful deliverable per cycle.** Examples: "NestJS project scaffolded with Prisma + first migration", "changelog crawler service working for 3 APIs", "landing page hero + pricing section done". NOT "scaffolded 3 projects" or "planned all ideas."
-- **If the last iteration left something broken, fix it FIRST** before new work. Read the audit-log's "Blockers" section from the previous iteration.
+### Scope per agent per iteration:
+- **One meaningful deliverable per agent.** Examples: "NestJS project scaffolded with Prisma + first migration", "changelog crawler service working for 3 APIs", "landing page hero + pricing section done".
+- **If the last iteration left something broken, the agent fixes it FIRST** before new work.
+- **Max ONE skill invocation per agent** — skills are heavy.
 
-### Idea rotation strategy:
-- Default: round-robin (idea 1, then 2, then 3, then 1 again...)
-- Exception: if an idea has a blocker, skip it and note in TRACKER.md
-- Exception: if an idea is close to MVP_COMPLETE (6+ of 10 checklist items done), focus on it until done
-- **Never let any idea stall for 3+ consecutive skips** — address the blocker or kill the idea
+### Handling agent failures:
+- If an agent errors or times out, note it as a blocker in TRACKER.md for that idea
+- The other agents' work is NOT affected — they run independently
+- Next iteration will retry the failed idea
+
+### When to skip an idea (don't spawn an agent):
+- Status is `MVP_COMPLETE` — done, no agent needed
+- Status is `KILLED` — dead, no agent needed
+- Status is `LAUNCHED` — post-launch, no agent needed
 
 ---
 
-## STEP 0: READ STATE (mandatory, every iteration)
+## STEP 0: ORCHESTRATOR READS STATE (mandatory, every iteration)
 
-**You MUST read these files before doing ANYTHING else:**
+**You MUST read these files before spawning any agents:**
 
 1. `research/implementation/TRACKER.md` — current status of all ideas, which iteration each is on, blockers
    - **If this file does not exist**, create it using the format in the TRACKER.md FORMAT section below, seeded from the leaderboard's top N ideas.
-2. The active idea's `docs/audit-log.md` (if it exists) — what was done last time, what's next, what's broken
-   - **If this file does not exist**, this idea needs planning (Step 1).
-3. The active idea's `docs/plan.md` (if it exists) — what phase we're in, what's the next deliverable
-   - **If this file does not exist**, this idea needs planning (Step 1).
+2. For EACH active idea, read its `docs/audit-log.md` (if it exists) — what was done last time, what's next, what's broken
+   - **If this file does not exist**, the agent brief should say "PLAN this idea (Step 1)".
+3. For EACH active idea, read its `docs/plan.md` (if it exists) — what phase we're in, what's the next deliverable
+   - **If this file does not exist**, the agent brief should say "PLAN this idea (Step 1)".
 
-**Based on the read, decide:**
-- Which idea to work on this iteration (round-robin by "Last Iteration" column — pick the idea with the oldest/no date)
-- The global iteration number (count ALL `## Iteration N` entries across ALL audit-logs, take max + 1)
-- Whether there are blockers from last iteration to fix first
-- What the SINGLE deliverable for this iteration should be
+**Based on the read, prepare agent briefs:**
+- For each active idea: determine its iteration number, current status, next deliverable, applicable skill
+- Determine which step each agent should execute (Plan vs Build vs Quality Gate)
+- **Then spawn ALL agents in parallel using a single message with multiple Agent tool calls**
 
 ---
 
@@ -127,8 +174,8 @@ READ STATE → DETECT ITERATION # → PICK ONE IDEA → BUILD OR PLAN → AUDIT 
 
 You have access to specialized skills that produce higher-quality output than doing it manually. **But skills are heavy — max ONE skill invocation per loop iteration.** Pick the one that adds the most value for the current deliverable.
 
-### CRITICAL RULE: One skill per iteration
-Each skill is a full analysis/generation pass. Invoking 2+ skills in a 30-min loop cycle will eat all the time and produce no actual code. **Pick the single most impactful skill for the deliverable you're building, invoke it, apply its output, then move on.**
+### CRITICAL RULE: One skill per agent per iteration
+Each skill is a full analysis/generation pass. Each agent should invoke at most ONE skill per iteration. The orchestrator assigns the skill in the agent brief based on the deliverable. **Since agents run in parallel, up to N skills can run simultaneously (one per agent).**
 
 ### Skill → Deliverable mapping (use ONLY when building that specific thing):
 
@@ -368,13 +415,15 @@ Last updated: YYYY-MM-DD
 
 ## IMPORTANT RULES
 
-1. **ONE idea, ONE deliverable per loop cycle.** This is the most important rule. Don't scatter across ideas or try to do multiple things. Depth > breadth.
-2. **Tracking files are your ONLY memory.** Read them thoroughly at the start. Write them thoroughly at the end. If it's not in the files, it didn't happen.
-3. **Fix broken things before building new things.** If the audit-log shows a FAIL or blocker, address it first.
-4. **Landing page is NOT optional.** It ships in Phase 2, before polish. No landing page = no customers = dead product.
-5. **Working > perfect.** An ugly feature that works beats a beautiful one that doesn't.
-6. **Never let any idea stall 3+ iterations.** If blocked, either solve the blocker or kill the idea with a reason in TRACKER.md.
-7. **If an idea hits a fundamental blocker** (API doesn't exist, legal issue, technical impossibility), update TRACKER.md with status `KILLED` and the reason, then move to the next idea.
-8. **Respect project boundaries** — each idea is its own folder. Don't mix code across projects.
-9. **Check Plata (projects/costs-tracker/) for patterns** — it's the reference implementation for how Jobelo ships products. Match its doc structure.
-10. **When all ideas reach MVP_COMPLETE or KILLED**, output `[LOOP_COMPLETE]` so the loop gets cancelled.
+1. **ALL active ideas run in PARALLEL every iteration.** Spawn one agent per idea in a single message. This is the core execution model.
+2. **Each agent: ONE deliverable, max ONE skill.** Agents work independently within their own `projects/<name>/` folder.
+3. **Agents write their own audit-logs. Orchestrator writes TRACKER.md.** This avoids write conflicts. Agents must NOT touch TRACKER.md.
+4. **Tracking files are the ONLY memory.** Read them thoroughly at the start. Write them thoroughly at the end. If it's not in the files, it didn't happen.
+5. **Fix broken things before building new things.** If an agent's audit-log shows a FAIL or blocker, its next iteration brief should say "fix this first."
+6. **Landing page is NOT optional.** It ships in Phase 2, before polish. No landing page = no customers = dead product.
+7. **Working > perfect.** An ugly feature that works beats a beautiful one that doesn't.
+8. **Never let any idea stall 3+ iterations.** If blocked, either solve the blocker or kill the idea with a reason in TRACKER.md.
+9. **If an idea hits a fundamental blocker** (API doesn't exist, legal issue, technical impossibility), the agent should note it in audit-log and the orchestrator updates TRACKER.md with status `KILLED` and reason.
+10. **Respect project boundaries** — each idea is its own folder. Agents must NOT modify files outside their assigned `projects/<name>/` folder.
+11. **Check Plata (projects/costs-tracker/) for patterns** — it's the reference implementation for how Jobelo ships products. Match its doc structure.
+12. **When all ideas reach MVP_COMPLETE or KILLED**, output `[LOOP_COMPLETE]` so the loop gets cancelled.
