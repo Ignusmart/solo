@@ -2,7 +2,7 @@
 
 > **Purpose**: Permanent record of ideas that have been researched and rejected. Any future research session MUST check this file first to avoid re-exploring dead ideas.
 >
-> **Last updated**: 2026-04-05 (after 13 discovery iterations + deep adversarial reviews)
+> **Last updated**: 2026-04-05 (after 17 discovery iterations + deep adversarial reviews)
 
 ---
 
@@ -319,15 +319,24 @@ Use these as pre-filters for future research:
 - Screenshot-to-docs automation — AI wrapper risk, too niche
 - OTA updates for React Native — Expo dominates ecosystem
 - AI business generators (FounderPal adjacent) — AI wrapper kill filter, ChatGPT substitute
+- Acquisition Play (buy underperforming extension) — sub-$5K market depleted, 8 marketplaces scanned, 8/8 candidates eliminated. Build > buy at this budget.
 
-## Stats (16 iterations)
+### Iteration 17 Kills (fresh 2026 signals — HN/PH/IH/G2/compliance)
+- CI Smart Test Selector — Launchable acquired by CloudBees ($12.7M), Trunk $28.5M (a16z), Datadog TIA native, CircleCI building natively. Platform absorption.
+- Automated SOP Generator — 9+ tools (Waybook, Trainual, Scribe, Tango). Saturated.
+- Trades CRM (plumbers/HVAC) — offline-first buyers (kill filter #17), ServiceTitan/Housecall Pro exist
+- Professional Services Capacity Planning — high-touch sales (kill filter #18), Resource Guru/Float/Forecast exist
+- (Also re-confirmed kills: compliance questionnaire 13+ tools, EU AI Act 13+ tools, AI spend 10+ tools, dunning 8+ tools)
 
-- **Total ideas considered**: 190+
-- **Total verticals scanned**: 58+
+## Stats (17 iterations)
+
+- **Total ideas considered**: 198+
+- **Total verticals scanned**: 60+
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
-- **Ideas deep-dived**: 43+
+- **Ideas deep-dived**: 47+
 - **Ideas surviving above bar**: DriftWatch at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as DriftWatch feature)
 - **Best surviving idea**: DriftWatch (API dependency change monitoring) — BEING BUILT, 6/10 MVP
+- **Research status**: EXHAUSTED after 17 iterations. No new viable ideas found in last 5 iterations.
 
 ---
 
