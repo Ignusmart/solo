@@ -49,6 +49,15 @@ One line per idea. Details in iteration reports.
 - Google Business Profile Audit — Merchynt free audit. BrightLocal $39/mo. SaaS territory.
 - Lien Waiver Generators — Built and Terms.Law both free. No pricing power.
 
+### Payroll/Tax Adjacent
+- Overtime Calculators — 10+ free tools (Omni Calculator, Connecteam, Good Calculators). Zero pricing power.
+- Sales Tax Calculators — Shopify built-in. Avalara/TaxJar dominate ($19/mo-$19K/yr). Platform gives it away.
+- P&L Statement Generators — Tyms free, QuickBooks/FreshBooks/Bench templates free. Kill.
+- W-9 Form Generators — IRS free PDF. Adobe, CreateW9, SmallPDF, DocuSign all free.
+- Donation Receipt Generators — Zeffy 100% free, Givebutter free. Fundraising platforms bundle this.
+- 1099/W-2 E-Filing — TaxBandits $2.75/form. Requires IRS integration. Too complex + seasonal.
+- BOI/CTA Reports — US companies EXEMPT as of March 2025 interim rule. Market killed by regulation.
+
 ### Calculators & Estimators
 - Moving Cost Calculators — Lead-gen tools for movers. moveBuddha, Allied, Extra Space all free.
 - Wedding Budget Calculators — All free (YourWeddingCompany, Centric Events, Smarty Pig).
@@ -68,6 +77,12 @@ One line per idea. Details in iteration reports.
 - Email Signature Generators — 10+ tools at $5-11/mo. Already killed in SaaS research.
 - 1099/W-2 Form Generators — Otto AI free, Jotform free. TaxBandits $2.75/form for e-filing. Seasonal + complex compliance.
 - Privacy/GDPR Cookie Audit — CookieYes free, Termly free. Cookiebot subscription. No pay-per-scan model.
+- Nutrition Label Generators — OnlineLabels, Packify, ePackageSupply all free. FDA-compliant templates available.
+- PDF Watermark/Protect Tools — iLovePDF, PDF Candy, GroupDocs all free. PDF Stamping at 1.5¢/page race to zero.
+- PDF Accessibility Remediation — EqualWeb $1-4/page. But too technically complex for 1-week MVP (4-8 week build).
+- Rent Receipt Generators — Free everywhere. Rent not federally tax-deductible. Low value.
+- Code Review/Security Scan — SaaS territory ($9-30/dev/mo). 28+ OSS tools (SonarQube, Semgrep). Dev tools go free.
+- Construction Estimating — Complex SaaS ($100-950/mo per user). Not utility tool shaped.
 
 ---
 
@@ -82,3 +97,4 @@ One line per idea. Details in iteration reports.
 7. **The AI wave made building trivial — competition is the real problem.** Any solo dev can build any "X generator" in a weekend. The bottleneck is distribution and differentiation, not engineering.
 8. **Calculators/estimators are lead-gen tools, not products.** Moving, wedding, tax, tariff calculators exist as free lead-gen for service companies (movers, wedding planners, CPAs). They monetize through leads, not direct payment. Can't compete with free.
 9. **Compliance-gated tools are the EXCEPTION to "free kills everything."** When getting the calculation wrong has legal/financial consequences (IRS paystubs, tax withholding), users pay for accuracy even when free versions exist. This is the strongest pattern found so far.
+10. **Most compliance documents still fail because IRS/government provides free fillable forms.** W-9, W-4, I-9 — all available free from IRS. The paystub pattern only works because paystubs require COMPUTATION (tax withholding across 50 states), not just form-filling. Compliance + computation = pricing power. Compliance alone ≠ pricing power.

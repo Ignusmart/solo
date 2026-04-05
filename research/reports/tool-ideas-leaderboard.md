@@ -18,5 +18,6 @@ Ranked by post-adversarial score. Must score 16+ to be considered viable for a b
 
 ## Iteration History
 
+- **Iteration 3** (2026-04-05): Explored 15+ more compliance-adjacent and technical categories. All killed. StubSnap remains the clear winner after 50+ categories and 40+ kills. **Recommendation: proceed to build.**
 - **Iteration 2** (2026-04-05): Explored B2B, seasonal, compliance tools. 13+ ideas killed. StubSnap scored 17/25 — FIRST to hit build threshold. Key discovery: compliance-gated tools create pricing power.
 - **Iteration 1** (2026-04-05): Explored 25+ categories. 25+ ideas killed. Best score: 15/25 (ClipCast). Key finding: AI boom has saturated all obvious utility tool categories.

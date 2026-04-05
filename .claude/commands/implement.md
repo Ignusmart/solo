@@ -51,8 +51,23 @@ projects/<project>/
 └── .env.example
 ```
 
+### Simplified structure for Tool-type ideas
+Utility tools (from `/research-tool-ideas`) are simpler than SaaS — they may not need a full monorepo. If the tool is a single Next.js app with API routes (no separate NestJS backend), use this lighter structure:
+```
+projects/<tool>/
+├── app/              # Next.js App Router (frontend + API routes)
+├── docs/
+│   ├── plan.md
+│   └── audit-log.md
+├── CLAUDE.md
+├── README.md
+├── package.json
+└── .env.example
+```
+Use the full monorepo structure (apps/web + apps/api) only if the tool needs a separate backend service (e.g., heavy background processing, queue workers, separate API for third-party integrations). The agent decides during PLAN (Step 1) based on the tool's requirements.
+
 ### Stack Rules
-- **Monorepo per idea** using pnpm workspaces (consistent with Plata pattern)
+- **Monorepo per idea** using pnpm workspaces for SaaS ideas (consistent with Plata pattern). Tool ideas may use a simpler single-package structure (see above).
 - **No Python backends** — use NestJS even for developer tools (keep stack uniform)
 - Python is OK for one-off scripts, data processing, or CLI tools that don't need a web API
 - **No Supabase Auth or Firebase Auth** — use NextAuth.js (Auth.js) in the Next.js app or a custom JWT flow in NestJS
@@ -66,7 +81,11 @@ projects/<project>/
 
 ### Master tracker:
 - `research/implementation/TRACKER.md` — implementation progress across all ideas (create if missing)
-- `research/reports/2026-04-04-idea-leaderboard.md` — source of truth for which ideas to build
+- `research/implementation/unified-leaderboard.md` — **unified leaderboard** combining SaaS + tool ideas (built by orchestrator each iteration)
+
+### Source leaderboards (read-only — maintained by research commands):
+- `research/reports/2026-04-04-idea-leaderboard.md` — SaaS ideas from `/research-ideas`
+- `research/reports/tool-ideas-leaderboard.md` — utility tool ideas from `/research-tool-ideas`
 
 ### Per-idea tracking (inside each project folder):
 - `projects/<project>/CLAUDE.md` — project context, architecture decisions, what NOT to do
@@ -85,8 +104,10 @@ This command is designed for `/loop 30m /implement --ideas 3`. Each invocation i
 ### Iteration lifecycle (every single run):
 ```
 ORCHESTRATOR: Read TRACKER.md
+  → Read BOTH source leaderboards (SaaS + tools)
+  → Build/update unified-leaderboard.md (merge, normalize scores, rank)
   → Count active ideas (not KILLED, not STABLE)
-  → If active < N: backfill from leaderboard (next unstarted idea → PLAN)
+  → If active < N: backfill from unified leaderboard (next unstarted idea → PLAN)
   → Spawn Agent 1 (Idea #1) ─┐
   → Spawn Agent 2 (Idea #2) ─┼─ ALL run in PARALLEL via Agent tool
   → Spawn Agent 3 (Idea #3) ─┘
@@ -98,10 +119,11 @@ ORCHESTRATOR: Read TRACKER.md
 When an idea is KILLED or STABLE, **it does NOT reduce the number of active slots.** The orchestrator must:
 1. Count active ideas in TRACKER.md (any status except KILLED and STABLE)
 2. If active count < N (the `--ideas N` argument):
-   - Read `research/reports/2026-04-04-idea-leaderboard.md` for the next highest-scoring idea NOT already in TRACKER.md
-   - Add it to TRACKER.md with status `NOT_STARTED`
+   - Read `research/implementation/unified-leaderboard.md` for the next highest-scoring idea NOT already in TRACKER.md
+   - The unified leaderboard contains BOTH SaaS and tool ideas — pick the highest-scoring regardless of type
+   - Add it to TRACKER.md with status `NOT_STARTED`, noting its type (`SaaS` or `Tool`) in the Type column
    - The agent for that idea will execute Step 1 (PLAN) this iteration
-3. If the leaderboard is exhausted (all ideas already tried or killed), invoke `/research-ideas` logic inline to find a new idea — or note "no ideas available" and run with fewer agents
+3. If the unified leaderboard is exhausted (all ideas already tried or killed), invoke `/research-ideas` or `/research-tool-ideas` logic inline to find a new idea — or note "no ideas available" and run with fewer agents
 4. **Never leave empty slots.** 3 ideas means 3 agents running every iteration, always.
 
 ### Orchestrator responsibilities (you — the main process):
@@ -165,15 +187,22 @@ Do NOT update TRACKER.md — the orchestrator handles that.
 
 ## STEP 0: ORCHESTRATOR READS STATE + DISPLAYS STATUS (mandatory, every iteration)
 
-### 0A) Read state
+### 0A) Read state and build unified leaderboard
 
 **You MUST read these files before doing anything:**
 
 1. `research/implementation/TRACKER.md` — current status of all ideas, which iteration each is on, blockers
-   - **If this file does not exist**, create it using the format in the TRACKER.md FORMAT section below, seeded from the leaderboard's top N ideas.
-2. For EACH active idea, read its `docs/audit-log.md` (if it exists) — what was done last time, what's next, what's broken
+   - **If this file does not exist**, create it using the format in the TRACKER.md FORMAT section below, seeded from the unified leaderboard's top N ideas.
+2. **Read BOTH source leaderboards and build/update the unified leaderboard:**
+   - Read `research/reports/2026-04-04-idea-leaderboard.md` (SaaS ideas from `/research-ideas`)
+   - Read `research/reports/tool-ideas-leaderboard.md` (utility tool ideas from `/research-tool-ideas`)
+   - Build/update `research/implementation/unified-leaderboard.md` by merging both sources (see UNIFIED LEADERBOARD FORMAT below)
+   - **Score normalization**: SaaS scores are out of /30 (with distribution dimensions weighted 2x). Tool scores are out of /25. Normalize both to a **percentage** for ranking: `(score / max) * 100`. Display both the original score and the normalized %.
+   - **Only include non-killed ideas** that score above the respective thresholds (22/30 for SaaS, 16/25 for tools) OR ideas already in TRACKER.md
+   - If neither leaderboard file exists, note "no ideas available" — run `/research-ideas` or `/research-tool-ideas` first
+3. For EACH active idea, read its `docs/audit-log.md` (if it exists) — what was done last time, what's next, what's broken
    - **If this file does not exist**, the agent brief should say "PLAN this idea (Step 1)".
-3. For EACH active idea, read its `docs/plan.md` (if it exists) — what phase we're in, what's the next deliverable
+4. For EACH active idea, read its `docs/plan.md` (if it exists) — what phase we're in, what's the next deliverable
    - **If this file does not exist**, the agent brief should say "PLAN this idea (Step 1)".
 
 ### 0A-bis) Ensure git is initialized in each active project folder
@@ -192,11 +221,11 @@ For each active idea, check if `projects/<name>/.git` exists. If NOT:
 ```
 ## /implement iteration — [DATE]
 
-| # | Idea | Status | Phase | Iteration | MVP | Next Deliverable | Blocker |
-|---|------|--------|-------|:---------:|:---:|-----------------|---------|
-| 1 | DriftWatch | BUILDING | Phase 1 | 4 | 3/10 | Build crawler service | None |
-| 2 | Freight TMS | PLANNING | — | 1 | 0/10 | Scaffold monorepo | None |
-| 3 | Acquisition | SCOUTING | — | 2 | 0/5 | Research targets | None |
+| # | Idea | Type | Status | Phase | Iteration | MVP | Next Deliverable | Blocker |
+|---|------|------|--------|-------|:---------:|:---:|-----------------|---------|
+| 1 | DriftWatch | SaaS | BUILDING | Phase 1 | 4 | 3/10 | Build crawler service | None |
+| 2 | ClipCast | Tool | PLANNING | — | 1 | 0/10 | Scaffold project | None |
+| 3 | Acquisition | — | SCOUTING | — | 2 | 0/5 | Research targets | None |
 
 Spawning 3 agents in parallel...
 ```
@@ -232,17 +261,9 @@ Each skill is a full analysis/generation pass. Each agent should invoke at most 
 | Data entry forms (e.g., freight load entry) | **`form-cro`** | Optimize non-signup forms for completion rate. |
 | Competitor positioning (planning phase) | **`competitive-teardown`** | Feature matrix + positioning insights for the 1-2 closest competitors. |
 
-### Pre-launch quality gates (one per iteration, run sequentially across iterations):
+### Pre-launch quality gates (10 gates — see Step 4E for the full table):
 
-When MVP checklist reaches 9/10 or 10/10, run these as **separate iterations** — one gate per cycle:
-
-| Gate | Skill | What it checks |
-|------|-------|---------------|
-| 1 | **`page-cro`** | Landing page conversion optimization |
-| 2 | **`seo-audit`** | Meta tags, structured data, performance |
-| 3 | **`a11y-audit`** | WCAG Level A/AA violations |
-| 4 | **`webapp-testing`** | Playwright smoke tests against running app |
-| 5 | **`simplify`** | Code quality review — reuse, efficiency, dead code |
+When MVP checklist reaches 9/10 or 10/10, run 10 polish gates — one gate per iteration. See the POLISHING section under Step 4E for the authoritative gate list.
 
 ### Launch phase (run after all 10 polish gates pass — see Step 6):
 
@@ -408,7 +429,7 @@ Each agent writes to its OWN project files only. **Do NOT touch TRACKER.md** —
 
 ### D) The orchestrator reads the above after all agents return, then updates TRACKER.md
 
-### D) Check for MVP completion (orchestrator reads this from audit-log):
+### E) Check for MVP completion (orchestrator reads this from audit-log):
 Count against this checklist:
 - [ ] Core feature works end-to-end (not just UI, the actual workflow)
 - [ ] Landing page exists (Next.js + shadcn/ui + Tailwind) with clear value prop, pricing, and CTA
@@ -442,8 +463,33 @@ Track gate progress in audit-log: `Polish gates: 7/10 passed`
 
 **When 10/10 MVP checklist AND 10/10 polish gates passed:**
 1. Update TRACKER.md: status → `MVP_COMPLETE`
-2. Update `research/reports/2026-04-04-idea-leaderboard.md` with `[MVP SHIPPED]` tag
+2. Update `research/implementation/unified-leaderboard.md` with `[MVP SHIPPED]` tag (and the corresponding source leaderboard)
 3. Proceed to LAUNCH phase (Step 6)
+
+---
+
+## STEP 5: ORCHESTRATOR CONSOLIDATION (after all agents return)
+
+This is what YOU (the orchestrator) do after all parallel agents complete. **Do NOT ask the user for input — proceed automatically.**
+
+1. **Read each idea's updated `docs/audit-log.md`** — extract status, MVP score, blockers, what's next
+2. **Update `research/implementation/TRACKER.md`** with consolidated data:
+   - Status column: derive from audit-log (PLANNING if just planned, BUILDING if code written, etc.)
+   - Phase column: current phase from plan.md
+   - Last Iteration column: today's date + idea's iteration number
+   - Blockers column: from audit-log
+3. **Output a results summary** (no user input needed):
+   ```
+   ## Results
+
+   | # | Idea | Type | Did | MVP | Next |
+   |---|------|------|-----|:---:|------|
+   | 1 | DriftWatch | SaaS | Built crawler service | 4/10 | Dashboard page |
+   | 2 | ClipCast | Tool | Wrote plan + scaffolded | 0/10 | Build audio processor |
+   | 3 | Acquisition | — | Researched 2 targets | 1/5 | Due diligence on Target A |
+   ```
+4. **Check completion**: if ALL ideas are STABLE or KILLED → output `[LOOP_COMPLETE]`. Note: MVP_COMPLETE, LAUNCHING, LAUNCHED, and GROWING are all ACTIVE statuses — the loop keeps running through polish, launch, and V2/growth phases.
+5. **Commit tracking updates** if any research/ files changed: `git add research/ && git commit -m "update implementation tracker"`
 
 ---
 
@@ -518,28 +564,40 @@ Even then, `[LOOP_COMPLETE]` is a suggestion — the loop can be restarted anyti
 
 ---
 
-## STEP 5: ORCHESTRATOR CONSOLIDATION (after all agents return)
+## UNIFIED LEADERBOARD FORMAT
 
-This is what YOU (the orchestrator) do after all parallel agents complete. **Do NOT ask the user for input — proceed automatically.**
+The unified leaderboard lives at `research/implementation/unified-leaderboard.md`. It is **built by the orchestrator** each iteration by merging both source leaderboards. Research commands do NOT write to this file.
 
-1. **Read each idea's updated `docs/audit-log.md`** — extract status, MVP score, blockers, what's next
-2. **Update `research/implementation/TRACKER.md`** with consolidated data:
-   - Status column: derive from audit-log (PLANNING if just planned, BUILDING if code written, etc.)
-   - Phase column: current phase from plan.md
-   - Last Iteration column: today's date + idea's iteration number
-   - Blockers column: from audit-log
-3. **Output a results summary** (no user input needed):
-   ```
-   ## Results
+```markdown
+# Unified Leaderboard
 
-   | # | Idea | Did | MVP | Next |
-   |---|------|-----|:---:|------|
-   | 1 | DriftWatch | Built crawler service | 4/10 | Dashboard page |
-   | 2 | Freight TMS | Wrote plan + scaffolded | 0/10 | pnpm install + first migration |
-   | 3 | Acquisition | Researched 2 targets | 1/5 | Due diligence on Target A |
-   ```
-4. **Check completion**: if ALL ideas are STABLE or KILLED → output `[LOOP_COMPLETE]`. Note: MVP_COMPLETE, LAUNCHING, LAUNCHED, and GROWING are all ACTIVE statuses — the loop keeps running through polish, launch, and V2/growth phases.
-5. **Commit tracking updates** if any research/ files changed: `git add research/ && git commit -m "update implementation tracker"`
+Last updated: YYYY-MM-DD
+
+Merged from:
+- `research/reports/2026-04-04-idea-leaderboard.md` (SaaS, /30 scale)
+- `research/reports/tool-ideas-leaderboard.md` (Tools, /25 scale)
+
+## Ranked Ideas (normalized to %)
+
+| Rank | Idea | Type | Raw Score | Normalized | Source | Status | Summary |
+|------|------|------|-----------|:----------:|--------|--------|---------|
+| 1 | DriftWatch | SaaS | 17/30 | 57% | SaaS leaderboard | IN_TRACKER | API dependency monitor |
+| 2 | ClipCast | Tool | 15/25 | 60% | Tool leaderboard | AVAILABLE | Podcast clip finder |
+| ... | ... | ... | ... | ... | ... | ... | ... |
+
+## Notes
+- Status: `AVAILABLE` (can be picked), `IN_TRACKER` (already being built), `KILLED`, `SHIPPED`
+- Ideas below threshold (SaaS <22/30, Tools <16/25) are excluded unless already in TRACKER
+- Ties broken by: SaaS ideas first (higher revenue ceiling), then by raw score
+```
+
+**Building rules:**
+1. Read both source leaderboards — extract all non-killed ideas
+2. Normalize: SaaS `score/30 * 100`, Tools `score/25 * 100`
+3. Include ideas **below threshold** if they're already in TRACKER.md (they were picked before the rules tightened)
+4. Mark status: check TRACKER.md — if idea is there, mark `IN_TRACKER`; if killed in TRACKER, mark `KILLED`
+5. Sort by normalized score descending. Ties: SaaS first (higher MRR ceiling)
+6. Write to `research/implementation/unified-leaderboard.md`
 
 ---
 
@@ -554,9 +612,9 @@ Last updated: YYYY-MM-DD
 
 ## Active Ideas
 
-| # | Idea | Folder | Status | Phase | Last Iteration | Blockers |
-|---|------|--------|--------|-------|---------------|----------|
-| 1 | [idea name] | [folder]/ | NOT_STARTED | — | — | None |
+| # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
+|---|------|------|--------|--------|-------|---------------|----------|
+| 1 | [idea name] | SaaS | [folder]/ | NOT_STARTED | — | — | None |
 
 ## Status Key
 - `NOT_STARTED` — idea selected, no work done yet

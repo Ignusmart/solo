@@ -8,9 +8,9 @@ This is Jobelo's solo workspace: a collection of personal projects, entrepreneur
 solo/
 ├── CLAUDE.md                  # You are here
 ├── README.md                  # Project overview and status
-├── .claude/commands/          # Slash commands (/implement, /research-ideas)
+├── .claude/commands/          # Slash commands (/implement, /research-ideas, /research-tool-ideas, /ideas-status, /auto-audit)
 ├── research/                  # Strategy docs, market research, reports
-│   ├── strategy/              # Income strategy, ideas, playbooks (00-06 series)
+│   ├── strategy/              # Income strategy, ideas, playbooks (00-07 series)
 │   ├── reports/               # Deep-dive audits, analyses, research outputs
 │   └── implementation/        # TRACKER.md for /implement command
 └── projects/                  # ALL projects live here (gitignored — each has own repo)
@@ -22,8 +22,8 @@ solo/
     ├── open-saas/             # Open SaaS template reference [own git]
     ├── saas-costs-tracker/    # SaaS costs tracker
     ├── salary-comparison/     # Python salary/credit analysis scripts
-    ├── driftwatch/            # (planned) API dependency change monitor
-    └── freight-tms/           # (planned) Freight broker micro-TMS
+    ├── driftwatch/            # DriftWatch — API dependency change monitor [BUILDING]
+    └── freight-tms/           # Freight broker micro-TMS [KILLED — offline buyers]
 ```
 
 ## Key Context
@@ -50,15 +50,19 @@ solo/
 
 ## Commands
 
-- **`/implement`** — Build micro-SaaS MVPs from the idea leaderboard. Works with `/loop 30m`. Tracks progress in `research/implementation/TRACKER.md`.
-- **`/research-ideas`** — Find new micro-SaaS ideas. 13 iterations done, 170+ killed. Works with `/loop`.
+- **`/implement`** — Build micro-SaaS MVPs from the unified leaderboard (SaaS + tools). Works with `/loop 30m`. Tracks progress in `research/implementation/TRACKER.md`.
+- **`/research-ideas`** — Find new micro-SaaS ideas. 14 iterations done, 178+ killed. Works with `/loop`.
+- **`/research-tool-ideas`** — Find transactional utility tool ideas. 2 iterations done. Works with `/loop`.
+- **`/ideas-status`** — Read-only dashboard of all ideas across both research tracks and implementation pipeline.
+- **`/auto-audit`** — Audit workspace for staleness, inconsistencies, and broken cross-references. Use `--fix` to auto-repair safe issues.
 
 ## Current Revenue Strategy (as of April 2026)
 
 1. **Competitive audits** (Code4rena, Sherlock) — primary income, 60-70% of time
 2. **Plata app** (projects/costs-tracker/) — already shipped, needs distribution/marketing
-3. **New micro-SaaS MVPs** — DriftWatch + Freight TMS + Acquisition play (see TRACKER.md)
-4. **Technical content** — builds audience and reputation
+3. **DriftWatch** (projects/driftwatch/) — actively building, Phase 2, best surviving SaaS idea (22/30)
+4. **New tool/SaaS MVPs** — backfill from unified leaderboard as slots open (see TRACKER.md)
+5. **Technical content** — builds audience and reputation
 
 ## Common Tasks
 
