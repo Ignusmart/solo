@@ -11,7 +11,7 @@ Merged from:
 | Rank | Idea | Type | Raw Score | Normalized | Source | Status | Summary |
 |------|------|------|-----------|:----------:|--------|--------|---------|
 | 1 | ScanAble | Tool | 21/25 | 84% | Tool leaderboard | IN_TRACKER | URL → WCAG/EAA compliance PDF report. $19/report. Zero API costs (axe-core). |
-| 2 | DriftWatch | SaaS | 22/30 | 73% | SaaS leaderboard | IN_TRACKER | API dependency change monitor — crawl changelogs, AI classify, alert |
+| 2 | DriftWatch | SaaS | 22/30 | 73% | SaaS leaderboard | MVP_COMPLETE | [MVP SHIPPED] API dependency change monitor — crawl changelogs, AI classify, alert |
 | 3 | StubSnap | Tool | 17/25 | 68% | Tool leaderboard | KILLED | ThePayStubs.com is full tax platform (30+ IRS forms), not simple tool |
 | 4 | ClipCast | Tool | 15/25 | 60% | Tool leaderboard | BELOW_THRESHOLD | Upload audio → AI finds viral clips + show notes |
 | 5 | FoodGlow | Tool | 14/25 | 56% | Tool leaderboard | BELOW_THRESHOLD | AI-enhance restaurant food photos |
