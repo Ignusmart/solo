@@ -48,6 +48,6 @@ Every promising signal was already in the killed ideas registry:
 4. Developer workflow niches (iter 14) — episodic churn or saturated
 5. Non-dev B2B + compliance (iter 15) — all pre-killed
 
-**DriftWatch remains the only idea meeting the bar (22/30 new scoring).** It's already 6/10 MVP. Further research is delivering diminishing returns — every new angle maps back to already-killed ideas.
+**APIDelta remains the only idea meeting the bar (22/30 new scoring).** It's already 6/10 MVP. Further research is delivering diminishing returns — every new angle maps back to already-killed ideas.
 
-**Recommendation: Stop research, focus all energy on shipping DriftWatch.** Add API rate limit monitoring as V2 feature for stickiness.
+**Recommendation: Stop research, focus all energy on shipping APIDelta.** Add API rate limit monitoring as V2 feature for stickiness.

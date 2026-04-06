@@ -22,7 +22,7 @@ solo/
     ├── open-saas/             # Open SaaS template reference [own git]
     ├── saas-costs-tracker/    # SaaS costs tracker
     ├── salary-comparison/     # Python salary/credit analysis scripts
-    ├── driftwatch/            # DriftWatch — API dependency change monitor [BUILDING]
+    ├── apidelta/            # APIDelta — API dependency change monitor [BUILDING]
     ├── stubsnap/              # StubSnap — IRS-compliant paystub generator [KILLED — competitors are full tax platforms]
     ├── acquisition-play/      # Acquisition play [KILLED — market depleted]
     └── freight-tms/           # Freight broker micro-TMS [KILLED — offline buyers]
@@ -62,7 +62,7 @@ solo/
 
 1. **Competitive audits** (Code4rena, Sherlock) — primary income, 60-70% of time
 2. **Plata app** (projects/costs-tracker/) — already shipped, needs distribution/marketing
-3. **DriftWatch** (projects/driftwatch/) — actively building, Phase 2, best surviving SaaS idea (22/30)
+3. **APIDelta** (projects/apidelta/) — actively building, Phase 2, best surviving SaaS idea (22/30)
 4. **New tool/SaaS MVPs** — backfill from unified leaderboard as slots open (see TRACKER.md)
 5. **Technical content** — builds audience and reputation
 

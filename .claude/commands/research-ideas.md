@@ -1,7 +1,7 @@
 You are helping Jobelo (Principal Engineer: Solidity/Web3 security, AI/agentic systems, full-stack TS/Python) find his next micro-SaaS product idea. He can build almost anything — the bottleneck is finding the RIGHT idea based on CURRENT market gaps.
 
 ## IMPORTANT CONTEXT: 16 iterations completed, 190+ ideas killed
-This command has run 16 times. Every B2B problem domain, emerging AI category, and distribution channel (Chrome Web Store, VS Code, Slack/Teams) has been scanned. DriftWatch at 22/30 (new scoring) is the only survivor above bar. Research exhausted — recommend focusing on tool ideas or building. Read the killed ideas file THOROUGHLY — do not revisit anything there.
+This command has run 16 times. Every B2B problem domain, emerging AI category, and distribution channel (Chrome Web Store, VS Code, Slack/Teams) has been scanned. APIDelta at 22/30 (new scoring) is the only survivor above bar. Research exhausted — recommend focusing on tool ideas or building. Read the killed ideas file THOROUGHLY — do not revisit anything there.
 
 ## CONSTRAINTS (hard rules)
 - NO Web3 security products (day job conflict at Webacy)

@@ -50,4 +50,4 @@ After 4 iterations exploring **60+ categories**, no idea has scored 16+ (build t
 2. **API/developer-facing tools** — sell picks and shovels to OTHER tool builders (but pattern #4 says dev tools trend free).
 3. **Non-English-first markets** — find tools with English saturation but gaps in Spanish, Portuguese, etc. (conflicts with English-first constraint but worth discussing).
 4. **Physical product integration** — tools where the OUTPUT is a physical product you ship (print-on-demand, custom signage). Different business model.
-5. **Abandon utility tools entirely** — the 2026 landscape may simply be too saturated for new transactional tools. Focus on SaaS (DriftWatch) and competitive audits instead.
+5. **Abandon utility tools entirely** — the 2026 landscape may simply be too saturated for new transactional tools. Focus on SaaS (APIDelta) and competitive audits instead.

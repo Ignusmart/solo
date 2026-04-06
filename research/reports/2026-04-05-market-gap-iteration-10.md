@@ -69,7 +69,7 @@
 
 ## Ideas Evaluated This Iteration
 
-### 1. DriftWatch — Third-Party API Dependency Change Monitor
+### 1. APIDelta — Third-Party API Dependency Change Monitor
 
 **Problem**: SaaS teams depend on 15-25+ third-party APIs (Stripe, Auth0, Twilio, OpenAI, etc.). When these APIs introduce breaking changes, deprecations, or behavioral shifts, teams discover the impact through customer complaints or production failures. 52% of developers cite breaking changes as their top API integration concern (Postman 2025 State of the API Report).
 
@@ -204,9 +204,9 @@
 
 ### 3. DepWatch — Third-Party SaaS Dependency Health Dashboard (Status + Changelog + Impact)
 
-**Problem**: This is a variant of Idea #1 (DriftWatch) but broader — combining status monitoring (IsDown/StatusGator) + changelog monitoring (API Drift Alert) + impact mapping (which of YOUR features are affected) into one dashboard. Currently teams use 2-3 separate tools or nothing.
+**Problem**: This is a variant of Idea #1 (APIDelta) but broader — combining status monitoring (IsDown/StatusGator) + changelog monitoring (API Drift Alert) + impact mapping (which of YOUR features are affected) into one dashboard. Currently teams use 2-3 separate tools or nothing.
 
-**Who**: Same buyer as DriftWatch — engineering leads at SaaS companies. But this combines two existing product categories.
+**Who**: Same buyer as APIDelta — engineering leads at SaaS companies. But this combines two existing product categories.
 
 **Existing solutions**: IsDown + StatusGator cover status. API Drift Alert covers changelogs. No single tool does both + impact mapping.
 
@@ -236,7 +236,7 @@ After 10 iterations, 140+ ideas considered, 30+ verticals scanned, and 30+ targe
 
 2. **The "alerting" signal from BigIdeasDB** is interesting but generic. Specific alerting niches (API changes, SSL expiry, status pages) each have dedicated tools.
 
-3. **DriftWatch (API dependency change monitoring)** is the best remaining gap: a real pain signal (52% of devs), existing tools are generic (page monitors) or early-stage (API Drift Alert), and engineering teams have budgets. But it scores 17/25, below the 18 bar.
+3. **APIDelta (API dependency change monitoring)** is the best remaining gap: a real pain signal (52% of devs), existing tools are generic (page monitors) or early-stage (API Drift Alert), and engineering teams have budgets. But it scores 17/25, below the 18 bar.
 
 4. **The hyper-vertical micro-tool pattern** (CottageKeeper, GmailSnippets, EZ Fulfill) suggests the best micro-SaaS opportunities are industry-specific workflow tools, not category-level software. These require domain expertise in the target industry.
 
@@ -246,7 +246,7 @@ After 10 iterations, 140+ ideas considered, 30+ verticals scanned, and 30+ targe
 
 | Idea | Gap | Build | Money | Comp | Dist | Total | Verdict |
 |------|-----|-------|-------|------|------|-------|---------|
-| DriftWatch (API dependency change monitor) | 3 | 4 | 4 | 3 | 3 | **17** | Best idea this iteration. Below 18 bar by 1 point. API Drift Alert exists but early. |
+| APIDelta (API dependency change monitor) | 3 | 4 | 4 | 3 | 3 | **17** | Best idea this iteration. Below 18 bar by 1 point. API Drift Alert exists but early. |
 | CommCalc (micro-team commission calculator) | 2 | 5 | 2 | 2 | 3 | **14** | Commissionly + Sales Cookie serve this. Spreadsheets "good enough." KILLED. |
 | DepWatch (combined status + changelog + impact) | - | - | - | - | - | **KILLED** | Combination product. IsDown or API Drift Alert adds a feature and kills this. |
 
@@ -260,7 +260,7 @@ After 10 iterations, 140+ ideas considered, 30+ verticals scanned, and 30+ targe
 
 ## Updated Recommendation
 
-### DriftWatch scores 17/25 — 1 point below the 18 bar.
+### APIDelta scores 17/25 — 1 point below the 18 bar.
 
 **Arguments FOR building it despite being 1 below bar:**
 - API Drift Alert appears to be early-stage with no G2/Capterra reviews, suggesting the market is pre-competitive
@@ -281,15 +281,15 @@ The micro-SaaS landscape in April 2026 is the most competitive it has ever been.
 
 1. **Hyper-vertical workflow tools** (like CottageKeeper) requiring domain expertise in a specific industry
 2. **Timing-window exploits** (like ScopeShield riding the HoneyBook price hike) that close within months
-3. **Early-stage categories** where 1-2 weak competitors exist but haven't achieved PMF (like DriftWatch vs API Drift Alert)
+3. **Early-stage categories** where 1-2 weak competitors exist but haven't achieved PMF (like APIDelta vs API Drift Alert)
 
-**DriftWatch is the best option in category 3.** ScopeShield remains the best option in category 2 (despite being killed in deep review, it scored 12/25 revised — the kill was on name conflict and weak moat, not on market opportunity).
+**APIDelta is the best option in category 3.** ScopeShield remains the best option in category 2 (despite being killed in deep review, it scored 12/25 revised — the kill was on name conflict and weak moat, not on market opportunity).
 
 ### Final Ranking (Post-Iteration 10)
 
 | Rank | Idea | Score | Status |
 |------|------|-------|--------|
-| 1 | DriftWatch (API dependency change monitor) | 17/25 | **NEW — Best fresh idea. 1 below bar.** |
+| 1 | APIDelta (API dependency change monitor) | 17/25 | **NEW — Best fresh idea. 1 below bar.** |
 | - | ScopeShield | 12/25 (revised) | Deep-killed. Name taken, competitors exist. |
 | - | PostPilot | KILL | Deep-killed. ChatGPT moat problem. |
 | - | CourseBot | 10/25 (revised) | Deep-killed. Platform absorption. |
@@ -297,16 +297,16 @@ The micro-SaaS landscape in April 2026 is the most competitive it has ever been.
 
 ### What To Do Now
 
-**Option A: Build DriftWatch despite 17/25 score.**
+**Option A: Build APIDelta despite 17/25 score.**
 The 1-point gap is within scoring noise. The demand signal is strong. The competitor (API Drift Alert) appears weak. Build a 2-week MVP and validate with 20 engineering leads. Kill signal: >50% say "we use Visualping for this and it's fine."
 
 **Option B: Accept the search is exhausted and build the best available option.**
-After 10 iterations and 140+ ideas, DriftWatch at 17/25 may be as good as it gets. The 18/25 bar was set when we hadn't yet killed the top 6. In a post-kill world, 17/25 is the new ceiling.
+After 10 iterations and 140+ ideas, APIDelta at 17/25 may be as good as it gets. The 18/25 bar was set when we hadn't yet killed the top 6. In a post-kill world, 17/25 is the new ceiling.
 
 **Option C: Pivot to hyper-vertical micro-tools.**
 Stop searching for category-level micro-SaaS. Instead, pick an industry Jobelo knows (crypto/DeFi — non-security angle, or dev tools) and build the CottageKeeper equivalent: one specific workflow tool for one specific buyer.
 
-**Recommendation: Option A (build DriftWatch) with Option C as fallback strategy.** The 48-hour validation sprint applies here just as it did for ScopeShield.
+**Recommendation: Option A (build APIDelta) with Option C as fallback strategy.** The 48-hour validation sprint applies here just as it did for ScopeShield.
 
 ---
 

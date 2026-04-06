@@ -2,17 +2,17 @@
 
 **Scoring updated in iteration 14**: 6 dimensions (max 30), distribution weighted 2x, minimum 22/30. Old scores (max 25) retained for reference.
 
-**STATUS**: 14 iterations, 178+ ideas considered. DriftWatch at 22/30 (new scoring) — meets bar. API Rate Limit Aggregator at 24/30 but recommended as DriftWatch feature, not standalone.
+**STATUS**: 14 iterations, 178+ ideas considered. APIDelta at 22/30 (new scoring) — meets bar. API Rate Limit Aggregator at 24/30 but recommended as APIDelta feature, not standalone.
 
-**ACTIVE**: DriftWatch is being built (6/10 MVP). Freight TMS killed (offline buyers, high-touch sales). Acquisition play killed (market too thin).
+**ACTIVE**: APIDelta is being built (6/10 MVP). Freight TMS killed (offline buyers, high-touch sales). Acquisition play killed (market too thin).
 
 **ITERATION 15**: Scanned non-dev B2B (agency tools, proposals, testimonials, client portals) + compliance (SOC 2, accessibility, cookie consent, DORA/NIS2, vendor risk, tax). ALL pre-killed — every vertical maps to existing killed ideas. 185+ ideas total. Research delivering diminishing returns.
 
-**ITERATION 16**: Revenue-reverse engineering — studied real solo-founder revenue ($2K-132K/mo). Adjacent gaps from Bannerbear, Simple Analytics, Carrd, Capgo, Karma all map to existing kill patterns. Confirms DriftWatch playbook matches winning pattern (clear B2B pain → simple tool → SEO growth). 190+ ideas total.
+**ITERATION 16**: Revenue-reverse engineering — studied real solo-founder revenue ($2K-132K/mo). Adjacent gaps from Bannerbear, Simple Analytics, Carrd, Capgo, Karma all map to existing kill patterns. Confirms APIDelta playbook matches winning pattern (clear B2B pain → simple tool → SEO growth). 190+ ideas total.
 
-**ITERATION 17**: Fresh 2026 signals scan (HN/PH/IH/G2/compliance deadlines). 8 new ideas evaluated — ALL killed (CI test selector: platform absorption; SOP automation: 9+ tools; trades CRM: offline buyers; etc.). DriftWatch competitive intel updated: Recent.dev validates changelog space but is NOT a competitor; API Drift Alert at $149/mo remains only direct competitor with limited traction. 198+ ideas total.
+**ITERATION 17**: Fresh 2026 signals scan (HN/PH/IH/G2/compliance deadlines). 8 new ideas evaluated — ALL killed (CI test selector: platform absorption; SOP automation: 9+ tools; trades CRM: offline buyers; etc.). APIDelta competitive intel updated: Recent.dev validates changelog space but is NOT a competitor; API Drift Alert at $149/mo remains only direct competitor with limited traction. 198+ ideas total.
 
-**ITERATION 18**: Formal close-out. No new searches — iteration 17 was comprehensive and returned zero viable ideas. 6 consecutive zero-result iterations (13-18). 200+ ideas total. **RESEARCH LOOP CLOSED. Ship DriftWatch + run /research-tool-ideas for new candidates.**
+**ITERATION 18**: Formal close-out. No new searches — iteration 17 was comprehensive and returned zero viable ideas. 6 consecutive zero-result iterations (13-18). 200+ ideas total. **RESEARCH LOOP CLOSED. Ship APIDelta + run /research-tool-ideas for new candidates.**
 
 ---
 
@@ -34,7 +34,7 @@ All previous top ideas were deep-killed. This is the surviving leaderboard:
 
 | Rank | Idea | Source | Gap | Build | Money | Comp | Dist | Total | Verdict |
 |------|------|--------|-----|-------|-------|------|------|-------|---------|
-| **1** | **DriftWatch** -- Third-party API dependency change monitor (changelog crawling + AI classification + impact alerting) | Iter 10 | 3 | 4 | 4 | 3 | 3 | **17** | **BEST SURVIVING IDEA.** 1 below bar. 52% of devs cite breaking changes as top API concern. API Drift Alert is early/weak direct competitor. Engineering budgets, daily use, sticky. |
+| **1** | **APIDelta** -- Third-party API dependency change monitor (changelog crawling + AI classification + impact alerting) | Iter 10 | 3 | 4 | 4 | 3 | 3 | **17** | **BEST SURVIVING IDEA.** 1 below bar. 52% of devs cite breaking changes as top API concern. API Drift Alert is early/weak direct competitor. Engineering budgets, daily use, sticky. |
 
 ### Iteration 13 Ideas (all killed — distribution-first)
 
@@ -342,7 +342,7 @@ After 10 iterations exploring **30+ ideas in depth** and dismissing **140+ space
 | 7 | Food/docs/privacy-wildcards | AIComply Lite | 16/25 | Best timing signal (EU AI Act deadline) but EU-only, deadline-driven churn. |
 | 8 | Bottom-up signal hunting | BriefForge | 16/25 | ScopeShield downgraded to 18 (new competitors). Three-way tie at 18/25. |
 | 9 | Agency ops, trades, pricing + BriefBot re-eval | None above bar | 13/25 | BriefBot DEMOLISHED to 14/25. Tie broken. ScopeShield + PostPilot final two. |
-| **10** | **Multi-source signal hunting (30+ searches, 25+ verticals)** | **DriftWatch** | **17/25** | **Every category-level gap is filled. Best remaining idea is API dependency change monitoring. All top 6 from iters 1-9 killed under deep review.** |
+| **10** | **Multi-source signal hunting (30+ searches, 25+ verticals)** | **APIDelta** | **17/25** | **Every category-level gap is filled. Best remaining idea is API dependency change monitoring. All top 6 from iters 1-9 killed under deep review.** |
 
 ---
 
@@ -354,7 +354,7 @@ After 10 iterations exploring **30+ ideas in depth** and dismissing **140+ space
 
 | Rank | Idea | Total | Status |
 |------|------|-------|--------|
-| **1** | **DriftWatch** (API dependency change monitor) | **17** | Best surviving idea. 1 below bar. API Drift Alert is early/weak competitor. |
+| **1** | **APIDelta** (API dependency change monitor) | **17** | Best surviving idea. 1 below bar. API Drift Alert is early/weak competitor. |
 | - | ScopeShield | 12 (revised) | Deep-killed: name taken, competitors exist, market rejects category. |
 | - | PostPilot | KILL | Deep-killed: ChatGPT moat problem, 77% churn, Missinglettr exists. |
 | - | CourseBot | 10 (revised) | Deep-killed: Thinkific/Kajabi absorbed feature. 5+ competitors. |
@@ -364,7 +364,7 @@ After 10 iterations exploring **30+ ideas in depth** and dismissing **140+ space
 
 ### Decision Framework
 
-**Option A: Build DriftWatch (17/25) — accept that 17 is the post-kill ceiling.**
+**Option A: Build APIDelta (17/25) — accept that 17 is the post-kill ceiling.**
 - 52% of developers cite breaking changes as top API concern
 - API Drift Alert is early-stage with no G2/Capterra reviews
 - Engineering teams have real budgets ($39-79/mo is trivial)
@@ -384,12 +384,12 @@ After 10 iterations exploring **30+ ideas in depth** and dismissing **140+ space
 - Plata is shipped and needs distribution/marketing
 - Micro-SaaS may not be the right play in a fully saturated 2026 landscape
 
-**Recommendation: Option A (DriftWatch validation) with Option C as the strategic fallback.** The 1-point gap between DriftWatch (17) and the 18 bar is within scoring noise. Validate before building.
+**Recommendation: Option A (APIDelta validation) with Option C as the strategic fallback.** The 1-point gap between APIDelta (17) and the 18 bar is within scoring noise. Validate before building.
 
 ### Immediate Action Plan
 
 1. **STOP RESEARCHING. 10 iterations, 140+ ideas, 30+ verticals is definitively exhaustive.**
-2. **48-hour DriftWatch validation sprint:**
+2. **48-hour APIDelta validation sprint:**
    - Post in 3 engineering communities (r/programming, DevOps Slack groups, HN "Show HN")
    - Ask 20 engineering leads: "How do you track breaking changes in your third-party API dependencies? Would you pay $39/mo for automated monitoring?"
    - Kill signal: >50% say "we use Visualping/Changeflow and it's fine" or <5/20 would pay
@@ -398,7 +398,7 @@ After 10 iterations exploring **30+ ideas in depth** and dismissing **140+ space
    - Crawler: monitor changelog/release notes (daily)
    - AI classifier: breaking / deprecation / new feature / patch
    - Alert: Slack/email with classified, contextual changes
-4. **If DriftWatch fails validation, pivot to Option C.** Focus on audits + Plata distribution.
+4. **If APIDelta fails validation, pivot to Option C.** Focus on audits + Plata distribution.
 5. **Do NOT run iteration 11.** The search space is fully mapped.
 
 ---

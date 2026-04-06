@@ -28,24 +28,24 @@
 | Trades CRM (plumbers/HVAC) | Kill filter #17 — offline-first buyers. ServiceTitan, Housecall Pro exist. Requires BD, not engineering. |
 | Professional Services Capacity Planning | Kill filter #18 — enterprise procurement, demo-driven sales. 10+ tools (Resource Guru, Float, Forecast). |
 
-## DriftWatch Competitive Update (useful finding)
+## APIDelta Competitive Update (useful finding)
 
-**Recent.dev** launched on PH (Jan 2026, 162 upvotes) — aggregates changelogs for ~50 dev tools. NOT a DriftWatch competitor: it's an informational feed with no AI classification, no breaking change detection, no impact alerting. Different job-to-be-done (awareness vs. prevention).
+**Recent.dev** launched on PH (Jan 2026, 162 upvotes) — aggregates changelogs for ~50 dev tools. NOT a APIDelta competitor: it's an informational feed with no AI classification, no breaking change detection, no impact alerting. Different job-to-be-done (awareness vs. prevention).
 
 **API Drift Alert** remains the only direct competitor:
-- $149/mo starter (15 APIs) — DriftWatch at $49-99/mo undercuts significantly
+- $149/mo starter (15 APIs) — APIDelta at $49-99/mo undercuts significantly
 - No AI classification — shows diffs but doesn't classify severity
-- Schema diffing only — DriftWatch's changelog crawling catches deprecation notices earlier
+- Schema diffing only — APIDelta's changelog crawling catches deprecation notices earlier
 - Limited traction: 3 testimonials, no PH launch found
 
-**Net**: DriftWatch's positioning is reinforced. The market is early, not consolidated, and the direct competitor is expensive with limited traction.
+**Net**: APIDelta's positioning is reinforced. The market is early, not consolidated, and the direct competitor is expensive with limited traction.
 
 ## Conclusion
 
 **Iteration 17 confirms iteration 16's conclusion: research is exhausted.** Eight new ideas from fresh 2026 sources all map to existing kill patterns. No new viable micro-SaaS opportunity found.
 
-The only actionable output is competitive intelligence that strengthens the case for DriftWatch. Recommend: **stop SaaS research loop permanently, focus entirely on shipping DriftWatch.**
+The only actionable output is competitive intelligence that strengthens the case for APIDelta. Recommend: **stop SaaS research loop permanently, focus entirely on shipping APIDelta.**
 
 ---
 
-Running total: 17 iterations, 198+ ideas, DriftWatch at 22/30 (only idea meeting bar)
+Running total: 17 iterations, 198+ ideas, APIDelta at 22/30 (only idea meeting bar)

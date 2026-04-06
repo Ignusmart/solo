@@ -159,7 +159,7 @@
 
 **Running total**: 11 iterations, 150+ ideas considered, 0 ideas scoring 18+ after adversarial review.
 
-**Best surviving idea across all iterations**: DriftWatch at 17/25 (Iteration 10).
+**Best surviving idea across all iterations**: APIDelta at 17/25 (Iteration 10).
 
 ---
 

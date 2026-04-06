@@ -144,7 +144,7 @@ LiteLLM (38.9K GitHub stars), Helicone (free to 100K requests), Portkey (free ti
 | LLM Cost Dashboard | KILL | CostLayer at $9/mo does exactly this. 10+ tools. Token prices dropping. |
 | Accessibility Compliance Tool | KILL | 50+ tools on G2. Commoditized tech (axe-core OSS). Demand absorbed. |
 
-**Running total**: 12 iterations, 160+ ideas considered, 0 scoring 18+. Best surviving: DriftWatch at 17/25.
+**Running total**: 12 iterations, 160+ ideas considered, 0 scoring 18+. Best surviving: APIDelta at 17/25.
 
 ---
 

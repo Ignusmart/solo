@@ -28,12 +28,12 @@ This command is designed for `/loop`. You have NO memory of previous runs. The c
 ### Findings
 | # | Severity | Check | Finding | Status | First Seen |
 |---|----------|-------|---------|--------|------------|
-| 1 | ERROR | README freshness | DriftWatch listed as "Not started" but TRACKER shows BUILDING | NEW | 2026-04-05 |
+| 1 | ERROR | README freshness | APIDelta listed as "Not started" but TRACKER shows BUILDING | NEW | 2026-04-05 |
 | 2 | WARN | Unified leaderboard | File does not exist yet | RECURRING x2 | 2026-04-05 |
 | 3 | ERROR | TRACKER consistency | Freight TMS still listed as active in README | FIXED | 2026-04-05 |
 
 ### Actions taken
-- [if --fix] Fixed README DriftWatch status
+- [if --fix] Fixed README APIDelta status
 - [if report-only] No fixes applied (report-only mode)
 
 ### Stats

@@ -334,8 +334,8 @@ Use these as pre-filters for future research:
 - **Total verticals scanned**: 60+
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
 - **Ideas deep-dived**: 47+
-- **Ideas surviving above bar**: DriftWatch at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as DriftWatch feature)
-- **Best surviving idea**: DriftWatch (API dependency change monitoring) — BEING BUILT, 6/10 MVP
+- **Ideas surviving above bar**: APIDelta at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as APIDelta feature)
+- **Best surviving idea**: APIDelta (API dependency change monitoring) — BEING BUILT, 6/10 MVP
 - **Research status**: CLOSED after 18 iterations. No new viable ideas found in last 6 iterations (13-18). Loop cancelled.
 
 ---

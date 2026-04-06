@@ -223,7 +223,7 @@ For each active idea, check if `projects/<name>/.git` exists. If NOT:
 
 | # | Idea | Type | Status | Phase | Iteration | MVP | Next Deliverable | Blocker |
 |---|------|------|--------|-------|:---------:|:---:|-----------------|---------|
-| 1 | DriftWatch | SaaS | BUILDING | Phase 1 | 4 | 3/10 | Build crawler service | None |
+| 1 | APIDelta | SaaS | BUILDING | Phase 1 | 4 | 3/10 | Build crawler service | None |
 | 2 | ClipCast | Tool | PLANNING | — | 1 | 0/10 | Scaffold project | None |
 | 3 | Acquisition | — | SCOUTING | — | 2 | 0/5 | Research targets | None |
 
@@ -298,7 +298,7 @@ The orchestrator does NOT execute these steps directly. They are included here a
 
 **Trigger:** The idea has no project folder, OR has a folder but no `docs/plan.md`.
 
-1. **Create the project folder** inside `projects/` (e.g., `projects/driftwatch/`, `projects/freight-tms/`)
+1. **Create the project folder** inside `projects/` (e.g., `projects/apidelta/`, `projects/freight-tms/`)
 2. **Research the tech approach** — what APIs/data sources? What's the minimum viable feature?
    - **Invoke `competitive-teardown` skill** on the 1-2 closest competitors to inform positioning (this is the ONE skill for the planning iteration)
 3. **Scaffold the monorepo** (structure only — NO `pnpm install` or dependency installation in this step):
@@ -484,7 +484,7 @@ This is what YOU (the orchestrator) do after all parallel agents complete. **Do 
 
    | # | Idea | Type | Did | MVP | Next |
    |---|------|------|-----|:---:|------|
-   | 1 | DriftWatch | SaaS | Built crawler service | 4/10 | Dashboard page |
+   | 1 | APIDelta | SaaS | Built crawler service | 4/10 | Dashboard page |
    | 2 | ClipCast | Tool | Wrote plan + scaffolded | 0/10 | Build audio processor |
    | 3 | Acquisition | — | Researched 2 targets | 1/5 | Due diligence on Target A |
    ```
@@ -623,7 +623,7 @@ Merged from:
 
 | Rank | Idea | Type | Raw Score | Normalized | Source | Status | Summary |
 |------|------|------|-----------|:----------:|--------|--------|---------|
-| 1 | DriftWatch | SaaS | 17/30 | 57% | SaaS leaderboard | IN_TRACKER | API dependency monitor |
+| 1 | APIDelta | SaaS | 17/30 | 57% | SaaS leaderboard | IN_TRACKER | API dependency monitor |
 | 2 | ClipCast | Tool | 15/25 | 60% | Tool leaderboard | AVAILABLE | Podcast clip finder |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 

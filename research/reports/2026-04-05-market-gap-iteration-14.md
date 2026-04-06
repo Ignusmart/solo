@@ -28,20 +28,20 @@
 - **Current state**: Devs check each API dashboard separately, parse headers manually, build custom logging.
 - **Buyer**: Engineering leads at SaaS companies using 5-10+ third-party APIs.
 - **Distribution**: SEO "API rate limit monitoring", Google ads, dev communities, Product Hunt.
-- **Concern**: Could be a FEATURE of DriftWatch rather than a standalone product. DriftWatch already monitors third-party APIs — adding rate limit monitoring is a natural extension.
+- **Concern**: Could be a FEATURE of APIDelta rather than a standalone product. APIDelta already monitors third-party APIs — adding rate limit monitoring is a natural extension.
 - **Score**: 24/30 (gap:3, build:5, money:3, comp:5, dist:4, marketing:4)
 
-### 3. DriftWatch re-scored under new system — 22/30 (MEETS BAR)
+### 3. APIDelta re-scored under new system — 22/30 (MEETS BAR)
 - Scores: gap:3, build:4, money:4, comp:3, dist:4, marketing:4
 - Already 6/10 MVP complete. Best surviving idea across 14 iterations.
 
 ---
 
-## Key Insight: API Rate Limit Monitoring as DriftWatch Feature
+## Key Insight: API Rate Limit Monitoring as APIDelta Feature
 
-Rather than a standalone product, API rate limit monitoring could strengthen DriftWatch's value prop:
-- **Current**: DriftWatch monitors changelogs + classifies breaking changes
-- **Extended**: DriftWatch monitors changelogs + rate limits + deprecation timelines = "complete third-party API health dashboard"
+Rather than a standalone product, API rate limit monitoring could strengthen APIDelta's value prop:
+- **Current**: APIDelta monitors changelogs + classifies breaking changes
+- **Extended**: APIDelta monitors changelogs + rate limits + deprecation timelines = "complete third-party API health dashboard"
 - This increases stickiness (daily use for rate limits vs. episodic for changelogs)
 
 ---
@@ -59,5 +59,5 @@ Rather than a standalone product, API rate limit monitoring could strengthen Dri
 
 ## Running Total
 - 14 iterations, 178+ ideas considered
-- 1 idea meets new 22/30 bar: DriftWatch (22/30)
-- 1 adjacent idea worth considering as DriftWatch feature: API Rate Limit Monitoring (24/30 standalone)
+- 1 idea meets new 22/30 bar: APIDelta (22/30)
+- 1 adjacent idea worth considering as APIDelta feature: API Rate Limit Monitoring (24/30 standalone)

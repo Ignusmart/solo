@@ -20,7 +20,7 @@ All projects live in `projects/` (gitignored — each has its own repo).
 
 | Project | Description | Status |
 |---------|-------------|--------|
-| projects/driftwatch/ | **DriftWatch** — API dependency change monitor for SaaS teams | Building (Phase 2, iteration #7) |
+| projects/apidelta/ | **APIDelta** — API dependency change monitor for SaaS teams | Building (Phase 2, iteration #7) |
 | projects/stubsnap/ | **StubSnap** — IRS-compliant paystub generator ($3.99/stub) | Not started |
 
 ### Killed
@@ -60,7 +60,7 @@ Spawns parallel agents to build micro-SaaS and utility tool MVPs. Designed for c
 ```
 /implement                  # Default: work on 3 ideas in parallel
 /implement --ideas 5        # Work on 5 ideas in parallel
-/implement --idea driftwatch  # Work on a single specific idea
+/implement --idea apidelta  # Work on a single specific idea
 ```
 
 **Arguments:**
@@ -106,7 +106,7 @@ Hunts for subscription SaaS opportunities ($19-99/mo). Multi-source signal hunti
 - `research/reports/YYYY-MM-DD-market-gap-iteration-N.md` — per-iteration findings
 - `research/strategy/06-KILLED-IDEAS.md` — killed ideas registry (178+ entries)
 
-**Status:** 16 iterations completed, 190+ ideas considered, SaaS track exhausted. DriftWatch (22/30) is the only survivor above bar.
+**Status:** 16 iterations completed, 190+ ideas considered, SaaS track exhausted. APIDelta (22/30) is the only survivor above bar.
 
 ---
 
@@ -141,7 +141,7 @@ Read-only command that shows the status of all ideas across both research tracks
 **Usage:**
 ```
 /ideas-status               # Quick dashboard (research pipeline + implementation + unified leaderboard)
-/ideas-status --detail driftwatch  # Deep dive on a specific idea (audit-log, plan, git log)
+/ideas-status --detail apidelta  # Deep dive on a specific idea (audit-log, plan, git log)
 ```
 
 **Arguments:**
@@ -193,5 +193,5 @@ Checks that all tracking files, docs, and commands are in sync. Flags staleness,
 
 1. Enter next Code4rena competitive audit contest (immediate money)
 2. Ship Plata to App Store and focus on distribution
-3. Build DriftWatch MVP (22/30 — actively building, Phase 2, iteration #7)
+3. Build APIDelta MVP (22/30 — actively building, Phase 2, iteration #7)
 4. Run more `/research-tool-ideas` iterations to find viable tool ideas

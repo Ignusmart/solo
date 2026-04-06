@@ -115,7 +115,7 @@
 | VS Code Database GUI | KILL | DBCode at $3/mo already here. No payment infrastructure. Dev WTP ~$0. |
 | AI Gmail Triage Sidebar | KILL | Google's Gemini 3 absorbed this natively. SaneBox at $7/mo. Platform risk. |
 
-**Running total**: 13 iterations, 170+ ideas considered, 0 scoring 18+. Best surviving: DriftWatch at 17/25.
+**Running total**: 13 iterations, 170+ ideas considered, 0 scoring 18+. Best surviving: APIDelta at 17/25.
 
 ---
 
@@ -148,7 +148,7 @@ After 170+ ideas across 13 iterations:
 
 ### Recommended next steps (not more research):
 
-1. **Build DriftWatch** (17/25, best surviving idea) — it's 1 point below bar but has the strongest fundamentals: engineering buyer with budget, daily use, sticky, clear MVP scope. Sometimes a 17 that ships beats a theoretical 18 that doesn't.
+1. **Build APIDelta** (17/25, best surviving idea) — it's 1 point below bar but has the strongest fundamentals: engineering buyer with budget, daily use, sticky, clear MVP scope. Sometimes a 17 that ships beats a theoretical 18 that doesn't.
 
 2. **Customer-first approach** — stop researching ideas, start talking to a specific buyer segment (e.g., engineering leads at 10-50 person SaaS). Ask what they're duct-taping. Build what they describe. The insight you need may only come from conversation, not desk research.
 
