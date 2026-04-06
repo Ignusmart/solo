@@ -1,13 +1,13 @@
 # Implementation Tracker
 
-Last updated: 2026-04-05 (iteration 24)
+Last updated: 2026-04-05 (iteration 25)
 
 ## Active Ideas
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
-| 1 | DriftWatch — API dependency change monitor | SaaS | projects/driftwatch/ | LAUNCHING | Launch B | 2026-04-05 (#24) | Manual: domain, Neon DB, Stripe products, deploy — then execute launch |
-| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | POLISHING | Phase 3 | 2026-04-05 (#9) | None |
+| 1 | DriftWatch — API dependency change monitor | SaaS | projects/driftwatch/ | LAUNCHING | Launch C | 2026-04-05 (#25) | Manual: domain, Neon DB, Stripe products, deploy — then execute launch |
+| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | POLISHING | Phase 3 | 2026-04-05 (#10) | None |
 | 3 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 4 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
 | 5 | Acquisition Play — buy underperforming extension | — | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
