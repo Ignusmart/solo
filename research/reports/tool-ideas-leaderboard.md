@@ -18,6 +18,8 @@ Ranked by post-adversarial score. Must score 16+ to be considered viable for a b
 
 ## Iteration History
 
+- **Iteration 9** (2026-04-07): Explored 8+ genuinely new categories (PDF redaction, video face blur, GEO audit, alt text generation, VPAT, audio stem separation, stock calculators, legal docs). ALL killed. GEO space went from 0→22+ tools in <12 months. Alt text generators have 85K+ users. New pattern: "compliance-adjacent" ≠ compliance-gated. 110+ tool ideas total. ScanAble remains only idea above bar.
+- **Iteration 8** (2026-04-05): Duplicate of iteration 7. Honest re-evaluation of ScanAble to 18/25. Still above threshold.
 - **Iteration 7** (2026-04-05): No new exploration. Research track complete. ScanAble at 21/25 is the winner. **Cancel /loop and run /implement.**
 - **Iteration 6** (2026-04-05): Stress-tested ScanAble. Found new competitor OnePageAudit ($49/report) — validates per-report model. Demand data: 8,667 ADA lawsuits in 2025, 94.8% WCAG failure rate, 77% lawsuits target sub-$20M businesses. **Score bumped to 21/25. Recommendation: STOP RESEARCHING, START BUILDING.**
 - **Iteration 5** (2026-04-05): Pivoted strategy — hunted EMERGING demand instead of grinding categories. Re-evaluated ScanAble with EAA angle. Visited actual competitors (WAVE, AccessibilityChecker.org, The Audit Base). Found clear gap: free tools don't generate reports, paid tools start at $89/mo or $99 minimum. **ScanAble scores 20/25 — FIRST idea to pass 16+ threshold after proper adversarial review.**

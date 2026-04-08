@@ -108,6 +108,16 @@ One line per idea. Details in iteration reports.
 - SVG/Cricut Design Generators — Clearly ($29/mo), SVG Bloom (credits), Inkscape free OSS. Niche + served.
 - Email Deliverability Testing — mail-tester.com free. GlockApps/MxToolbox subscription SaaS. Not utility tool shaped.
 
+### Iteration 9 Kills (unexplored categories)
+- PDF/Document Redaction (PII removal) — Redactable (AI, $20/batch), SmallPDF (free), Foxit Smart Redact (99.9% accuracy), Nitro (30+ PII types), 2 free online tools. No gap.
+- Video Face Blur (GDPR) — Blur.it, BlurMe, Gallio PRO, SecureRedact, Facit AI, VideoBGRemover. 6+ dedicated tools. Saturated.
+- GEO (Generative Engine Optimization) Audit — 22+ tools in <12 months. HubSpot FREE AEO grader. AI Rank Checker (pay-per-check). SE Ranking, RankZero, Scrunch, Profound all $65-399/mo. Pattern #14 confirmed.
+- Bulk Alt Text Generator (WCAG) — AltText.ai (85K users, 30M images, pay-per-credit), AltTextLab, Caseo.ai, SmartAlt, Describer.pro, AutoAlt.ai. 5+ dedicated tools + free tiers.
+- VPAT Generator — Accessibility Tracker ($19/mo), AllAccessible exist. Natural feature of ScanAble, not standalone.
+- Audio Stem Separation — LALAL.AI (10 stems), StemSplit, Moises, AudioPod + 5 more. Capital-intensive ML. 9+ competitors.
+- Stock Option Tax Calculator — ESO Fund, Carta, EquitySimplified, AgentCalc, Secfi all FREE. Pattern #8 (lead-gen).
+- Legal Document Generators (eviction, C&D, demand letters) — Rocket Lawyer, LegalZoom cover broadly. No computation = no pricing power (pattern #10).
+
 ---
 
 ## Patterns That Kill Tool Ideas
@@ -124,3 +134,4 @@ One line per idea. Details in iteration reports.
 10. **Most compliance documents still fail because IRS/government provides free fillable forms.** W-9, W-4, I-9 — all available free from IRS. The paystub pattern only works because paystubs require COMPUTATION (tax withholding across 50 states), not just form-filling. Compliance + computation = pricing power. Compliance alone ≠ pricing power.
 11. **"Simple tool" competitors are often full platforms.** Always visit the actual competitor site. A "paystub generator" might be a tax document platform with 30+ form types, years of content, and support infrastructure. Your single-feature MVP isn't "differentiated" — it's incomplete. Check the footer, sitemap, and product catalog before scoring.
 12. **The 2026 utility tool landscape is near-saturation.** After 60+ categories explored across 4 iterations, every "generate X" / "convert X" / "create X" category has 5-30+ free tools. The gap between free and paid has narrowed to near-zero for most use cases. New utility tools need a genuinely novel angle — not just "better UX" on an existing category.
+13. **"Compliance-adjacent" ≠ compliance-gated.** Redaction, alt text, and VPAT are adjacent to compliance but don't require the OUTPUT ITSELF to be the compliance artifact. Users can manually review/fix AI output. Only tools where the output IS the compliance document (audit report, tax form, paystub) have real pricing power.

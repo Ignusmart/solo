@@ -328,15 +328,26 @@ Use these as pre-filters for future research:
 - Professional Services Capacity Planning — high-touch sales (kill filter #18), Resource Guru/Float/Forecast exist
 - (Also re-confirmed kills: compliance questionnaire 13+ tools, EU AI Act 13+ tools, AI spend 10+ tools, dunning 8+ tools)
 
-## Stats (18 iterations)
+### Iteration 19 Kills (weak competitor hunting + 2026 signals)
+- Freshping shutdown replacement — status monitoring has 10+ alternatives (UptimeRobot, Better Stack, Hyperping). Kill pattern #12.
+- AND.CO shutdown replacement — freelancer tools churn catastrophically. Kill pattern #2.
+- GetFeedback Direct shutdown replacement — survey tools saturated (Typeform, SurveyMonkey, etc.)
+- EU Cyber Resilience Act compliance — SBOM tools (Syft, Snyk, Aikido, Anchore) already cover. Killed.
+- SEC Reg S-P / CMMC compliance — financial/defense = high-touch sales + domain expertise. Killed.
+- Zapier pricing backlash alternative — 19+ alternatives exist (Make, Pabbly, Activepieces). Saturated.
+- Changelog management tools — 13+ tools (ProductLift, RightFeature, Canny). Saturated.
+- MCP registry/tooling — official registry + Smithery + MCPMarket. Crowded, no proven revenue.
+- Market Clarity "21 Niches" — 17/21 are offline buyers, 2 are freelancer tools, rest are killed.
+
+## Stats (19 iterations)
 
 - **Total ideas considered**: 200+
 - **Total verticals scanned**: 60+
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
 - **Ideas deep-dived**: 47+
 - **Ideas surviving above bar**: APIDelta at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as APIDelta feature)
-- **Best surviving idea**: APIDelta (API dependency change monitoring) — BEING BUILT, 6/10 MVP
-- **Research status**: CLOSED after 18 iterations. No new viable ideas found in last 6 iterations (13-18). Loop cancelled.
+- **Best surviving idea**: APIDelta (API dependency change monitoring) — CODE COMPLETE, awaiting deploy
+- **Research status**: DEFINITIVELY CLOSED after 19 iterations. No new viable ideas in 7 consecutive iterations (13-19).
 
 ---
 
