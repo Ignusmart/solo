@@ -1,13 +1,13 @@
 # Implementation Tracker
 
-Last updated: 2026-04-05 (iteration 30)
+Last updated: 2026-04-10 (iteration 31)
 
 ## Active Ideas
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
 | 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-08 (#28) | Stripe webhook secret, Resend, GitHub OAuth — domain ✅, Vercel ✅, Neon DB ✅, Railway API ✅ |
-| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch A | 2026-04-08 (#15) | Manual: Stripe keys, Resend, Google Ads — domain ✅, Vercel ✅, Neon DB ✅, deploy guide ready |
+| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-10 (#16) | Google Ads campaign LIVE ($10/day, Performance Max, learning phase) — domain ✅, Vercel ✅, Neon DB ✅, GA4 linked, Stripe: needs prod keys, Resend: needs setup |
 | 3 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 4 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
 | 5 | Acquisition Play — buy underperforming extension | — | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
@@ -71,17 +71,55 @@ Last updated: 2026-04-05 (iteration 30)
 - [ ] 9. README has setup instructions (pnpm install, DB setup, env vars, dev server)
 - [ ] 10. No hardcoded secrets or obvious security issues
 
-### ScanAble
-- [ ] 1. Core feature works end-to-end (URL input → axe-core scan → PDF report generation)
-- [ ] 2. Landing page (Next.js + Tailwind) with value prop, pricing, CTA
-- [ ] 3. Auth (NextAuth.js or guest checkout — transactional tool may use guest checkout)
-- [ ] 4. Billing (Stripe Checkout — $19/report, one-time payment)
-- [ ] 5. Frontend deployable to Vercel
-- [ ] 6. Backend deployable (API routes or separate NestJS if needed)
-- [ ] 7. Database migrations run cleanly (if using DB)
-- [ ] 8. `.env.example` documents all required environment variables
-- [ ] 9. README has setup instructions
-- [ ] 10. No hardcoded secrets or obvious security issues
+### ScanAble (MVP COMPLETE — 2026-04-08)
+- [x] 1. Core feature works end-to-end (URL input → axe-core scan → PDF report generation)
+- [x] 2. Landing page (Next.js + Tailwind) with value prop, pricing, CTA
+- [x] 3. Auth (guest checkout — no accounts needed for transactional tool)
+- [x] 4. Billing (Stripe Checkout — $19/report, one-time payment)
+- [x] 5. Frontend deployable to Vercel
+- [x] 6. Backend deployable (Next.js API routes + @sparticuz/chromium for serverless)
+- [x] 7. Database migrations run cleanly (Prisma + Neon PostgreSQL)
+- [x] 8. `.env.example` documents all required environment variables
+- [x] 9. README has setup instructions
+- [x] 10. No hardcoded secrets or obvious security issues
 
 ### StubSnap (KILLED)
 - N/A
+
+## Launch Progress Logs
+
+### ScanAble — Launch Log
+| Date | Action | Status | Notes |
+|------|--------|--------|-------|
+| 2026-04-08 | MVP complete (10/10 checklist + 10/10 polish) | ✅ | Guest checkout, axe-core scanning, PDF generation, Stripe integration |
+| 2026-04-08 | Domain secured: scanable.dev | ✅ | |
+| 2026-04-08 | Vercel deployment | ✅ | Connected to Neon DB |
+| 2026-04-08 | GA4 analytics setup | ✅ | Property ID 532432963 |
+| 2026-04-08 | SEO landing pages built | ✅ | /ada-compliance-checker, /eaa-accessibility-audit, /free-wcag-checker, /wcag-compliance-report, /website-accessibility-audit |
+| 2026-04-10 | Google Ads campaign launched | ✅ | Performance Max, $10/day budget, Purchases goal, 10 search themes, 6 sitelinks, GA4 linked |
+| 2026-04-10 | Google Ads — learning phase | 🔄 | Don't touch for 7 days. Check metrics ~2026-04-17 |
+| — | Stripe production keys | ❌ | Needs manual setup in Vercel env vars |
+| — | Resend email integration | ❌ | Needs API key + domain verification for report delivery |
+| — | First conversion validation | ❌ | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
+| — | Replace stock ad images | ❌ | Upload scanable.dev screenshot + sample report PDF to Google Ads |
+
+#### Google Ads Campaign Config
+- **Type**: Performance Max
+- **Budget**: $10/day (~$140 over 2 weeks)
+- **Goal**: Purchases (conversion URL: scanable.dev/success)
+- **Locations**: US, UK, Canada, Australia + EU (France, Germany, Ireland, Netherlands)
+- **Languages**: English
+- **Search themes**: WCAG compliance report, website accessibility audit, ADA compliance checker, accessibility report generator, WCAG audit tool, EAA accessibility compliance, website accessibility checker, ADA website compliance, accessibility testing tool, WCAG PDF report
+- **Estimated**: 8 weekly conversions at $8 CPA
+- **Review date**: 2026-04-17 (7 days post-launch)
+
+### APIDelta — Launch Log
+| Date | Action | Status | Notes |
+|------|--------|--------|-------|
+| 2026-04-08 | Domain secured: apidelta.dev | ✅ | |
+| 2026-04-08 | Vercel deployment | ✅ | |
+| 2026-04-08 | Neon DB provisioned | ✅ | |
+| 2026-04-08 | Railway API confirmed | ✅ | |
+| — | Stripe webhook secret | ❌ | Needs manual setup |
+| — | Resend email integration | ❌ | Needs API key + domain |
+| — | GitHub OAuth app | ❌ | Needs manual creation |

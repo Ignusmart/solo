@@ -46,6 +46,15 @@ Output this dashboard as markdown. Keep it concise — this is a quick status ch
 |------|------|------|:---------:|:----------:|--------|
 | 1 | ... | ... | ... | ... | IN_TRACKER / AVAILABLE / KILLED |
 
+## Launch Progress (for LAUNCHING/LAUNCHED/GROWING ideas)
+
+### [Idea Name]
+| Date | Action | Status | Notes |
+|------|--------|--------|-------|
+| ... | ... | ✅/❌/🔄 | ... |
+
+(Include ad campaign configs, pending blockers with unblock steps, and review dates)
+
 ## Summary
 - **Active builds**: N idea(s) in implementation
 - **Available for backfill**: N idea(s) above threshold, not yet started
@@ -65,6 +74,11 @@ Output this dashboard as markdown. Keep it concise — this is a quick status ch
 - Tools: `score / 25 * 100` → percentage
 - Sort by normalized % descending
 
+### Launch progress (always show for LAUNCHING/LAUNCHED/GROWING ideas):
+- Read the "Launch Progress Logs" section of TRACKER.md
+- Display the launch log table for each active launch idea
+- Highlight pending (❌) items and upcoming review dates
+
 ### If `--detail [idea-name]` is passed:
 Also read and display:
 - Latest audit-log entry for that idea
@@ -73,7 +87,7 @@ Also read and display:
 - Git log (last 3 commits) from `projects/<idea>/`
 
 ### If no arguments:
-Just show the dashboard. No deep dives.
+Show the dashboard + launch logs for any LAUNCHING/LAUNCHED/GROWING ideas.
 
 ---
 

@@ -133,7 +133,8 @@ When an idea is KILLED or STABLE, **it does NOT reduce the number of active slot
    - Set `isolation: "worktree"` is NOT needed — each agent works in its own `projects/<name>/` folder, so they don't conflict
    - **Launch ALL agents in a SINGLE message** (parallel tool calls) — do NOT wait for one to finish before starting the next
 3. **After all agents return**, read each idea's updated `docs/audit-log.md` and consolidate into TRACKER.md
-4. **Check completion** — if all ideas are MVP_COMPLETE or KILLED, output `[LOOP_COMPLETE]`
+4. **Update launch logs** — for any idea in LAUNCHING/LAUNCHED/GROWING status, update the "Launch Progress Logs" section in TRACKER.md with any new actions (deployments, ad campaigns, env setup, marketing)
+5. **Check completion** — if all ideas are MVP_COMPLETE or KILLED, output `[LOOP_COMPLETE]`
 
 ### Agent brief template (what you pass to each spawned agent):
 ```
@@ -544,6 +545,25 @@ Validate that real people will pay before investing in distribution. This is esp
 After launch iteration 7:
 1. Update TRACKER.md: status → `LAUNCHED`
 2. Proceed to V2/GROWTH phase (Step 7)
+
+### Launch Log (MANDATORY — update on every launch action)
+
+TRACKER.md contains a "Launch Progress Logs" section with a per-idea table. **Every launch action MUST be logged here** — deployments, domain setup, ad campaigns, env var configuration, email integration, analytics setup, etc.
+
+Format:
+```markdown
+### [Idea] — Launch Log
+| Date | Action | Status | Notes |
+|------|--------|--------|-------|
+| YYYY-MM-DD | [what was done] | ✅/❌/🔄 | [details, config values, review dates] |
+```
+
+Rules:
+- **✅** = completed, **❌** = pending/blocked, **🔄** = in progress/waiting
+- Log EVERY action, not just code changes — ad campaigns, Stripe key setup, DNS config, email verification
+- For ad campaigns, also log the full config (budget, targeting, keywords, review date) as a sub-section
+- For pending items, include what's needed to unblock (e.g., "Needs API key from Resend dashboard")
+- The orchestrator updates launch logs after each agent returns, same as TRACKER.md status updates
 
 ### Launch kill criteria (apply to ALL ideas):
 - **Utility tools**: <$50 revenue in first 2 weeks after launch → kill
