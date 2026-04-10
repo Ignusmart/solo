@@ -10,8 +10,8 @@ Merged from:
 
 | Rank | Idea | Type | Raw Score | Normalized | Source | Status | Summary |
 |------|------|------|-----------|:----------:|--------|--------|---------|
-| 1 | ScanAble | Tool | 21/25 | 84% | Tool leaderboard | LAUNCHING | [LIVE] Google Ads campaign running ($10/day). Domain + Vercel + Neon DB ✅. Pending: Stripe prod keys, Resend. |
-| 2 | APIDelta | SaaS | 22/30 | 73% | SaaS leaderboard | LAUNCHING | Domain + Vercel + Neon DB + Railway ✅. Pending: Stripe webhook, Resend, GitHub OAuth. |
+| 1 | ScanAble | Tool | 21/25 | 84% | Tool leaderboard | LAUNCHING | [LIVE] All infra ✅. Google Ads running ($10/day). Awaiting first conversion (review 2026-04-17). |
+| 2 | APIDelta | SaaS | 22/30 | 73% | SaaS leaderboard | LAUNCHING | [LIVE] All infra ✅ — Stripe, Resend, GitHub OAuth, Vercel, Neon, Railway. Ready for users. |
 | 3 | StubSnap | Tool | 17/25 | 68% | Tool leaderboard | KILLED | ThePayStubs.com is full tax platform (30+ IRS forms), not simple tool |
 | 4 | ClipCast | Tool | 15/25 | 60% | Tool leaderboard | BELOW_THRESHOLD | Upload audio → AI finds viral clips + show notes |
 | 5 | FoodGlow | Tool | 14/25 | 56% | Tool leaderboard | BELOW_THRESHOLD | AI-enhance restaurant food photos |

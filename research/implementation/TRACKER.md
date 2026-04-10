@@ -6,8 +6,8 @@ Last updated: 2026-04-10 (iteration 31)
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
-| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-08 (#28) | Stripe webhook secret, Resend, GitHub OAuth — domain ✅, Vercel ✅, Neon DB ✅, Railway API ✅ |
-| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-10 (#16) | Google Ads campaign LIVE ($10/day, Performance Max, learning phase) — domain ✅, Vercel ✅, Neon DB ✅, GA4 linked, Stripe: needs prod keys, Resend: needs setup |
+| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-10 (#29) | All infra complete ✅ — domain, Vercel, Neon DB, Railway API, Stripe webhook, Resend, GitHub OAuth. Ready for users. |
+| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-10 (#17) | All infra complete ✅ — domain, Vercel, Neon DB, GA4, SEO pages, Google Ads ($10/day), Stripe prod keys, Resend. Awaiting first conversion (review 2026-04-17). |
 | 3 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 4 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
 | 5 | Acquisition Play — buy underperforming extension | — | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
@@ -98,10 +98,10 @@ Last updated: 2026-04-10 (iteration 31)
 | 2026-04-08 | SEO landing pages built | ✅ | /ada-compliance-checker, /eaa-accessibility-audit, /free-wcag-checker, /wcag-compliance-report, /website-accessibility-audit |
 | 2026-04-10 | Google Ads campaign launched | ✅ | Performance Max, $10/day budget, Purchases goal, 10 search themes, 6 sitelinks, GA4 linked |
 | 2026-04-10 | Google Ads — learning phase | 🔄 | Don't touch for 7 days. Check metrics ~2026-04-17 |
-| — | Stripe production keys | ❌ | Needs manual setup in Vercel env vars |
-| — | Resend email integration | ❌ | Needs API key + domain verification for report delivery |
-| — | First conversion validation | ❌ | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
-| — | Replace stock ad images | ❌ | Upload scanable.dev screenshot + sample report PDF to Google Ads |
+| 2026-04-10 | Stripe production keys | ✅ | Configured in Vercel env vars |
+| 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
+| 2026-04-10 | Replace stock ad images | ✅ | Product screenshots uploaded to Google Ads |
+| — | First conversion validation | 🔄 | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
 
 #### Google Ads Campaign Config
 - **Type**: Performance Max
@@ -120,6 +120,6 @@ Last updated: 2026-04-10 (iteration 31)
 | 2026-04-08 | Vercel deployment | ✅ | |
 | 2026-04-08 | Neon DB provisioned | ✅ | |
 | 2026-04-08 | Railway API confirmed | ✅ | |
-| — | Stripe webhook secret | ❌ | Needs manual setup |
-| — | Resend email integration | ❌ | Needs API key + domain |
-| — | GitHub OAuth app | ❌ | Needs manual creation |
+| 2026-04-10 | Stripe webhook secret | ✅ | Configured |
+| 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
+| 2026-04-10 | GitHub OAuth app | ✅ | Created and configured |
