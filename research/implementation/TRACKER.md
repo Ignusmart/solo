@@ -101,7 +101,8 @@ Last updated: 2026-04-10 (iteration 31)
 | 2026-04-10 | Stripe production keys | ✅ | Configured in Vercel env vars |
 | 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
 | 2026-04-10 | Replace stock ad images | ✅ | Product screenshots uploaded to Google Ads |
-| — | First conversion validation | 🔄 | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
+| 2026-04-10 | End-to-end prod test | ✅ | Payment → scan → email (report@scanable.dev) → PDF download all working. scanable.dev scored 100/100. |
+| — | First organic/ad conversion | 🔄 | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
 
 #### Google Ads Campaign Config
 - **Type**: Performance Max
