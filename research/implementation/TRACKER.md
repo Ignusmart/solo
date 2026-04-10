@@ -6,7 +6,7 @@ Last updated: 2026-04-10 (iteration 31)
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
-| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-10 (#29) | All infra complete ✅ — domain, Vercel, Neon DB, Railway API, Stripe webhook, Resend, GitHub OAuth. Ready for users. |
+| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-10 (#30) | All infra ✅. Launch content drafted. Pending: demo GIF, HN karma, community launch (target next Tue). |
 | 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-10 (#17) | All infra complete ✅ — domain, Vercel, Neon DB, GA4, SEO pages, Google Ads ($10/day), Stripe prod keys, Resend. Awaiting first conversion (review 2026-04-17). |
 | 3 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 4 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
@@ -124,3 +124,8 @@ Last updated: 2026-04-10 (iteration 31)
 | 2026-04-10 | Stripe webhook secret | ✅ | Configured |
 | 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
 | 2026-04-10 | GitHub OAuth app | ✅ | Created and configured |
+| 2026-04-10 | Launch content drafted | ✅ | Show HN, Twitter thread, LinkedIn, 4 Reddit posts, IH post — see apidelta-launch-content.md |
+| — | Pre-launch: demo GIF/video | ❌ | 30-sec screen capture: add URL → AI classification → Slack alert |
+| — | Pre-launch: HN karma check | ❌ | Ensure account has comment history before Show HN |
+| — | Community launch (8 posts) | ❌ | Target: next Tue-Fri. Goal: 5-10 trial signups in 2 weeks |
+| — | Demand validation review | ❌ | 2 weeks after launch — kill/continue decision |
