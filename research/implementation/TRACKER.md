@@ -1,12 +1,12 @@
 # Implementation Tracker
 
-Last updated: 2026-04-10 (iteration 31)
+Last updated: 2026-04-11 (iteration 32)
 
 ## Active Ideas
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
-| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-10 (#30) | All infra ✅. Launch content drafted. Pending: demo GIF, HN karma, community launch (target next Tue). |
+| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-11 (#32) | All infra ✅. Solidification sprint complete (dedup, auth, landing page honesty). Pending: demo GIF, HN karma, community launch. |
 | 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-10 (#17) | All infra complete ✅ — domain, Vercel, Neon DB, GA4, SEO pages, Google Ads ($10/day), Stripe prod keys, Resend. Awaiting first conversion (review 2026-04-17). |
 | 3 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 4 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
@@ -59,17 +59,17 @@ Last updated: 2026-04-10 (iteration 31)
 
 ## MVP Completion Checklist (10 items)
 
-### APIDelta
-- [ ] 1. Core feature works end-to-end (changelog crawling + AI classification + alerting)
-- [ ] 2. Landing page (Next.js + shadcn/ui + Tailwind) with value prop, pricing, CTA
-- [ ] 3. Auth (NextAuth.js or custom JWT — sign up, log in, sessions)
-- [ ] 4. Billing (Stripe Checkout + webhooks in NestJS — can be test mode)
-- [ ] 5. Frontend deployable to Vercel
-- [ ] 6. Backend deployable to Railway/Fly.io (Dockerfile or config)
-- [ ] 7. Prisma migrations run cleanly on fresh database
-- [ ] 8. `.env.example` documents all required environment variables
-- [ ] 9. README has setup instructions (pnpm install, DB setup, env vars, dev server)
-- [ ] 10. No hardcoded secrets or obvious security issues
+### APIDelta (MVP COMPLETE — 2026-04-11)
+- [x] 1. Core feature works end-to-end (changelog crawling + AI classification + alerting)
+- [x] 2. Landing page (Next.js + shadcn/ui + Tailwind) with value prop, pricing, CTA
+- [x] 3. Auth (NextAuth.js v5 — email magic link + GitHub OAuth, session-validated API proxy)
+- [x] 4. Billing (Stripe Checkout + webhooks in NestJS — production keys configured)
+- [x] 5. Frontend deployable to Vercel
+- [x] 6. Backend deployable to Railway (NestJS + Prisma)
+- [x] 7. Prisma migrations run cleanly on fresh database
+- [x] 8. `.env.example` documents all required environment variables
+- [x] 9. README has setup instructions (pnpm install, DB setup, env vars, dev server)
+- [x] 10. No hardcoded secrets or obvious security issues (auth hardened 2026-04-11)
 
 ### ScanAble (MVP COMPLETE — 2026-04-08)
 - [x] 1. Core feature works end-to-end (URL input → axe-core scan → PDF report generation)
@@ -125,6 +125,11 @@ Last updated: 2026-04-10 (iteration 31)
 | 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
 | 2026-04-10 | GitHub OAuth app | ✅ | Created and configured |
 | 2026-04-10 | Launch content drafted | ✅ | Show HN, Twitter thread, LinkedIn, 4 Reddit posts, IH post — see apidelta-launch-content.md |
+| 2026-04-11 | Solidification sprint | ✅ | Cross-run dedup (SHA-256 content hash), classifier idempotency (aiSummary field), isNew lifecycle, duplicate alert prevention, 6 noise filter patterns, auto-disable after 5 failures |
+| 2026-04-11 | Auth hardening | ✅ | API proxy validates session + injects x-team-id header, backend ownership checks, removed exposed evaluate endpoint |
+| 2026-04-11 | Landing page honesty | ✅ | Removed false claims (50+ formats, weekly digests, team members, priority support). Honest copy deployed. |
+| 2026-04-11 | Data cleanup | ✅ | Deleted 164 duplicate entries, 48 failed crawl runs, 7 noise entries. Disabled 6 broken sources. 108 clean entries remain across 9 active sources. |
+| 2026-04-11 | Production dedup verified | ✅ | 3 prod crawls (Cloudflare, Slack, Twilio) — 0 duplicates created. Pipeline is solid. |
 | — | Pre-launch: demo GIF/video | ❌ | 30-sec screen capture: add URL → AI classification → Slack alert |
 | — | Pre-launch: HN karma check | ❌ | Ensure account has comment history before Show HN |
 | — | Community launch (8 posts) | ❌ | Target: next Tue-Fri. Goal: 5-10 trial signups in 2 weeks |
