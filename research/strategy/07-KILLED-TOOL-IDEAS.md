@@ -118,6 +118,26 @@ One line per idea. Details in iteration reports.
 - Stock Option Tax Calculator — ESO Fund, Carta, EquitySimplified, AgentCalc, Secfi all FREE. Pattern #8 (lead-gen).
 - Legal Document Generators (eviction, C&D, demand letters) — Rocket Lawyer, LegalZoom cover broadly. No computation = no pricing power (pattern #10).
 
+### Iteration 10 Kills (18 categories — standard + radical approach)
+- Nutrition Facts Label Generator — OnlineLabels (free), Packify (free), Nutrition-Facts-Labels.com (free/no signup). Multiple free FDA-compliant tools.
+- AI Architectural Rendering — 23+ tools (mnml.ai, ArchiVinci, MyArchitectAI, RenderAI, Vibe3D). 44% architect adoption. Saturated.
+- FLSA Overtime Calculator — DOL provides FREE official calculator. ClickTime, PieceworkPro free. Pattern #8.
+- Rent Increase Notice Generator — UtilityProfit (AI+free), LawDistrict (free), eForms (free). Minimal computation. Pattern #10.
+- Employee Handbook Generator — 20+ tools. Free: Handbooks.io, Waybook, QuillBot. Paid: AirMason, SixFifty. All price points served.
+- GDPR Website Compliance Scanner — Free: ComplyDog, Cookiebot, 2GDPR. Enterprise: OneTrust, Osano. Saturated.
+- DMARC/SPF/DKIM Report — EasyDMARC, DMARCLY, dmarcian, PowerDMARC ($8/mo+). Subscription territory, not transactional. Pattern #5.
+- AI Trademark Search — Corsearch (172.5M records/188 jurisdictions), Clarivate RiskMark, Trademarkia.ai. Data moat impossible.
+- Lien Waiver Generator — LienShield ($19/mo), Built.com (free). Minimal computation. Pattern #10.
+- Data Anonymization Tool — Free: Tomedes, Parabola, terrific.tools (browser-based). Zero friction free alternatives.
+- EU AI Act Compliance Assessment — EU Commission free checker, 25+ free tools at euaicompass.com. Pattern #14.
+- AI Dating Profile Photos — 10+ tools (TruShot, Aragon AI, PhotoAI, CarePhoto, Face26, ProfileBakery, Narkis.ai). $0.50-$49. Saturated extension of headshots market.
+- AI 3D Product Models — Shopify app exists, plus Sloyd, SellerPic, Modelry, Fibbl. Capital-intensive ML.
+- Wedding Seating Chart Optimizer — Free (Wedibox, Zola, WeddingWire). Pattern #8 (lead gen for platforms).
+- AI Agent Builder/Marketplace — 13+ no-code builders (Lindy, MindStudio, Gumloop). Marketplaces exist.
+- Changelog/Release Notes Tool — 13+ tools, all subscription $19-249/mo. Not transactional.
+- AI Product Demo Video — 14+ tools (Synthesia, Trupeer, Clueso, Supademo). Subscription territory.
+- Brand Voice Consistency Checker — Jasper, Grammarly Business, Writer, Sprites. Feature within larger platforms.
+
 ---
 
 ## Patterns That Kill Tool Ideas
@@ -135,3 +155,4 @@ One line per idea. Details in iteration reports.
 11. **"Simple tool" competitors are often full platforms.** Always visit the actual competitor site. A "paystub generator" might be a tax document platform with 30+ form types, years of content, and support infrastructure. Your single-feature MVP isn't "differentiated" — it's incomplete. Check the footer, sitemap, and product catalog before scoring.
 12. **The 2026 utility tool landscape is near-saturation.** After 60+ categories explored across 4 iterations, every "generate X" / "convert X" / "create X" category has 5-30+ free tools. The gap between free and paid has narrowed to near-zero for most use cases. New utility tools need a genuinely novel angle — not just "better UX" on an existing category.
 13. **"Compliance-adjacent" ≠ compliance-gated.** Redaction, alt text, and VPAT are adjacent to compliance but don't require the OUTPUT ITSELF to be the compliance artifact. Users can manually review/fix AI output. Only tools where the output IS the compliance document (audit report, tax form, paystub) have real pricing power.
+14. **Governments now proactively release free compliance tools.** DOL (overtime), EU Commission (AI Act), USPTO (trademark search) — regulatory bodies increasingly ship free digital tools alongside new regulations. The window between "new regulation" and "free government tool" has shrunk to near-zero. Don't assume emerging regulations = tool gap.

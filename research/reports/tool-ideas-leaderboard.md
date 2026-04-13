@@ -18,6 +18,7 @@ Ranked by post-adversarial score. Must score 16+ to be considered viable for a b
 
 ## Iteration History
 
+- **Iteration 10** (2026-04-11): Standard approach (11 categories) + radical approach (7 more via revenue-first, arbitrage, platform gaps). 18 total categories explored — ALL killed. Tried flipping strategy: starting from proven revenue patterns (HeadshotPro $300K/mo model), price arbitrage, Fiverr automation, Shopify gaps. Key finding: every "professional service → AI tool" arbitrage was claimed in 2023-2024. New pattern #14: governments proactively release free compliance tools. **131+ tool ideas total. RESEARCH TRACK CLOSED. ScanAble remains only idea above bar.**
 - **Iteration 9** (2026-04-07): Explored 8+ genuinely new categories (PDF redaction, video face blur, GEO audit, alt text generation, VPAT, audio stem separation, stock calculators, legal docs). ALL killed. GEO space went from 0→22+ tools in <12 months. Alt text generators have 85K+ users. New pattern: "compliance-adjacent" ≠ compliance-gated. 110+ tool ideas total. ScanAble remains only idea above bar.
 - **Iteration 8** (2026-04-05): Duplicate of iteration 7. Honest re-evaluation of ScanAble to 18/25. Still above threshold.
 - **Iteration 7** (2026-04-05): No new exploration. Research track complete. ScanAble at 21/25 is the winner. **Cancel /loop and run /implement.**

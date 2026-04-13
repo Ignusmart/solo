@@ -1,13 +1,13 @@
 # Implementation Tracker
 
-Last updated: 2026-04-11 (iteration 32)
+Last updated: 2026-04-13 (iteration 32)
 
 ## Active Ideas
 
 | # | Idea | Type | Folder | Status | Phase | Last Iteration | Blockers |
 |---|------|------|--------|--------|-------|---------------|----------|
-| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-11 (#32) | All infra ✅. Solidification sprint complete (dedup, auth, landing page honesty). Pending: demo GIF, HN karma, community launch. |
-| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-10 (#17) | All infra complete ✅ — domain, Vercel, Neon DB, GA4, SEO pages, Google Ads ($10/day), Stripe prod keys, Resend. Awaiting first conversion (review 2026-04-17). |
+| 1 | APIDelta — API dependency change monitor | SaaS | projects/apidelta/ | LAUNCHING | Launch C | 2026-04-11 (#32) | All infra ✅. Demo GIF ✅ (on landing page). Pending: HN karma, community launch (8 posts). Hard kill criteria set — see launch log. |
+| 2 | ScanAble — Accessibility Report | Tool | projects/scanable/ | LAUNCHING | Launch B | 2026-04-13 (#17) | Google Ads paused — advertiser verification submitted 2026-04-13, awaiting Google approval (1-3 biz days). Review date pushed to ~2026-04-20. |
 | 3 | StubSnap — Paystub Generator | Tool | projects/stubsnap/ | KILLED | — | 2026-04-05 (#1) | Killed in tool leaderboard: ThePayStubs.com is a full tax platform (30+ IRS forms), not a simple tool. One feature vs full platform = no viable path. |
 | 4 | Freight Broker Micro-TMS | SaaS | projects/freight-tms/ | KILLED | Phase 2 | 2026-04-05 (#7) | Distribution requires high-touch sales to offline buyers (freight brokers). Incompatible with async/automated marketing. |
 | 5 | Acquisition Play — buy underperforming extension | — | projects/acquisition-play/ | KILLED | — | 2026-04-05 (#3) | Sub-$5K market depleted after 3 iterations, 8 marketplaces, 8/8 candidates eliminated. Build > buy at this budget. |
@@ -97,7 +97,7 @@ Last updated: 2026-04-11 (iteration 32)
 | 2026-04-08 | GA4 analytics setup | ✅ | Property ID 532432963 |
 | 2026-04-08 | SEO landing pages built | ✅ | /ada-compliance-checker, /eaa-accessibility-audit, /free-wcag-checker, /wcag-compliance-report, /website-accessibility-audit |
 | 2026-04-10 | Google Ads campaign launched | ✅ | Performance Max, $10/day budget, Purchases goal, 10 search themes, 6 sitelinks, GA4 linked |
-| 2026-04-10 | Google Ads — learning phase | 🔄 | Don't touch for 7 days. Check metrics ~2026-04-17 |
+| 2026-04-10 | Google Ads — learning phase | ⚠️ | Campaign paused — Google requires advertiser verification. Submitted 2026-04-13, awaiting approval (1-3 business days). |
 | 2026-04-10 | Stripe production keys | ✅ | Configured in Vercel env vars |
 | 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
 | 2026-04-10 | Replace stock ad images | ✅ | Product screenshots uploaded to Google Ads |
@@ -130,7 +130,37 @@ Last updated: 2026-04-11 (iteration 32)
 | 2026-04-11 | Landing page honesty | ✅ | Removed false claims (50+ formats, weekly digests, team members, priority support). Honest copy deployed. |
 | 2026-04-11 | Data cleanup | ✅ | Deleted 164 duplicate entries, 48 failed crawl runs, 7 noise entries. Disabled 6 broken sources. 108 clean entries remain across 9 active sources. |
 | 2026-04-11 | Production dedup verified | ✅ | 3 prod crawls (Cloudflare, Slack, Twilio) — 0 duplicates created. Pipeline is solid. |
-| — | Pre-launch: demo GIF/video | ❌ | 30-sec screen capture: add URL → AI classification → Slack alert |
-| — | Pre-launch: HN karma check | ❌ | Ensure account has comment history before Show HN |
-| — | Community launch (8 posts) | ❌ | Target: next Tue-Fri. Goal: 5-10 trial signups in 2 weeks |
-| — | Demand validation review | ❌ | 2 weeks after launch — kill/continue decision |
+| 2026-04-11 | Demo GIF + landing page | ✅ | 9-frame GIF (664KB) on landing page "Product tour" section. Demo mode (?demo=true) for screenshots without backend. |
+| 2026-04-11 | HN karma check | ⚠️ | Account `Ignusmart`: 1 karma, 0 comments. BLOCKED — need 50+ karma, 15-20 comments. Target Show HN: ~April 28-May 2. Start commenting now. |
+| 2026-04-11 | Launch posts finalized | ✅ | 8 posts ready (social-content.md). False Postman stat removed. Kill criteria updated. Links set. Show HN drafted but blocked on karma. |
+| — | Community launch (7 posts excl. HN) | ❌ | Launch day: **2026-04-15 (Tuesday)**. Schedule below. Goal: 5-10 trial signups in 2 weeks. |
+| — | Show HN post | ❌ | Blocked on karma. Target: ~April 28-May 2. |
+| — | Demand validation review | ❌ | 2 weeks after launch — hard kill criteria below |
+
+#### Kill Criteria (non-negotiable)
+
+| Checkpoint | Date | Metric | Kill if |
+|-----------|------|--------|---------|
+| Day 14 post-launch | ~2026-04-29 | Trial signups | < 5 signups → kill |
+| Day 30 post-launch | ~2026-05-15 | Paying customers | < 2 paying ($49+ MRR) → kill |
+| Day 30 post-launch | ~2026-05-15 | Organic interest | Zero inbound, no repeat visits → kill |
+
+#### Launch Schedule (starts 2026-04-15)
+
+| Date | Day | Post | Platform | Time (ET) |
+|------|-----|------|----------|-----------|
+| Tue Apr 15 | 1 | LinkedIn launch post | LinkedIn | 9 AM |
+| Tue Apr 15 | 1 | Twitter launch thread | X | 10 AM |
+| Tue Apr 15 | 1 | r/webdev discussion | Reddit | 11 AM |
+| Thu Apr 17 | 3 | r/devops discussion | Reddit | 10 AM |
+| Thu Apr 17 | 3 | IH launch post | Indie Hackers | 11 AM |
+| Fri Apr 18 | 4 | LinkedIn pain-point post | LinkedIn | 9 AM |
+| Mon Apr 21 | 7 | Dev.to technical article | Dev.to | 10 AM |
+| Tue Apr 22 | 8 | r/programming technical post | Reddit | 10 AM |
+| Wed Apr 23 | 9 | Twitter build thread | X | 10 AM |
+| Thu Apr 24 | 10 | LinkedIn technical post | LinkedIn | 9 AM |
+| ~Apr 28-May 2 | 14-18 | Show HN | HN | 10 AM (if karma 50+) |
+
+**Rules**: Copy-paste from `docs/social-content.md`. Reply to every comment for 4-6 hours after posting. No follow-up posts on the same day.
+
+**Context**: Market research (2026-04-11) found weak demand signals — dead competitors (API Drift Alert, Optic.dev, GetChanges.io), pain point absent from Postman 2025/SO 2024 surveys, free alternatives cover 80% of value (oasdiff, PageCrawl $8/mo, RSS feeds). Product is built and polished — launch costs 2-3 days of posting. Don't invest another engineering hour until organic demand appears. If killed, redirect all time to competitive audits (Code4rena/Sherlock).
