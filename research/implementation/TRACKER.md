@@ -102,7 +102,9 @@ Last updated: 2026-04-13 (iteration 32)
 | 2026-04-10 | Resend email integration | ✅ | API key + domain verified |
 | 2026-04-10 | Replace stock ad images | ✅ | Product screenshots uploaded to Google Ads |
 | 2026-04-10 | End-to-end prod test | ✅ | Payment → scan → email (report@scanable.dev) → PDF download all working. scanable.dev scored 100/100. |
+| 2026-04-13 | API subscription billing shipped | ✅ | Paid API tiers (Starter $19/mo, Growth $49/mo, Scale $149/mo) live. Stripe Checkout subscription flow, Customer Portal for plan switching/cancellation, dashboard plan card with usage, webhook lifecycle handling. Tested end-to-end in test mode (upgrade Starter→Growth→Scale). Live Stripe price IDs + portal configured. |
 | — | First organic/ad conversion | 🔄 | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
+| — | First API subscription conversion | 🔄 | Paid tiers just launched — awaiting first subscriber |
 
 #### Google Ads Campaign Config
 - **Type**: Performance Max
