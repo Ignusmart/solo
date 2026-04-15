@@ -103,8 +103,12 @@ Last updated: 2026-04-13 (iteration 32)
 | 2026-04-10 | Replace stock ad images | ✅ | Product screenshots uploaded to Google Ads |
 | 2026-04-10 | End-to-end prod test | ✅ | Payment → scan → email (report@scanable.dev) → PDF download all working. scanable.dev scored 100/100. |
 | 2026-04-13 | API subscription billing shipped | ✅ | Paid API tiers (Starter $19/mo, Growth $49/mo, Scale $149/mo) live. Stripe Checkout subscription flow, Customer Portal for plan switching/cancellation, dashboard plan card with usage, webhook lifecycle handling. Tested end-to-end in test mode (upgrade Starter→Growth→Scale). Live Stripe price IDs + portal configured. |
+| 2026-04-14 | One-time PDF report repriced $19 → $9 | ✅ | Realigned value vs API tiers ($19 PDF was priced at 1,000 API scans). Inline `price_data` — no Stripe Product change needed, takes effect on next checkout. 26 files updated across pricing cards, CTAs, SEO pages, OG/Twitter images, comparison tables. |
+| 2026-04-14 | RapidAPI integration — code ready | ✅ | `POST /api/rapidapi/scan` + `lib/rapidapi-auth.ts` + `public/openapi.json` shipped. Proxy-secret auth, full paid-tier response for all RapidAPI users, no local quota (RapidAPI enforces). Next: create RapidAPI provider account, import spec, set `RAPIDAPI_PROXY_SECRET` in Vercel. |
+| — | RapidAPI listing live | 🔄 | TODO: (1) create provider account at rapidapi.com/provider, (2) import `https://scanable.dev/openapi.json`, (3) generate Proxy Secret in RapidAPI dashboard and set `RAPIDAPI_PROXY_SECRET` in Vercel prod env, (4) configure pricing tiers (Basic $9/500, Pro $29/2000, Ultra $99/10000), (5) submit for review. Strategy: discovery channel, funnel power users to direct pricing. |
 | — | First organic/ad conversion | 🔄 | Waiting for Google Ads data (target: 1+ conversion by 2026-04-17) |
 | — | First API subscription conversion | 🔄 | Paid tiers just launched — awaiting first subscriber |
+| — | First RapidAPI subscription | 🔄 | Awaiting listing approval + discovery |
 
 #### Google Ads Campaign Config
 - **Type**: Performance Max
