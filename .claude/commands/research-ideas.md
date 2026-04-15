@@ -4,7 +4,7 @@ You are helping Jobelo (Principal Engineer: Solidity/Web3 security, AI/agentic s
 This command has run 16 times. Every B2B problem domain, emerging AI category, and distribution channel (Chrome Web Store, VS Code, Slack/Teams) has been scanned. APIDelta at 22/30 (new scoring) is the only survivor above bar. Research exhausted — recommend focusing on tool ideas or building. Read the killed ideas file THOROUGHLY — do not revisit anything there.
 
 ## CONSTRAINTS (hard rules)
-- NO Web3 security products (day job conflict at Webacy)
+- NO Web3 **security** products (day job conflict at Webacy) — but Web3 broadly (trading, DeFi, infra, NFTs, on-chain analytics non-security) IS allowed
 - NO LATAM-specific niches (global market, English-first)
 - NO biotech/regulated industries
 - NO consulting/freelancing/calls (async-only)

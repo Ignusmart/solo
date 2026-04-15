@@ -16,7 +16,7 @@ You are helping Jobelo (Principal Engineer: Solidity/Web3 security, AI/agentic s
 | Win condition | $2K+ MRR in 6 months | $1K+/mo revenue in 3 months |
 
 ## CONSTRAINTS (hard rules)
-- NO Web3 security products (day job conflict at Webacy)
+- NO Web3 **security** products (day job conflict at Webacy) — but Web3 broadly (trading, DeFi, infra, NFTs, on-chain analytics non-security) IS allowed
 - NO LATAM-specific niches (global market, English-first)
 - NO biotech/regulated industries
 - NO consulting/freelancing/calls (async-only)

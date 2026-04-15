@@ -37,9 +37,10 @@ solo/
 
 ## Important: Off-Limits Product Domains
 
-- **Web3 security products are OFF LIMITS** — no wallet risk scoring, smart contract monitoring/auditing tools, compliance/OFAC tooling, transaction classifiers, depegging monitors, or anything adjacent. This is Jobelo's professional domain at Webacy and would conflict with his employment.
-- His security/blockchain skills are **transferable building skills** (architecture, data pipelines, API design) but the product vertical must be completely different.
-- When brainstorming micro SaaS or product ideas, target non-Web3-security verticals.
+- **Web3 SECURITY products are OFF LIMITS** (narrow rule — Web3 broadly is fine): no wallet risk scoring, smart contract monitoring/auditing tools, compliance/OFAC tooling, transaction classifiers, depegging monitors, or anything adjacent. This is Jobelo's professional domain at Webacy and would conflict with his employment.
+- **Web3 non-security IS allowed**: trading systems, arbitrage bots, DeFi tooling, yield strategies, NFT tools, on-chain analytics (non-security angle), wallet UX, dev tooling, RPC/indexers, bridges, cross-chain UX, MEV infra. Before rejecting a Web3 idea, ask: "Is this specifically a *security* product?" If no → it's on the table.
+- His security/blockchain skills are **transferable building skills** (architecture, data pipelines, API design) — and his Solidity/EVM/Solana expertise is a *building advantage* for non-security Web3 products too.
+- When brainstorming micro SaaS or product ideas, target non-Web3-security verticals (but Web3 non-security is fair game).
 - **Target global markets** — not Colombia/LATAM-specific niches. English-first, global distribution. LATAM can be secondary but not the primary value proposition.
 
 ## Working in This Repo

@@ -4,7 +4,7 @@ You are implementing micro-SaaS MVPs for Jobelo. This command builds products fr
 - `$ARGUMENTS` — parse for `--ideas N` (default: 3) or `--idea <name>`. If $ARGUMENTS is empty or missing, default to `--ideas 3`.
 
 ## CONSTRAINTS
-- NO Web3 security products (day job conflict at Webacy)
+- NO Web3 **security** products (day job conflict at Webacy) — but Web3 broadly (trading, DeFi, infra, NFTs, on-chain analytics non-security) IS allowed
 - Global market, English-first
 - Async-only, no calls
 - Each MVP must ship in 1-4 weeks
