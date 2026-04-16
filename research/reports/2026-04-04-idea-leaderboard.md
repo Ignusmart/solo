@@ -16,6 +16,8 @@
 
 **ITERATION 19**: Weak competitor hunting + fresh 2026 signals (SaaS shutdowns, pricing backlash, regulatory deadlines, Market Clarity "21 niches" report, PH April launches). All ideas map to existing kill patterns — offline buyers, saturated categories, or platform absorption. 7 consecutive zero-result iterations (13-19). 200+ ideas total. **SaaS RESEARCH DEFINITIVELY EXHAUSTED.**
 
+**ITERATION 20**: First-ever Web3 non-security scan. 20+ sub-categories explored (DeFi yield tooling, DAO governance, Foundry/Solidity dev tools, Pendle ecosystem, on-chain analytics, RPC monitoring, Web3 webhooks, AI agent infra, crypto tax, airdrop tracking, etc.). ALL saturated or off-limits. Best ideas: DeFi Governance Watch (18/30) and Pendle Yield Compass (18/30) — both below 22 bar. Web3 mirrors general SaaS saturation + security constraint eliminates strongest concepts. Actionable output: position APIDelta for Web3 dev teams (SDK changelog monitoring). 8 consecutive zero-result iterations (13-20). 220+ ideas total.
+
 ---
 
 ## Scoring Criteria

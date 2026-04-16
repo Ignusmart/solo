@@ -339,15 +339,42 @@ Use these as pre-filters for future research:
 - MCP registry/tooling — official registry + Smithery + MCPMarket. Crowded, no proven revenue.
 - Market Clarity "21 Niches" — 17/21 are offline buyers, 2 are freelancer tools, rest are killed.
 
-## Stats (19 iterations)
+### Iteration 20 Kills (Web3 non-security — first scan)
+- DeFi Portfolio Tracking — Zerion, Zapper, DeBank, DeFi Saver, APY.vision. 5+ tools, free tiers.
+- DAO Governance Tooling — Snapshot, Tally, Aragon. Mature platforms.
+- Foundry Gas CI — foundry-gas-diff (free OSS GH Action). No pricing power.
+- RPC Monitoring/Failover — built into Alchemy, QuickNode, dRPC, Chainstack. Provider feature.
+- DeFi Alerts — DeFi Monitor + Open DeFi Notification Protocol (30+ protocols). Covered.
+- Transaction Simulation — Tenderly dominates (VC-funded). Not micro-SaaS territory.
+- Whale Tracking — Nansen ($9/mo), Arkham, CoinGlass, DexCheck. 7+ tools.
+- Web3 Webhooks/Events — Alchemy, QuickNode, Moralis, Chainbase, GetBlock, Dispatch. 6+ providers.
+- Multi-chain Deploy — thirdweb (2000+ chains), Remix, Foundry scripts. Well-served.
+- Airdrop Tracking — Alpha Drops, Drops.bot, Earnifi, AirdropScan, AirdropAlert. 6+ tools.
+- DeFi Yield API — vaults.fyi ($399+/mo), DeFiLlama (free). Gap exists but massive data pipeline build.
+- ABI Tools — 13+ on Alchemy store, ContractABI, HashEx, Dune. Free tools.
+- Token Unlock Tracking — CoinMarketCap, CoinGecko, DeFiLlama, CoinGlass, Tokenomist, DropsTab. 7+ tools.
+- Gas Calculators — RareSkills, free multi-chain calculators, hardhat-gas-reporter. Free.
+- Impermanent Loss Calculators — DailyDeFi, CoinStats, Poolfish, Qalc.ai. 5+ free tools.
+- DAO Treasury Management — Streamflow, Cashmere, Remox, HQ.xyz, Safe. Multiple tools.
+- DeFi Tax Reporting — CoinTracker, Koinly, TokenTax, CoinTracking, CryptoTaxCalculator, Blockstats. 10+ tools.
+- Web3 AI Agent Infra — 282 projects, $4.3B market, Coinbase Agentic Wallets. VC gold rush.
+- Crypto Payroll — Request Finance, Superfluid. Covered.
+- Protocol Revenue Analytics — TokenTerminal ($300+/mo), DeFiLlama (free). Gap requires massive build.
+- Smart Contract Monitoring/ABI Change Detection — OFF LIMITS (Web3 security conflict).
+- Proxy Upgrade Monitoring — OFF LIMITS (smart contract monitoring variant).
+- DeFi Governance Watch — 18/30. Real gap but intermittent use, low WTP, borderline off-limits.
+- Pendle Yield Compass — 18/30. Zero competitors but TAM too small.
+- DeFi Strategy Backtester — 6-8 week build, low WTP. Exceeds MVP bar.
 
-- **Total ideas considered**: 200+
-- **Total verticals scanned**: 60+
+## Stats (20 iterations)
+
+- **Total ideas considered**: 220+
+- **Total verticals scanned**: 80+ (60 general + 20+ Web3)
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
-- **Ideas deep-dived**: 47+
+- **Ideas deep-dived**: 50+
 - **Ideas surviving above bar**: APIDelta at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as APIDelta feature)
 - **Best surviving idea**: APIDelta (API dependency change monitoring) — CODE COMPLETE, awaiting deploy
-- **Research status**: DEFINITIVELY CLOSED after 19 iterations. No new viable ideas in 7 consecutive iterations (13-19).
+- **Research status**: DEFINITIVELY CLOSED after 20 iterations. No new viable ideas in 8 consecutive iterations (13-20). Web3 non-security confirms same saturation pattern.
 
 ---
 

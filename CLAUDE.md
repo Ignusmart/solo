@@ -18,6 +18,7 @@ solo/
     ├── costs-tracker/         # Plata — LATAM expense tracker (Flutter + NestJS) [own git]
     ├── cv/                    # Resume / CV generator [own git]
     ├── games/                 # Game experiments (crawling_chaos, sprites-generator)
+    ├── hackathons/            # Hackathon tracker & entries (like bounty/ but for hackathons)
     ├── ignusmart/             # IgnuSmart — Next.js project [own git]
     ├── open-saas/             # Open SaaS template reference [own git]
     ├── saas-costs-tracker/    # SaaS costs tracker
