@@ -62,11 +62,12 @@ solo/
 
 ## Current Revenue Strategy (as of April 2026)
 
-1. **Competitive audits** (Code4rena, Sherlock) — primary income, 60-70% of time
-2. **Plata app** (projects/costs-tracker/) — already shipped, needs distribution/marketing
-3. **APIDelta** (projects/apidelta/) — actively building, Phase 2, best surviving SaaS idea (22/30)
-4. **New tool/SaaS MVPs** — backfill from unified leaderboard as slots open (see TRACKER.md)
-5. **Technical content** — builds audience and reputation
+1. **Competitive audits & bounties** — historically framed as primary income (60-70% time), but claude-bug-bounty harness has produced **$0 paid across ~170 projects audited** as of 2026-04-18 (see `projects/bounty/claude-bug-bounty/BOUNTIES.md`). Root cause is target saturation (most live programs have 5-20 prior audits + Certora FV). One live signal: `immunefi-ssvnetwork` F-12 High ESCALATED to team 2026-04-17; 5 other submissions pending. Allocation is **under review** until ssvnetwork resolves — do not default to "primary income" framing.
+2. **ScanAble** (projects/scanable/) — LAUNCHING, Google Ads live since Apr 10, pSEO + compliance moat
+3. **APIDelta** (projects/apidelta/) — LAUNCHING, community launch Apr 15, kill checkpoint Apr 29
+4. **Plata app** (projects/costs-tracker/) — already shipped, needs distribution/marketing
+5. **New tool/SaaS MVPs** — backfill from unified leaderboard as slots open (see TRACKER.md)
+6. **Technical content** — builds audience and reputation
 
 ## Common Tasks
 

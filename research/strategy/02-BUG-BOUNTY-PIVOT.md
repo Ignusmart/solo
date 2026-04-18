@@ -1,6 +1,19 @@
 # Bug Bounty: Why It's Hard and What to Do Instead
 
-## Current Situation
+## 2026-04-18 Reality Check (supersedes original framing)
+
+The "pivot to competitive audits" below was the right *direction* but has not produced revenue. Data from `projects/bounty/claude-bug-bounty/BOUNTIES.md`:
+- **~170 projects audited, $0 paid** as of 2026-04-18
+- **~130 EXHAUSTED** (0 submittable findings, most due to 5-20 prior audits + Certora FV)
+- **7 submitted + rejected** (alchemix N/A, 40acres out-of-scope, trustee-plus N/A, iotex Informative, dexalot-omnivault not-reachable, firedancer not-reachable, termmax DUP)
+- **6 pending**: ssvnetwork ESCALATED 2026-04-17 (strongest), glow-finance Critical, dexalot Critical, chainlink-c4 QA, intuition-c4 Medium, layer-zero Medium
+- **~20 BLOCKED** on platform rep tiers (multipli, gmx-immunefi hold confirmed Mediums)
+
+Root cause is **target saturation**, not harness failure. The time-allocation table below is therefore on hold — do not treat "60% competitive audits" as a live recommendation until at least one submission pays. See also: `memory/project_bounty_roi_warning.md`.
+
+---
+
+## Current Situation (original)
 - You started a bounty project (~/Repos/bounty with 8+ protocol repos)
 - Finding it hard to get payouts
 - This is normal. Here's why and what to do about it.

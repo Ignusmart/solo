@@ -12,13 +12,13 @@ IPinfo (1.95T requests/yr): Single API, usage-based pricing, zero churn.
 
 ---
 
-## Current State (April 12, 2026)
+## Current State (updated April 18, 2026)
 
 | Product | Stage | Revenue | Signal Strength |
 |---------|-------|---------|-----------------|
 | **ScanAble** | LAUNCHING — Google Ads running ($10/day since Apr 10) | $0 (waiting for first conversion) | STRONG — 8,667 ADA lawsuits, 94.8% WCAG failure rate, EAA enforcement, zero API costs, >95% margin |
 | **APIDelta** | LAUNCHING — community launch Apr 15 | $0 (pre-launch) | WEAK — dead competitors, absent from surveys, free alternatives cover 80% |
-| **Competitive audits** | Active (Code4rena/Sherlock) | Primary income | Proven |
+| **Competitive audits & bounties** | Active via `claude-bug-bounty` harness | **$0 paid across ~170 projects** as of 2026-04-18; 6 submissions pending (ssvnetwork ESCALATED 2026-04-17) | **UNDER REVIEW** — target-saturation problem, not harness failure. See `memory/project_bounty_roi_warning.md` |
 
 **Critical dates:**
 - Apr 17: ScanAble Google Ads review (7 days learning)
@@ -339,5 +339,5 @@ If ScanAble's model proves out (compliance audit → PDF report → pay-per-use)
 3. **Kill fast, redirect faster.** If APIDelta fails kill criteria by May 15, immediately redirect all time to ScanAble growth + competitive audits.
 4. **Every new product must reuse existing infra.** No new tech stacks, no new deployment pipelines. Same Vercel + Neon + Stripe + Next.js + PDF engine.
 5. **pSEO before paid ads for low-ticket items.** Google Ads for $19 products may not have viable CPA. Organic/pSEO is the sustainable play.
-6. **Competitive audits are the floor.** Never drop below 50% time on Code4rena/Sherlock. This is proven income while products ramp.
+6. **Competitive audits as "floor" is under review.** Originally framed as proven income at ≥50% time. As of 2026-04-18, `claude-bug-bounty` has produced $0 paid across ~170 projects — primarily a target-saturation problem (mature Immunefi/Sherlock/Cantina programs with 5-20 prior audits). Do not treat audits as a guaranteed floor until at least one of the 6 pending submissions pays. Decision gate: ssvnetwork ESCALATED (2026-04-17) outcome — if it pays, restore floor; if it rejects, reallocate time toward products.
 7. **Audience compounds.** Every blog post, every HN comment, every Reddit engagement builds the distribution muscle. Products come and go; audience persists.
