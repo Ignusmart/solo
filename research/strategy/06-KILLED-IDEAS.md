@@ -366,15 +366,30 @@ Use these as pre-filters for future research:
 - Pendle Yield Compass — 18/30. Zero competitors but TAM too small.
 - DeFi Strategy Backtester — 6-8 week build, low WTP. Exceeds MVP bar.
 
-## Stats (20 iterations)
+### Iteration 21 Kills (non-dev verticals — first scan)
+- ASO Tools — 10+ tools (AppDrift, AppFigures, AppTweak, Sensor Tower, AstroASO $9/mo, AppVector $9/mo, GrowASO $49/yr). Saturated price floor.
+- SaaS Affiliate/Partner Mgmt — Rewardful, Kiflo, Dub Partners, Introw, Partner.io, PartnerStack, Impartner. 8+ tools.
+- Podcast Production Workflow — Descript, Riverside, Podsqueeze, OpusClip, Capsho, Castmagic. 10+ tools.
+- Localization for Indie SaaS — Lokalise, Crowdin ($25/mo), Verba, SimpleLocalize, POEditor, Tolgee (OSS), Localazy (free). 7+ tools.
+- Angel Investor Syndicate Ops — AngelList dominates back-office. Niche TAM. Carta/Angel Match/OpenVC cover CRM.
+- Newsletter Editorial Ops — Beehiiv/Substack/ConvertKit absorb editorial workflow natively.
+- Small Nonprofit Donor Mgmt — Bloomerang, Little Green Light ($45/mo), Givebutter (FREE), LiveImpact, DonorPerfect, Neon, eTapestry. 10+ tools, free floor.
+- Creator Talent Manager Roster Ops — 15/30. RosterGrid + InfluenceFlow + FOAM + 5 adjacent CRMs. Platform absorption risk (Meta/TikTok creator marketplaces) + API gatekeeping.
+- Wedding Planner Ops — HoneyBook, Aisle Planner, Planning Pod, Plutio. Saturated + offline buyer drift.
+- Paid Ads Agency Reporting — AgencyAnalytics, DashThis, Swydo, Cometly (pre-killed Iter 9).
+- Podcast Guest Booking — PodMatch ($6-64/mo), MatchMaker.fm ($129/yr), PodPitch, Podseeker, Talks.co, Podchaser. 6+ tools.
+- KDP 2026 Compliance Dashboard — 19/30. Timing window (AI disclosure + accessibility mandates) but platform absorption + intermittent pain + low WTP.
+- Influencer Brand Deal CRM — GRIN, Upfluence, Meltwater, Influencer Hero, MightyScout. 8+ tools.
 
-- **Total ideas considered**: 220+
-- **Total verticals scanned**: 80+ (60 general + 20+ Web3)
+## Stats (21 iterations)
+
+- **Total ideas considered**: 230+
+- **Total verticals scanned**: 95+ (60 general + 20+ Web3 + 13 non-dev)
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
-- **Ideas deep-dived**: 50+
+- **Ideas deep-dived**: 55+
 - **Ideas surviving above bar**: APIDelta at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as APIDelta feature)
 - **Best surviving idea**: APIDelta (API dependency change monitoring) — CODE COMPLETE, awaiting deploy
-- **Research status**: DEFINITIVELY CLOSED after 20 iterations. No new viable ideas in 8 consecutive iterations (13-20). Web3 non-security confirms same saturation pattern.
+- **Research status**: DEFINITIVELY CLOSED after 21 iterations. No new viable ideas in 9 consecutive iterations (13-21). Non-dev hypothesis falsified — same saturation pattern applies to non-dev verticals; domain knowledge difficulty is NOT the bottleneck.
 
 ---
 

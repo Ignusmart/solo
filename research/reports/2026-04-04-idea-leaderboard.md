@@ -18,6 +18,8 @@
 
 **ITERATION 20**: First-ever Web3 non-security scan. 20+ sub-categories explored (DeFi yield tooling, DAO governance, Foundry/Solidity dev tools, Pendle ecosystem, on-chain analytics, RPC monitoring, Web3 webhooks, AI agent infra, crypto tax, airdrop tracking, etc.). ALL saturated or off-limits. Best ideas: DeFi Governance Watch (18/30) and Pendle Yield Compass (18/30) — both below 22 bar. Web3 mirrors general SaaS saturation + security constraint eliminates strongest concepts. Actionable output: position APIDelta for Web3 dev teams (SDK changelog monitoring). 8 consecutive zero-result iterations (13-20). 220+ ideas total.
 
+**ITERATION 21**: First-ever non-dev vertical scan (hypothesis test: do audience-filtering rules force dev-only, or is saturation the real constraint?). 13 verticals scanned: ASO, SaaS affiliate mgmt, podcast production, LocOps, angel syndicate ops, newsletter ops, nonprofit donor mgmt, creator talent mgmt, wedding planner, paid ads agency reporting, podcast guest booking, KDP compliance, influencer brand deal CRM. ALL saturated or below bar. Best ideas: Creator Talent Manager Ops (15/30) and KDP Compliance Dashboard (19/30). Domain knowledge difficulty rated Easy-Medium for both — confirms domain opacity is NOT the bottleneck; saturation + platform absorption are. **Hypothesis FALSIFIED**: removing rules would not unlock non-dev survivors. 9 consecutive zero-result iterations (13-21). 230+ ideas total.
+
 ---
 
 ## Scoring Criteria
