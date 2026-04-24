@@ -64,7 +64,7 @@ solo/
 
 1. **Competitive audits & bounties** — historically framed as primary income (60-70% time), but claude-bug-bounty harness has produced **$0 paid across ~170 projects audited** as of 2026-04-18 (see `projects/bounty/claude-bug-bounty/BOUNTIES.md`). Root cause is target saturation (most live programs have 5-20 prior audits + Certora FV). One live signal: `immunefi-ssvnetwork` F-12 High ESCALATED to team 2026-04-17; 5 other submissions pending. Allocation is **under review** until ssvnetwork resolves — do not default to "primary income" framing.
 2. **ScanAble** (projects/scanable/) — LAUNCHING, Google Ads live since Apr 10, pSEO + compliance moat
-3. **APIDelta** (projects/apidelta/) — LAUNCHING, community launch Apr 15, kill checkpoint Apr 29
+3. **APIDelta** (projects/apidelta/) — LAUNCHING, community launch Apr 15, **kill checkpoint 2026-05-15 (Day 30)**. Criteria in `projects/apidelta/docs/launch-strategy.md:533` — survival floor is >200 visitors, >5 trial signups, any paying customer, any MRR. As of 2026-04-24 (Day 9): ~13 visitors/7d, 0 signups, 0 MRR — tracking below the kill floor on visitors and signups. Secondary $0-MRR-after-60-days backstop applies if Day 30 squeaks through.
 4. **Plata app** (projects/costs-tracker/) — already shipped, needs distribution/marketing
 5. **New tool/SaaS MVPs** — backfill from unified leaderboard as slots open (see TRACKER.md)
 6. **Technical content** — builds audience and reputation
