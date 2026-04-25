@@ -121,10 +121,15 @@ Use ALL of these sources. Do not rely on web search alone. The goal is to find R
 
 #### D) Competitor gap analysis
 - Search G2, Capterra, TrustRadius for existing tools in any promising space
-- Read 1-star and 2-star reviews — anger = opportunity
+- **Phrase-mine 1-2 star reviews** for: `"doesn't have"`, `"wish it could"`, `"missing"`, `"switched away from"`, `"had to use a workaround"`. These tell you exactly what the next product should ship — not generic complaints, but the precise feature gap.
 - Check for "alternatives to [expensive tool]" — high search volume = market pain
 
-#### E) Explore a DIFFERENT vertical or angle each iteration
+#### E) Upwork / Fiverr task mining (paying humans to do this manually)
+- Search Upwork for active jobs in the vertical — filter by hourly + repeat clients
+- Tasks posted weekly with $30-100/hr budgets are SaaS-replaceable
+- "People pay humans every week to do this" is a stronger demand signal than "people complain about this on Reddit." Look for repeated, predictable tasks — those are workflow gaps.
+
+#### F) Explore a DIFFERENT vertical or angle each iteration
 - **DO NOT repeat verticals from previous iterations** — check the killed file
 - Prioritize B2B with real budgets over solopreneur/creator tools
 - Consider non-obvious angles: developer workflows, back-office operations, compliance timing windows, marketplace gaps
@@ -150,7 +155,7 @@ For each idea, go DEEP — don't just describe it, PROVE the gap exists:
 - MVP scope (what ships in 1-2 weeks — specific features, not vague)
 - Revenue model + realistic MRR ceiling (show the math: TAM x conversion x price)
 - Why Jobelo's skills give a specific edge here
-- Distribution plan: How do first 10 customers find this? First 100?
+- Distribution plan: Pick **ONE primary channel** and write a 90-day execution plan. Specific weekly actions (e.g., "Reddit: 3 posts/week in r/X + r/Y, comment on 5 threads/day"), not "SEO + ads + Product Hunt." Multi-channel launches fail — channel-hopping founders learn nothing from any of them. If you can't commit to one channel for 90 days, the idea isn't ready.
 - Kill criteria: specific, measurable conditions to abandon this
 
 ### Step 4: ADVERSARIAL REVIEW (mandatory for every idea scoring 16+)
@@ -178,8 +183,19 @@ For each idea, go DEEP — don't just describe it, PROVE the gap exists:
 5. **Solo founder test**: Can one person build + maintain + support + market this?
 6. **Automated distribution test**: Can customers be acquired via SEO, Google/Facebook ads, Product Hunt, dev communities, or PLG without sales calls? If the buyer doesn't Google their problem or hang out in online communities → KILL.
 7. **Self-serve conversion test**: Can a stranger land on the page, understand the value, sign up, and get value in <5 minutes without talking to anyone? If a demo call or custom onboarding is needed → KILL.
+8. **Free-tier mask test**: If you launched with a free tier, would the likely outcome be 100+ signups but <10% paid conversion? If yes, the free tier is masking the fact that nobody would actually pay. Either go paid-only (or paid-trial) or no launch. Reference failure mode: 7 months of building, 100+ signups, 8-9 paid, killed.
 
-If 2+ kill tests fail hard → KILL the idea. **Tests 6 and 7 are mandatory passes** — any idea that fails either one is auto-killed regardless of other scores.
+If 2+ kill tests fail hard → KILL the idea. **Tests 6, 7, and 8 are mandatory passes** — any idea that fails any of them is auto-killed regardless of other scores.
+
+#### Pre-Build Validation Gate (mandatory for any idea scoring 22+)
+
+Before an idea graduates from research → /implement, the iteration report MUST answer all three:
+
+1. **Who are the 10 DM targets?** Specific named accounts, not personas. "DevOps engineers" fails. "10 named companies actively hiring [job title] on LinkedIn this month" passes. Provide the list (or a concrete way to generate it).
+2. **Where do they hang out?** A specific subreddit, Discord/Slack, LinkedIn group, GitHub org, newsletter, or community list — not "developer communities." If you can't name the place, you can't reach the buyer.
+3. **What does the cold-DM script ask?** A 3-line message ending with: "Would you pay $X/month for [specific outcome]?" The 3-of-10 yes bar applies *before any code is written*.
+
+If any of the three is missing or vague, the idea is **RETURNED** (not killed, not promoted) — back to research with a note about what's unanswered. Validation precedes building. T3's failure was 7 months of code with no DM evidence; don't repeat it.
 
 ### Step 5: Score each idea (1-5 scale, 6 dimensions now — max 30)
 
@@ -218,10 +234,11 @@ If 2+ kill tests fail hard → KILL the idea. **Tests 6 and 7 are mandatory pass
 ---
 
 ## BAR FOR IDEAS
-Be ruthlessly critical. 170+ ideas killed across 13 iterations. Top 6 scoring ideas ALL died under adversarial review. The question is NOT "does this sound like a good idea?" but:
+Be ruthlessly critical. 170+ ideas killed across 13 iterations; top 6 scoring ideas ALL died under adversarial review. An idea graduates only if:
 
-1. "Can I find EVIDENCE of real people paying for workarounds to this problem?"
-2. "Does this survive ALL 5 kill tests?"
-3. "Does this have a clear path to $2K+ MRR within 6 months?"
+1. EVIDENCE of real people paying for workarounds (Reddit / G2 / Upwork — not just "people complain")
+2. Survives all 8 kill tests (with tests 6, 7, 8 as mandatory passes)
+3. Clears the Pre-Build Validation Gate (10 named DM targets + community + script)
+4. Score ≥22/30 AFTER adversarial review
 
-An idea scoring 18+ AFTER adversarial review is worth building. Anything below is noise.
+Anything below is noise.
