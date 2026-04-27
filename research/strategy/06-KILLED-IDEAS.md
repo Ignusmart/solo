@@ -381,15 +381,62 @@ Use these as pre-filters for future research:
 - KDP 2026 Compliance Dashboard — 19/30. Timing window (AI disclosure + accessibility mandates) but platform absorption + intermittent pain + low WTP.
 - Influencer Brand Deal CRM — GRIN, Upfluence, Meltwater, Influencer Hero, MightyScout. 8+ tools.
 
-## Stats (21 iterations)
+### Iteration 22 Kills (final untested-angle sweep — closure iteration)
+- GovCon SMB RFP Tracking — SAM.gov (free, official), HigherGov, GovWin IQ, Bloomberg Government, BidPrime, GovTribe. Federal contractors win on past-performance + relationships, not Google ads. Kill filter #17 (offline buyers).
+- Grant Writing / grants.gov Tracking — Instrumentl ($179-499/mo), GrantStation, Foundation Directory Online, grants.gov (free), Submittable. Free-tier floor + solo nonprofits have no budget. Kill filter #6.
+- Music Royalty Tracking / Sync License Admin — TuneRegistry, Songtrust, Audiam, Cosynd, SongVault + PRO/CMO infra (ASCAP, BMI, SoundExchange). Domain expertise barrier + regulated mechanical licensing + 5+ incumbents.
+- K-12 Teacher Tools — Google Classroom (free), Canva for Education (free), ChatGPT Edu (free), Magic School AI (free), Diffit (free), Eduaide. Kill filters #6 (free-tier floor) + #18 (district procurement = high-touch sales).
 
-- **Total ideas considered**: 230+
-- **Total verticals scanned**: 95+ (60 general + 20+ Web3 + 13 non-dev)
+### Iteration 23 Kills (pain-signal-first methodology test)
+- Lightweight Postman alternative (HN wish) — Hoppscotch (free OSS), Bruno (free OSS), Insomnia, Yaak, Apidog, Thunder Client (7M+ installs). Pre-killed (VS Code API testing).
+- AI agent execution sandbox (HN wish) — LangSmith, Maxim, Braintrust, Langfuse (OSS), AgentOps, Arize, Helicone. 15+ tools. Pre-killed iter 8.
+- Indie hacker multi-platform revenue dashboard (Reddit-claimed signal) — Revenuo.app exists exactly. Plus Lemon Squeezy → Stripe acquisition consolidates the rails. Direct competitor + market consolidating against the pain.
+- Renter-side landlord review platform (Reddit-claimed signal) — OpenIgloo (1M+ addresses), WYL, RateTheLandlord, Rate My Landlord. 4 direct competitors + UGC libel liability for solo founder + consumer-pay-zero monetization.
+- Function call graph visualizer (HN wish) — Mindmap (JetBrains), Code Graph (VS Code), scip-callgraph, Graphify (OSS), Sourcetrail, CodeSee, koknat/callGraph. 7+ direct tools, mostly free OSS.
+
+### Iteration 24 Kills (Upwork recurring-task mining — partial, 403'd from raw listings)
+- Shopify SMB stock-cover / stockout alerting — Forthcast ($19.99/mo), Stockie ($5/mo), Sumtracker, Bee Low Stock, Inventory Planner ($249/mo for mid-market), Shopify-native low-stock + Stocky. 8+ Shopify apps + native.
+- Amazon listing health / suppression monitor — SentryKit, AmzMonitor, SellerSonar, Sellerboard, Bindwise (Threecolts), Sellerise, Helium 10 Alerts + Amazon-native "Listing Quality and Suppression" alerts. 6+ direct + native.
+- Law firm "weekly at-risk client" AR aging report — Clio Manage + Clio Accounting native; LeanLaw + QuickBooks; MyCase, PracticePanther, CosmoLex. Native to every legal practice management tool.
+- **Reframe kill**: "VAs do this every week" ≠ "SaaS gap exists." VA marketing pages explicitly list the SaaS tools VAs operate (Linnworks, Clio, Helium 10, SellerSonar). The pain is operator-time, not software absence.
+
+### Iteration 26 Kills (ScanAble-adjacency targeted scan)
+- Hreflang multi-language SEO compliance pSEO — 9+ free checkers (TechnicalSEO, SearchViu, SEOptimer, Sitechecker, SiteGuru, Apify, Seomator, WebsiteAudit, Screaming Frog) + Ahrefs/SEMrush/Sitebulb suites. No regulatory cliff (Google guidance only).
+- App store privacy nutrition label compliance audit — Apple deadline Dec 2020 + Google Play July 2022 (both passed). OneTrust Mobile App Compliance Scanner + governance platforms own enterprise. Apple Privacy Manifest Files mandatory Q1 2024. Window closed years ago.
+- DKIM/SPF/DMARC per-domain audit pSEO — MxToolbox (free) + AutoSPF + dmarcian + EasyDMARC + DMARCLY + PowerDMARC + Red Sift + Mailtrap + DNSChecker (9+ free). Google/Yahoo Feb 2024 + PCI DSS March 2025 cliffs already passed.
+- **Structural learning**: ScanAble caught a 6-12 month window between regulatory deadline announcement and free-tool race-to-the-bottom. All three adjacencies are post-T+12mo (1-4 years past their cliff).
+
+### Signal-Monitor Day 1 Kills (2026-04-25) — first ≥18 hypotheses from automated pain-mining
+Both surfaced from r/devops via the new daily signal-monitor cron. Both killed in deep validation. Pattern confirms iter 25-26 structural finding: pain-mining surfaces real pain but the most pain-rich communities (r/devops, r/sysadmin, r/SaaS) are also the most VC-targeted markets.
+
+- **AIGate / LLMGuard / GuardRail** (signal-monitor 19/25, killed) — Policy-as-code framework for LLM/agent pipelines (K8s admission controller). Killed by saturation: $414M flowed into 13 dedicated AI-security startups in 2025; top 10 agentic AI security raised $3.6B + $96B in M&A. Direct competitors at every tier: Lakera (well-funded), Protect AI (acquired by Palo Alto Networks 2025), Robust Intelligence (acquired by Cisco), HiddenLayer, WitnessAI ($85M+), Noma ($100M), 7AI ($130M Series A — largest cyber Series A ever). Native cloud absorption: AWS Bedrock Guardrails (6 policy types, free with Bedrock), Azure AI Content Safety, GCP Vertex AI Safety. OSS floor: NeMo Guardrails, LLM Guard, Promptfoo, Lakera Gandalf. Webacy adjacency check = clear (AI/LLM security ≠ Web3 security). **Filters: P3 platform absorption + P9 category-filled + P13 monopoly-anger + P14 12mo-fill.**
+
+- **InfraMap / DriftGuard / infrasync / CloudMap** (signal-monitor 18/25, killed) — Auto-discover live cloud infra → searchable dependency graphs + runbooks. Killed by name + saturation: cycloidio/inframap is OSS MIT 2K-star tool with release April 23 2026 doing exact functionality. Cloudcraft (425K+ users, acquired by Datadog 2021, free tier) does live-scan auto-discovery. Hava.io (commercial, customers include Citrix/GE/Amazon/SAP) does multi-cloud auto-discovery + dependency graphs + drift alerts + CI/CD integration. OSS floor: CloudMapper (Duo), Cartography (Lyft), Steampipe. Native cloud: AWS Resource Explorer, AWS Application Composer, Datadog Service Map. **Filters: P5 name-taken + P6 free-tier-floor + P9 category-filled + P3 platform-absorption.**
+
+- **GrantGuard** (signal-monitor 18/25, killed) — Real-time OAuth permission auditing for enterprise Workspace/Okta/Azure users; flag overpermissioned ('Allow All') grants before attacker reuse. Surfaced from Vercel/Context.ai breach r/sysadmin post (2026-04-26). Killed by saturation: Nudge Security, Push Security, Grip Security, Wing Security, Material Security, Reco, Spin.AI, Stitchflow all ship SaaS app discovery + OAuth grant audit + risky-permission flagging + IdP integration. Native absorption: Google Workspace Admin OAuth audit, Microsoft Entra ID Permissions Management, Okta Workflows. **Two-pass classifier limitation exposed**: GitHub returned 4 weak namesakes (top 0★, name appears available); DDG web search failed silently — classifier didn't see the funded incumbent space because they don't use the term "OAuth grant audit" in their primary positioning. Manual Webacy-domain-knowledge override caught the kill. **Filters: P3 platform-absorption + P9 category-filled + P14 12mo-fill.**
+
+### Iteration 25 Kills (below-bar reframe screen against APIDelta + ScanAble playbooks)
+- AIComply Lite REFRAME — deadline real (Aug 2 2026) but supply side WORSE since original kill: 5 free tools live (artificialintelligenceact.eu, airiskcheck.eu, Conformy.io, AI Compliance Advisor, Compliance Radar) + Vanta enterprise product. No public-crawlable input means no pSEO play; no $19 transactional gap because competitors give assessment away free as lead-gen.
+- DeadlineGuard REFRAME — Stitchflow ships free renewal tracker WITH AI contract parsing as of 2026; Termedora $49 + Contract Hound $95 + ExpiryEdge + SpendHound free. Contracts are private = no pSEO. AI parsing commoditized in the 12 months since original kill.
+- CodeOnboard / CourseBot / DocDrift / DocuParse / BriefForge / ClipCast REFRAME — all fail the public-crawlable-input requirement; all have heavy LLM/RAG inference costs; no margin moat available.
+- LessonLoop REFRAME — has margin moat (analytics not LLM) and weak incumbent (Nudge Coach died) but the empty niche STAYED empty because course completion nudges don't drive direct revenue, only indirect (more reviews → more sales). Buyer absent, not tool absent.
+- HireKit REFRAME — has partial regulatory hook (NYC AEDT, Illinois AIVID Act for hiring AI) but seasonal use breaks stickiness AND no public-crawlable input.
+- MCP Server Portfolio REFRAME — Smithery + MCPize + official registry now live. Platform-dependent revenue.
+- StubSnap — already built and killed (full tax platform competitors).
+- **Structural finding**: below-bar ideas don't reframe upward because the missing ingredients (public crawlable input, weak incumbent, regulatory deadline + zero-margin pipeline simultaneously) ARE the reason they scored below-bar.
+
+## Stats (26 iterations — RESEARCH CLOSED)
+
+- **Total ideas considered**: 247+
+- **Total verticals scanned**: 99+ (60 general + 20+ Web3 + 13 non-dev + 4 final-sweep)
 - **Distribution channels scanned**: 4 (Chrome Web Store, VS Code, Slack, Teams)
 - **Ideas deep-dived**: 55+
+- **Methodology paths tested**: 5 (top-down vertical, bottom-up wishlist, Upwork recurring-task, below-bar reframe, ScanAble-adjacency targeted scan)
+- **Reframe screens applied to below-bar candidates**: 12 candidates, 0 survivors
+- **ScanAble-adjacency candidates verified**: 3 candidates, 0 survivors (all post-T+12mo on their regulatory cliffs)
 - **Ideas surviving above bar**: APIDelta at 22/30 (new scoring), API Rate Limit Aggregator at 24/30 (recommended as APIDelta feature)
-- **Best surviving idea**: APIDelta (API dependency change monitoring) — CODE COMPLETE, awaiting deploy
-- **Research status**: DEFINITIVELY CLOSED after 21 iterations. No new viable ideas in 9 consecutive iterations (13-21). Non-dev hypothesis falsified — same saturation pattern applies to non-dev verticals; domain knowledge difficulty is NOT the bottleneck.
+- **Best surviving idea**: APIDelta (API dependency change monitoring) — LAUNCHED, Day 30 kill checkpoint May 15 2026
+- **Research status**: **DEFINITIVELY CLOSED after 26 iterations + 5-way methodology triangulation + structural explanation.** 14 consecutive zero-result iterations (13-26). The structural finding from iter 25-26: ScanAble caught a 6-12 month window between regulatory-deadline-announcement and free-tool race-to-the-bottom. That window is rare and short-lived. The next survivor would require a regulatory cliff 6-12 months out from now (May 2026 → April 2027) with objective public-crawlable input AND no current free lead-gen tools — by definition surfaceable only via trade-publication or industry-newsletter signal access, not Google search. **Closure is structurally explained**: not "no ideas exist" but "structural ingredients are rare and require timing luck or insider signal access that web search cannot provide."
 
 ---
 
